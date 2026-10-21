@@ -1,0 +1,18 @@
+{
+  "titulo": "Primer múltiplo de 7 grande",
+  "capitulo": "05",
+  "seccion": "5.4 Break y continue",
+  "enunciado": "La lista `numeros` tiene enteros. Recórrela con un `for` y guarda en `primero` el **primer** número que sea mayor que 100 y múltiplo de 7, usando `break` en cuanto lo encuentres. Ignora con `continue` los números negativos. Si no hay ninguno, `primero` debe quedar en `None`.\n\nEjemplo: en `[-7, 14, 105, 210]`, `primero` es 105.",
+  "inicial": "numeros = [-210, 5, 98, 99, 203, 108, 217, 301]\nprimero = None\n\n# Escribe tu código aquí\n",
+  "pruebas": "assert primero == 203, f\"primero vale {primero!r}, se esperaba 203\"\n",
+  "solucion": "numeros = [-210, 5, 98, 99, 203, 108, 217, 301]\nprimero = None\n\nfor n in numeros:\n    if n < 0:\n        continue\n    if n > 100 and n % 7 == 0:\n        primero = n\n        break\n",
+  "erroneas": [
+    "numeros = [-210, 5, 98, 99, 203, 108, 217, 301]\nprimero = None\n\nfor n in numeros:\n    if n > 100 and n % 7 == 0:\n        primero = n\n",
+    "numeros = [-210, 5, 98, 99, 203, 108, 217, 301]\nprimero = None\n\nfor n in numeros:\n    if n > 100 and n % 7 == 0:\n        primero = n\n    break\n",
+    "numeros = [-210, 5, 98, 99, 203, 108, 217, 301]\nprimero = None\n\nfor n in numeros:\n    if n > 100 or n % 7 == 0:\n        primero = n\n        break\n"
+  ],
+  "pistas": [
+    "`break` sale del bucle en cuanto encuentras el valor.",
+    "Necesitas las dos condiciones a la vez: `and`."
+  ]
+}

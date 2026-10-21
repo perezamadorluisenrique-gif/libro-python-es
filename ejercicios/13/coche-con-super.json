@@ -1,0 +1,18 @@
+{
+  "titulo": "Un coche con puertas",
+  "capitulo": "13",
+  "seccion": "13.2 Acceso a atributos",
+  "enunciado": "`Vehiculo` guarda la `marca`. Define `Coche(Vehiculo)` con un `__init__(self, marca, puertas)` que use `super().__init__(...)` para guardar la marca y además guarde `puertas`. Agrega el método `resumen()` que devuelva `\"<marca> de <puertas> puertas\"`.\n\n```python\nc = Coche(\"Mazda\", 4)\nprint(c.resumen())  # Mazda de 4 puertas\n```",
+  "inicial": "class Vehiculo:\n    def __init__(self, marca):\n        self.marca = marca\n\n\n# Escribe tu código aquí\n",
+  "pruebas": "c = Coche(\"Mazda\", 4)\nassert isinstance(c, Vehiculo), \"Coche debe heredar de Vehiculo\"\nassert c.marca == \"Mazda\", f\"marca: {c.marca!r}\"\nassert c.puertas == 4, f\"puertas: {c.puertas!r}\"\nassert c.resumen() == \"Mazda de 4 puertas\", f\"resumen() devolvió {c.resumen()!r}\"\nassert Coche(\"Kia\", 2).resumen() == \"Kia de 2 puertas\", \"falla con otros datos\"\n",
+  "solucion": "class Vehiculo:\n    def __init__(self, marca):\n        self.marca = marca\n\n\nclass Coche(Vehiculo):\n    def __init__(self, marca, puertas):\n        super().__init__(marca)\n        self.puertas = puertas\n\n    def resumen(self):\n        return f\"{self.marca} de {self.puertas} puertas\"\n",
+  "erroneas": [
+    "class Vehiculo:\n    def __init__(self, marca):\n        self.marca = marca\n\n\nclass Coche(Vehiculo):\n    def __init__(self, marca, puertas):\n        self.puertas = puertas\n\n    def resumen(self):\n        return f\"{self.marca} de {self.puertas} puertas\"\n",
+    "class Vehiculo:\n    def __init__(self, marca):\n        self.marca = marca\n\n\nclass Coche(Vehiculo):\n    def __init__(self, marca, puertas):\n        super().__init__(marca)\n        self.puertas = puertas\n\n    def resumen(self):\n        return f\"{self.marca} de puertas {self.puertas}\"\n",
+    "class Vehiculo:\n    def __init__(self, marca):\n        self.marca = marca\n\n\nclass Coche(Vehiculo):\n    def __init__(self, marca, puertas):\n        super().__init__(marca)\n        self.puertas = puertas\n\n    def resumen(self):\n        print(f\"{self.marca} de {self.puertas} puertas\")\n"
+  ],
+  "pistas": [
+    "Si `Coche` define su propio `__init__` y no llama a `super().__init__(marca)`, la marca nunca se guarda.",
+    "`resumen()` devuelve el texto con `return`."
+  ]
+}

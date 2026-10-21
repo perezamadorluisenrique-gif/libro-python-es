@@ -1,0 +1,18 @@
+{
+  "titulo": "Un perro es un animal",
+  "capitulo": "13",
+  "seccion": "13.2 Acceso a atributos",
+  "enunciado": "La clase `Animal` ya está definida. Define la clase `Perro`, que **hereda** de `Animal`, y agrégale el método `ladrar()`, que devuelve la cadena `\"<nombre> dice guau\"`.\n\n```python\np = Perro(\"Rex\")\nprint(p.nombre)    # Rex (heredado)\nprint(p.ladrar())  # Rex dice guau\n```",
+  "inicial": "class Animal:\n    def __init__(self, nombre):\n        self.nombre = nombre\n\n\n# Escribe tu código aquí\n",
+  "pruebas": "p = Perro(\"Rex\")\nassert isinstance(p, Animal), \"Perro debe heredar de Animal\"\nassert p.nombre == \"Rex\", f\"nombre: {p.nombre!r}\"\nassert p.ladrar() == \"Rex dice guau\", f\"ladrar() devolvió {p.ladrar()!r}\"\nassert Perro(\"Luna\").ladrar() == \"Luna dice guau\", \"ladrar() debe usar el nombre de cada perro\"\n",
+  "solucion": "class Animal:\n    def __init__(self, nombre):\n        self.nombre = nombre\n\n\nclass Perro(Animal):\n    def ladrar(self):\n        return self.nombre + \" dice guau\"\n",
+  "erroneas": [
+    "class Animal:\n    def __init__(self, nombre):\n        self.nombre = nombre\n\n\nclass Perro:\n    def __init__(self, nombre):\n        self.nombre = nombre\n\n    def ladrar(self):\n        return self.nombre + \" dice guau\"\n",
+    "class Animal:\n    def __init__(self, nombre):\n        self.nombre = nombre\n\n\nclass Perro(Animal):\n    def ladrar(self):\n        print(self.nombre + \" dice guau\")\n",
+    "class Animal:\n    def __init__(self, nombre):\n        self.nombre = nombre\n\n\nclass Perro(Animal):\n    def ladrar(self):\n        return \"nombre dice guau\"\n"
+  ],
+  "pistas": [
+    "La clase padre va entre paréntesis: `class Perro(Animal):`.",
+    "El método debe devolver (`return`) la cadena, no imprimirla."
+  ]
+}

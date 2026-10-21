@@ -1,0 +1,18 @@
+{
+  "titulo": "Suma hasta n con variable local",
+  "capitulo": "06",
+  "seccion": "6.3 Ámbito de las variables",
+  "enunciado": "Define `suma_hasta(n)` que devuelva `1 + 2 + ... + n` (y 0 si `n` es 0). La función debe dar el mismo resultado cada vez que se llama: usa una variable **local** para acumular, no una global.\n\nEjemplo: `suma_hasta(4)` devuelve `10`, llames las veces que llames.",
+  "inicial": "total = 0  # variable global; la función no debe depender de ella\n\ndef suma_hasta(n):\n    # Escribe tu código aquí\n    pass\n",
+  "pruebas": "assert suma_hasta(4) == 10, f\"suma_hasta(4) devolvió {suma_hasta(4)!r}\"\nassert suma_hasta(4) == 10, f\"la segunda llamada a suma_hasta(4) devolvió {suma_hasta(4)!r}\"\nassert suma_hasta(0) == 0, f\"suma_hasta(0) devolvió {suma_hasta(0)!r}\"\nassert suma_hasta(100) == 5050, f\"suma_hasta(100) devolvió {suma_hasta(100)!r}\"\nassert total == 0, \"la variable global total no debe cambiar\"\n",
+  "solucion": "total = 0  # variable global; la función no debe depender de ella\n\ndef suma_hasta(n):\n    total = 0\n    for i in range(1, n + 1):\n        total += i\n    return total\n",
+  "erroneas": [
+    "total = 0\n\ndef suma_hasta(n):\n    global total\n    for i in range(1, n + 1):\n        total += i\n    return total\n",
+    "total = 0\n\ndef suma_hasta(n):\n    total = 0\n    for i in range(1, n):\n        total += i\n    return total\n",
+    "total = 0\n\ndef suma_hasta(n):\n    total = 0\n    for i in range(1, n + 1):\n        total = i\n    return total\n"
+  ],
+  "pistas": [
+    "Crea `total = 0` dentro de la función: así es local y empieza de cero en cada llamada.",
+    "`range(1, n + 1)` incluye a `n`."
+  ]
+}

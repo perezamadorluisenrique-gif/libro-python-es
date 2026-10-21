@@ -1,0 +1,18 @@
+{
+  "titulo": "Agrega al final del archivo",
+  "capitulo": "14",
+  "seccion": "14.2 Escritura en archivos",
+  "enunciado": "Escribe `agrega_linea(nombre, texto)` que añada `texto` como una línea nueva al final del archivo `nombre` **sin borrar** lo que ya tenga. Si el archivo no existe, debe crearse.\n\n```python\nagrega_linea(\"diario.txt\", \"hoy llovió\")\nagrega_linea(\"diario.txt\", \"hoy salió el sol\")\n# diario.txt: dos líneas\n```",
+  "inicial": "def agrega_linea(nombre, texto):\n    # Escribe tu código aquí\n",
+  "pruebas": "import os\nif os.path.exists(\"ej14_agrega.txt\"):\n    os.remove(\"ej14_agrega.txt\")\nagrega_linea(\"ej14_agrega.txt\", \"uno\")\nagrega_linea(\"ej14_agrega.txt\", \"dos\")\nwith open(\"ej14_agrega.txt\") as f:\n    contenido = f.read()\nassert contenido == \"uno\\ndos\\n\", f\"el archivo contiene {contenido!r}\"\n",
+  "solucion": "def agrega_linea(nombre, texto):\n    with open(nombre, \"a\") as f:\n        f.write(texto + \"\\n\")\n",
+  "erroneas": [
+    "def agrega_linea(nombre, texto):\n    with open(nombre, \"w\") as f:\n        f.write(texto + \"\\n\")\n",
+    "def agrega_linea(nombre, texto):\n    with open(nombre, \"a\") as f:\n        f.write(texto)\n",
+    "def agrega_linea(nombre, texto):\n    with open(nombre, \"a\") as f:\n        return texto + \"\\n\"\n"
+  ],
+  "pistas": [
+    "El modo de adición es `\"a\"`; crea el archivo si no existe.",
+    "Recuerda terminar la línea con `\\n`."
+  ]
+}

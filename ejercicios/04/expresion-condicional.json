@@ -1,0 +1,18 @@
+{
+  "titulo": "Mensaje con expresión condicional",
+  "capitulo": "04",
+  "seccion": "4.7 Expresiones condicionales",
+  "enunciado": "La variable `temperatura` guarda grados Celsius. Con una expresión condicional (`x if condicion else y`) guarda en `mensaje` el texto `\"Hace calor\"` si la temperatura es mayor que 28 y `\"Está templado\"` en caso contrario. Imprime `mensaje`.\n\nEjemplo con `temperatura = 28`:\n\n```text\nEstá templado\n```",
+  "inicial": "temperatura = 28\n\n# Escribe tu código aquí\n",
+  "pruebas": "assert mensaje == \"Está templado\", f\"con 28 grados mensaje vale {mensaje!r}\"\nassert __salida__.strip() == \"Está templado\", f\"se imprimió {__salida__.strip()!r}\"\n",
+  "solucion": "temperatura = 28\n\nmensaje = \"Hace calor\" if temperatura > 28 else \"Está templado\"\nprint(mensaje)\n",
+  "erroneas": [
+    "temperatura = 28\n\nmensaje = \"Hace calor\" if temperatura >= 28 else \"Está templado\"\nprint(mensaje)\n",
+    "temperatura = 28\n\nmensaje = \"Está templado\" if temperatura > 28 else \"Hace calor\"\nprint(mensaje)\n",
+    "temperatura = 28\n\nmensaje = \"Hace calor\"\nprint(mensaje)\n"
+  ],
+  "pistas": [
+    "La forma es `valor_si_cierto if condicion else valor_si_falso`.",
+    "28 no es mayor que 28."
+  ]
+}

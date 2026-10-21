@@ -1,0 +1,18 @@
+{
+  "titulo": "La clase Mascota",
+  "capitulo": "11",
+  "seccion": "11.2 Clases e instancias",
+  "enunciado": "Define una clase `Mascota` cuyo `__init__` reciba `nombre` y `especie` y los guarde en atributos del mismo nombre.\n\nEjemplo: `m = Mascota(\"Fido\", \"perro\")` da `m.nombre == \"Fido\"` y `m.especie == \"perro\"`.",
+  "inicial": "class Mascota:\n    # Escribe tu código aquí\n",
+  "pruebas": "m = Mascota(\"Fido\", \"perro\")\nassert m.nombre == \"Fido\", f\"m.nombre vale {m.nombre!r}\"\nassert m.especie == \"perro\", f\"m.especie vale {m.especie!r}\"\nn = Mascota(\"Misu\", \"gato\")\nassert n.nombre == \"Misu\" and m.nombre == \"Fido\", \"cada instancia debe tener sus propios atributos\"\n",
+  "solucion": "class Mascota:\n    def __init__(self, nombre, especie):\n        self.nombre = nombre\n        self.especie = especie\n",
+  "erroneas": [
+    "class Mascota:\n    def __init__(self, nombre, especie):\n        nombre = nombre\n        especie = especie\n",
+    "class Mascota:\n    def __init__(self, nombre, especie):\n        self.nombre = especie\n        self.especie = nombre\n",
+    "class Mascota:\n    nombre = \"Fido\"\n    especie = \"perro\"\n    def __init__(self, nombre, especie):\n        pass\n"
+  ],
+  "pistas": [
+    "Dentro de `__init__`, los atributos se crean con `self.atributo = valor`.",
+    "El primer parámetro de todo método es `self`."
+  ]
+}

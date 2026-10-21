@@ -1,0 +1,18 @@
+{
+  "titulo": "Invierte una cadena",
+  "capitulo": "12",
+  "seccion": "12.3 Recursión con cadenas y listas",
+  "enunciado": "Define `invertir(texto)` de forma recursiva, sin usar rebanadas con paso negativo (`[::-1]`) ni `reversed()`. Devuelve el texto al revés.\n\nEjemplo: `invertir(\"hola\")` devuelve `\"aloh\"`. La cadena vacía se devuelve igual.",
+  "inicial": "def invertir(texto):\n    # Escribe tu código aquí\n",
+  "pruebas": "assert invertir(\"\") == \"\", \"la cadena vacía debe quedar vacía\"\nassert invertir(\"a\") == \"a\", f\"invertir('a') devolvió {invertir('a')!r}\"\nassert invertir(\"hola\") == \"aloh\", f\"invertir('hola') devolvió {invertir('hola')!r}\"\nassert invertir(\"anilina\") == \"anilina\", \"un palíndromo queda igual\"\nassert invertir(\"ab cd\") == \"dc ba\", f\"invertir('ab cd') devolvió {invertir('ab cd')!r}\"\n",
+  "solucion": "def invertir(texto):\n    if texto == \"\":\n        return \"\"\n    return invertir(texto[1:]) + texto[0]\n",
+  "erroneas": [
+    "def invertir(texto):\n    if texto == \"\":\n        return \"\"\n    return texto[0] + invertir(texto[1:])\n",
+    "def invertir(texto):\n    if texto == \"\":\n        return \"\"\n    return invertir(texto[1:])\n",
+    "def invertir(texto):\n    if len(texto) == 1:\n        return texto\n    return invertir(texto[1:]) + texto[0]\n"
+  ],
+  "pistas": [
+    "Caso base: la cadena vacía. Caso recursivo: invierte `texto[1:]` y deja el primer carácter al final.",
+    "El orden de la concatenación es lo que invierte el texto."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "titulo": "Hipotenusa",
+  "capitulo": "07",
+  "seccion": "7.1 Conceptos básicos de los módulos",
+  "enunciado": "Define `hipotenusa(a, b)` que devuelva la longitud de la hipotenusa de un triángulo rectángulo con catetos `a` y `b`, usando `math.sqrt`.\n\nEjemplo: `hipotenusa(3, 4)` devuelve `5.0`.",
+  "inicial": "import math\n\ndef hipotenusa(a, b):\n    # Escribe tu código aquí\n    pass\n",
+  "pruebas": "for a, b, esperado in [(3, 4, 5.0), (5, 12, 13.0), (0, 7, 7.0), (1, 1, 2 ** 0.5), (8, 15, 17.0)]:\n    obtenido = hipotenusa(a, b)\n    assert abs(obtenido - esperado) < 1e-9, f\"hipotenusa({a}, {b}) devolvió {obtenido!r}, se esperaba {esperado!r}\"\n",
+  "solucion": "import math\n\ndef hipotenusa(a, b):\n    return math.sqrt(a ** 2 + b ** 2)\n",
+  "erroneas": [
+    "import math\n\ndef hipotenusa(a, b):\n    return math.sqrt(a + b)\n",
+    "import math\n\ndef hipotenusa(a, b):\n    return math.sqrt(a) ** 2 + math.sqrt(b) ** 2\n",
+    "import math\n\ndef hipotenusa(a, b):\n    return a ** 2 + b ** 2\n"
+  ],
+  "pistas": [
+    "Teorema de Pitágoras: la hipotenusa es la raíz de `a² + b²`.",
+    "`math.sqrt(x)` calcula la raíz cuadrada."
+  ]
+}

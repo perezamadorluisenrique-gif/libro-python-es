@@ -1,0 +1,18 @@
+{
+  "titulo": "Años hasta duplicar el ahorro",
+  "capitulo": "05",
+  "seccion": "5.1 Bucle while",
+  "enunciado": "Una cuenta tiene `ahorro = 1000` y crece un 50 % cada año. Con un bucle `while`, calcula en la variable `anios` cuántos años pasan hasta que el ahorro **llegue o supere** `meta = 2250`.\n\nEjemplo: con `ahorro = 100` y `meta = 200` al 50 % anual, `anios` valdría 2 (100, 150, 225).",
+  "inicial": "ahorro = 1000\nmeta = 2250\nanios = 0\n\n# Escribe tu código aquí\n",
+  "pruebas": "assert anios == 2, f\"anios vale {anios!r}, se esperaba 2\"\nassert ahorro == 2250.0, f\"el ahorro final vale {ahorro!r}, se esperaba 2250.0\"\n",
+  "solucion": "ahorro = 1000\nmeta = 2250\nanios = 0\n\nwhile ahorro < meta:\n    ahorro = ahorro * 1.5\n    anios += 1\n",
+  "erroneas": [
+    "ahorro = 1000\nmeta = 2250\nanios = 0\n\nwhile ahorro <= meta:\n    ahorro = ahorro * 1.5\n    anios += 1\n",
+    "ahorro = 1000\nmeta = 2250\nanios = 0\n\nwhile ahorro < meta:\n    ahorro = ahorro * 1.5\n",
+    "ahorro = 1000\nmeta = 2250\nanios = 0\n\nwhile ahorro < meta:\n    anios += 1\n    ahorro = ahorro * 0.5\n    if anios > 20:\n        break\n"
+  ],
+  "pistas": [
+    "Repite mientras `ahorro < meta`; dentro del bucle actualiza el ahorro y cuenta un año.",
+    "El ahorro se multiplica por 1.5 cada vuelta."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "titulo": "Un mixin de registro",
+  "capitulo": "13",
+  "seccion": "13.5 Herencia múltiple y clases mixin",
+  "enunciado": "`Persona` guarda un `nombre` y `RegistroMixin` ofrece `registrar(mensaje)`, que agrega `\"<nombre>: <mensaje>\"` a la lista `self.historial` (creándola vacía si aún no existe). Define `Estudiante` con **herencia múltiple** de `Persona` y `RegistroMixin` (en ese orden), de modo que un estudiante tenga ambos comportamientos.\n\n```python\ne = Estudiante(\"Sara\")\ne.registrar(\"entró\")\nprint(e.historial)  # ['Sara: entró']\n```",
+  "inicial": "class Persona:\n    def __init__(self, nombre):\n        self.nombre = nombre\n\n\nclass RegistroMixin:\n    def registrar(self, mensaje):\n        if not hasattr(self, \"historial\"):\n            self.historial = []\n        self.historial.append(f\"{self.nombre}: {mensaje}\")\n\n\n# Escribe tu código aquí\n",
+  "pruebas": "e = Estudiante(\"Sara\")\nassert isinstance(e, Persona), \"Estudiante debe heredar de Persona\"\nassert isinstance(e, RegistroMixin), \"Estudiante debe heredar de RegistroMixin\"\nassert Estudiante.__mro__.index(Persona) < Estudiante.__mro__.index(RegistroMixin), \"el orden debe ser (Persona, RegistroMixin)\"\ne.registrar(\"entró\")\ne.registrar(\"salió\")\nassert e.historial == [\"Sara: entró\", \"Sara: salió\"], f\"historial: {e.historial!r}\"\nf = Estudiante(\"Leo\")\nf.registrar(\"hola\")\nassert f.historial == [\"Leo: hola\"] and len(e.historial) == 2, \"cada estudiante tiene su propio historial\"\n",
+  "solucion": "class Persona:\n    def __init__(self, nombre):\n        self.nombre = nombre\n\n\nclass RegistroMixin:\n    def registrar(self, mensaje):\n        if not hasattr(self, \"historial\"):\n            self.historial = []\n        self.historial.append(f\"{self.nombre}: {mensaje}\")\n\n\nclass Estudiante(Persona, RegistroMixin):\n    pass\n",
+  "erroneas": [
+    "class Persona:\n    def __init__(self, nombre):\n        self.nombre = nombre\n\n\nclass RegistroMixin:\n    def registrar(self, mensaje):\n        if not hasattr(self, \"historial\"):\n            self.historial = []\n        self.historial.append(f\"{self.nombre}: {mensaje}\")\n\n\nclass Estudiante(Persona):\n    pass\n",
+    "class Persona:\n    def __init__(self, nombre):\n        self.nombre = nombre\n\n\nclass RegistroMixin:\n    def registrar(self, mensaje):\n        if not hasattr(self, \"historial\"):\n            self.historial = []\n        self.historial.append(f\"{self.nombre}: {mensaje}\")\n\n\nclass Estudiante(RegistroMixin, Persona):\n    pass\n",
+    "class Persona:\n    def __init__(self, nombre):\n        self.nombre = nombre\n\n\nclass RegistroMixin:\n    def registrar(self, mensaje):\n        if not hasattr(self, \"historial\"):\n            self.historial = []\n        self.historial.append(f\"{self.nombre}: {mensaje}\")\n\n\nclass Estudiante(RegistroMixin):\n    pass\n"
+  ],
+  "pistas": [
+    "Se listan varias clases padre separadas por comas: `class C(A, B):`.",
+    "Python busca los métodos de izquierda a derecha en esa lista (el MRO)."
+  ]
+}

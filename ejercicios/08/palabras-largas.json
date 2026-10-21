@@ -1,0 +1,18 @@
+{
+  "titulo": "Palabras largas",
+  "capitulo": "08",
+  "seccion": "8.5 División y unión de cadenas",
+  "enunciado": "Define `palabras_largas(frase, minimo)` que devuelva una cadena con las palabras de `frase` que tengan **al menos** `minimo` letras, en el mismo orden y unidas por un guion `-`. Si no hay ninguna, devuelve `\"\"`. Las palabras se separan por espacios (puede haber varios seguidos).\n\nEjemplo: `palabras_largas(\"el gato come pescado\", 4)` devuelve `\"gato-come-pescado\"`.",
+  "inicial": "def palabras_largas(frase, minimo):\n    # Escribe tu código aquí\n    pass\n",
+  "pruebas": "for frase, minimo, esperado in [(\"el gato come pescado\", 4, \"gato-come-pescado\"), (\"el gato come pescado\", 7, \"pescado\"), (\"a b c\", 2, \"\"), (\"  hola   mundo  \", 4, \"hola-mundo\"), (\"uno dos\", 3, \"uno-dos\"), (\"\", 1, \"\"), (\"a  b\", 0, \"a-b\")]:\n    obtenido = palabras_largas(frase, minimo)\n    assert obtenido == esperado, f\"palabras_largas({frase!r}, {minimo}) devolvió {obtenido!r}, se esperaba {esperado!r}\"\n",
+  "solucion": "def palabras_largas(frase, minimo):\n    elegidas = []\n    for palabra in frase.split():\n        if len(palabra) >= minimo:\n            elegidas.append(palabra)\n    return \"-\".join(elegidas)\n",
+  "erroneas": [
+    "def palabras_largas(frase, minimo):\n    elegidas = []\n    for palabra in frase.split():\n        if len(palabra) > minimo:\n            elegidas.append(palabra)\n    return \"-\".join(elegidas)\n",
+    "def palabras_largas(frase, minimo):\n    elegidas = []\n    for palabra in frase.split(\" \"):\n        if len(palabra) >= minimo:\n            elegidas.append(palabra)\n    return \"-\".join(elegidas)\n",
+    "def palabras_largas(frase, minimo):\n    elegidas = []\n    for palabra in frase.split():\n        if len(palabra) >= minimo:\n            elegidas.append(palabra)\n    return elegidas\n"
+  ],
+  "pistas": [
+    "`frase.split()` sin argumentos ignora los espacios repetidos.",
+    "`\"-\".join(lista)` une la lista en una cadena."
+  ]
+}

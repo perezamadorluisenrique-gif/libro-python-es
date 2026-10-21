@@ -1,0 +1,18 @@
+{
+  "titulo": "De Fahrenheit a Celsius",
+  "capitulo": "06",
+  "seccion": "6.4 Parámetros",
+  "enunciado": "Define `fahrenheit_a_celsius(f)` que devuelva los grados Celsius redondeados a un decimal con `round(valor, 1)`. Fórmula: `(f - 32) * 5 / 9`.\n\nEjemplo: `fahrenheit_a_celsius(212)` devuelve `100.0`.",
+  "inicial": "def fahrenheit_a_celsius(f):\n    # Escribe tu código aquí\n    pass\n",
+  "pruebas": "for entrada, esperado in [(212, 100.0), (32, 0.0), (-40, -40.0), (98.6, 37.0), (50, 10.0), (0, -17.8)]:\n    obtenido = fahrenheit_a_celsius(entrada)\n    assert obtenido == esperado, f\"fahrenheit_a_celsius({entrada}) devolvió {obtenido!r}, se esperaba {esperado!r}\"\n",
+  "solucion": "def fahrenheit_a_celsius(f):\n    return round((f - 32) * 5 / 9, 1)\n",
+  "erroneas": [
+    "def fahrenheit_a_celsius(f):\n    return round(f - 32 * 5 / 9, 1)\n",
+    "def fahrenheit_a_celsius(f):\n    return round((f - 32) * 5 // 9, 1)\n",
+    "def fahrenheit_a_celsius(f):\n    return round((f - 32) * 9 / 5, 1)\n"
+  ],
+  "pistas": [
+    "Cuidado con la precedencia: la resta va entre paréntesis.",
+    "Usa `/` y no `//` para no perder decimales."
+  ]
+}

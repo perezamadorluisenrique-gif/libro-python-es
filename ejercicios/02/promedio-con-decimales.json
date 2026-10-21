@@ -1,0 +1,18 @@
+{
+  "titulo": "Promedio con decimales",
+  "capitulo": "02",
+  "seccion": "2.3 Tipos de datos mixtos",
+  "enunciado": "Las variables `total_puntos` y `partidas` son enteros. Guarda en `promedio` los puntos por partida y muéstralo redondeado a 2 decimales con `print`.\n\nEjemplo: con 100 puntos en 8 partidas se imprime:\n\n```text\n12.5\n```\n\nCon 10 puntos en 3 partidas saldría `3.33`.",
+  "inicial": "total_puntos = 100\npartidas = 8\n\n# Escribe tu código aquí\n",
+  "pruebas": "assert promedio == 12.5, f\"promedio vale {promedio!r}\"\nassert __salida__.strip() == \"12.5\", f\"se imprimió {__salida__.strip()!r}\"\n",
+  "solucion": "total_puntos = 100\npartidas = 8\n\npromedio = total_puntos / partidas\nprint(round(promedio, 2))\n",
+  "erroneas": [
+    "total_puntos = 100\npartidas = 8\n\npromedio = total_puntos // partidas\nprint(round(promedio, 2))\n",
+    "total_puntos = 100\npartidas = 8\n\npromedio = total_puntos * partidas\nprint(promedio)\n",
+    "total_puntos = 100\npartidas = 8\n\npromedio = total_puntos / partidas\nprint(round(promedio))\n"
+  ],
+  "pistas": [
+    "`/` siempre da un decimal; `//` descarta la parte decimal.",
+    "`round(x, 2)` redondea a 2 decimales."
+  ]
+}

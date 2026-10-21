@@ -1,0 +1,18 @@
+{
+  "titulo": "Un comentario que sobra",
+  "capitulo": "01",
+  "seccion": "1.7 Comentarios",
+  "enunciado": "El programa debe imprimir `Total: 30`, pero la línea que calcula el total quedó convertida en comentario por error. Corrígelo para que el programa imprima exactamente:\n\n```text\nTotal: 30\n```",
+  "inicial": "precio = 10\ncantidad = 3\n# total = precio * cantidad\nprint(\"Total:\", total)\n",
+  "pruebas": "assert __salida__.strip() == \"Total: 30\", f\"se imprimió {__salida__.strip()!r}\"\n",
+  "solucion": "precio = 10\ncantidad = 3\ntotal = precio * cantidad\nprint(\"Total:\", total)\n",
+  "erroneas": [
+    "precio = 10\ncantidad = 3\ntotal = 30\nprint(\"Total: 30\")\nprint(\"Total:\", total)\n",
+    "precio = 10\ncantidad = 3\ntotal = precio + cantidad\nprint(\"Total:\", total)\n",
+    "precio = 10\ncantidad = 3\ntotal = precio * cantidad\nprint(\"Total:\" + total)\n"
+  ],
+  "pistas": [
+    "Quita el `#` del inicio de la línea.",
+    "Ejecuta y lee el mensaje de error: dice qué nombre no existe."
+  ]
+}

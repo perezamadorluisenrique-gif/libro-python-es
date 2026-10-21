@@ -1,0 +1,15 @@
+{
+  "titulo": "Saludo en dos líneas",
+  "capitulo": "01",
+  "seccion": "1.2 Entrada/salida",
+  "enunciado": "La variable `nombre` ya contiene un nombre. Escribe un programa que imprima exactamente dos líneas:\n\n```text\nHola, <nombre>.\nBienvenida al curso de Python.\n```\n\ndonde `<nombre>` es el valor de la variable (por ejemplo, `Hola, Ana.`). Usa `print()` dos veces.",
+  "inicial": "nombre = \"Ana\"\n\n# Escribe tu código aquí\n",
+  "pruebas": "lineas = __salida__.splitlines()\nassert len(lineas) == 2, f\"se esperaban 2 líneas y se imprimieron {len(lineas)}\"\nassert lineas[0] == \"Hola, Ana.\", f\"primera línea: {lineas[0]!r}\"\nassert lineas[1] == \"Bienvenida al curso de Python.\", f\"segunda línea: {lineas[1]!r}\"\n",
+  "solucion": "nombre = \"Ana\"\n\nprint(\"Hola, \" + nombre + \".\")\nprint(\"Bienvenida al curso de Python.\")\n",
+  "erroneas": [
+    "nombre = \"Ana\"\n\nprint(\"Hola,\", nombre, \".\")\nprint(\"Bienvenida al curso de Python.\")\n",
+    "nombre = \"Ana\"\n\nprint(\"Hola, nombre.\")\nprint(\"Bienvenida al curso de Python.\")\n",
+    "nombre = \"Ana\"\n\nprint(\"Hola, \" + nombre + \".\", \"Bienvenida al curso de Python.\")\n"
+  ],
+  "pistas": ["`print(\"Hola,\", nombre)` separa con un espacio cada argumento: fíjate en dónde queda el punto.", "Para unir cadenas sin espacios extra, usa `+`."]
+}

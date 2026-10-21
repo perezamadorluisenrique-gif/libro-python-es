@@ -1,0 +1,18 @@
+{
+  "titulo": "Inventario de tienda",
+  "capitulo": "10",
+  "seccion": "10.3 Operaciones con diccionarios",
+  "enunciado": "Define `vender(inventario, producto, cantidad)`, que resta `cantidad` unidades al `producto` del diccionario `inventario` (modificándolo) y devuelve `True`. Si el producto no existe o no hay suficientes unidades, no cambia nada y devuelve `False`.\n\nEjemplo: con `{\"pan\": 5}`, `vender(inv, \"pan\", 2)` deja `{\"pan\": 3}` y devuelve `True`.",
+  "inicial": "def vender(inventario, producto, cantidad):\n    # Escribe tu código aquí\n",
+  "pruebas": "inv = {\"pan\": 5, \"leche\": 1}\nassert vender(inv, \"pan\", 2) is True, \"venta válida debe devolver True\"\nassert inv == {\"pan\": 3, \"leche\": 1}, f\"inventario: {inv!r}\"\nassert vender(inv, \"leche\", 2) is False, \"no hay suficientes: debe devolver False\"\nassert inv[\"leche\"] == 1, \"no debe cambiar si no alcanza\"\nassert vender(inv, \"queso\", 1) is False, \"producto inexistente: debe devolver False\"\nassert \"queso\" not in inv, \"no debe crear el producto\"\nassert vender(inv, \"pan\", 3) is True and inv[\"pan\"] == 0, f\"vender todo el stock: {inv!r}\"\n",
+  "solucion": "def vender(inventario, producto, cantidad):\n    if producto in inventario and inventario[producto] >= cantidad:\n        inventario[producto] -= cantidad\n        return True\n    return False\n",
+  "erroneas": [
+    "def vender(inventario, producto, cantidad):\n    if producto in inventario and inventario[producto] > cantidad:\n        inventario[producto] -= cantidad\n        return True\n    return False\n",
+    "def vender(inventario, producto, cantidad):\n    if producto in inventario:\n        inventario[producto] -= cantidad\n        return True\n    return False\n",
+    "def vender(inventario, producto, cantidad):\n    if inventario[producto] >= cantidad:\n        inventario[producto] -= cantidad\n        return True\n    return False\n"
+  ],
+  "pistas": [
+    "Comprueba con `in` que la clave exista antes de leerla.",
+    "El stock exacto también alcanza: usa `>=`."
+  ]
+}

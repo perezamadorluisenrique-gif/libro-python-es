@@ -1,0 +1,18 @@
+{
+  "titulo": "Pila de platos",
+  "capitulo": "11",
+  "seccion": "11.3 Métodos de instancia",
+  "enunciado": "Define la clase `Pila` (sin parámetros en `__init__`) con una lista interna `elementos` y los métodos:\n\n- `apilar(x)`: agrega `x` encima.\n- `desapilar()`: quita y devuelve el elemento de encima, o devuelve `None` si la pila está vacía.\n- `esta_vacia()`: devuelve `True` si no hay elementos.",
+  "inicial": "class Pila:\n    # Escribe tu código aquí\n",
+  "pruebas": "p = Pila()\nassert p.esta_vacia() is True, \"una pila nueva está vacía\"\nassert p.desapilar() is None, \"desapilar en vacía devuelve None\"\np.apilar(1)\np.apilar(2)\nassert p.esta_vacia() is False, \"tras apilar ya no está vacía\"\nassert p.desapilar() == 2, \"debe salir primero el último en entrar\"\nassert p.desapilar() == 1, \"luego el anterior\"\nassert p.esta_vacia() is True, \"tras vaciarla está vacía\"\nq = Pila()\nq.apilar(\"x\")\nassert p.esta_vacia(), \"cada pila tiene su propia lista\"\n",
+  "solucion": "class Pila:\n    def __init__(self):\n        self.elementos = []\n\n    def apilar(self, x):\n        self.elementos.append(x)\n\n    def desapilar(self):\n        if self.esta_vacia():\n            return None\n        return self.elementos.pop()\n\n    def esta_vacia(self):\n        return len(self.elementos) == 0\n",
+  "erroneas": [
+    "class Pila:\n    def __init__(self):\n        self.elementos = []\n\n    def apilar(self, x):\n        self.elementos.append(x)\n\n    def desapilar(self):\n        if self.esta_vacia():\n            return None\n        return self.elementos.pop(0)\n\n    def esta_vacia(self):\n        return len(self.elementos) == 0\n",
+    "class Pila:\n    def __init__(self):\n        self.elementos = []\n\n    def apilar(self, x):\n        self.elementos.append(x)\n\n    def desapilar(self):\n        return self.elementos.pop()\n\n    def esta_vacia(self):\n        return len(self.elementos) == 0\n",
+    "class Pila:\n    elementos = []\n\n    def apilar(self, x):\n        self.elementos.append(x)\n\n    def desapilar(self):\n        if self.esta_vacia():\n            return None\n        return self.elementos.pop()\n\n    def esta_vacia(self):\n        return len(self.elementos) == 0\n"
+  ],
+  "pistas": [
+    "Una lista como pila: `append()` para apilar y `pop()` para desapilar.",
+    "Crea `self.elementos = []` dentro de `__init__`, no en el cuerpo de la clase."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "titulo": "Total por cliente",
+  "capitulo": "10",
+  "seccion": "10.5 Diccionarios anidados y comprensión de diccionario",
+  "enunciado": "Un diccionario anidado guarda los pedidos: `{cliente: {producto: precio}}`. Define `totales(pedidos)`, que devuelve un diccionario `{cliente: suma_de_precios}` usando una comprensión de diccionario.\n\nEjemplo: `totales({\"Ana\": {\"té\": 3, \"pan\": 2}, \"Beto\": {}})` devuelve `{\"Ana\": 5, \"Beto\": 0}`.",
+  "inicial": "def totales(pedidos):\n    # Escribe tu código aquí\n",
+  "pruebas": "r = totales({\"Ana\": {\"té\": 3, \"pan\": 2}, \"Beto\": {}})\nassert r == {\"Ana\": 5, \"Beto\": 0}, f\"devolvió {r!r}\"\nassert totales({}) == {}, \"sin pedidos debe dar {}\"\nassert totales({\"Eva\": {\"a\": 1.5, \"b\": 2.5}}) == {\"Eva\": 4.0}, \"precios decimales\"\nassert totales({\"X\": {\"a\": 1}, \"Y\": {\"a\": 2, \"b\": 3}}) == {\"X\": 1, \"Y\": 5}, \"varios clientes\"\n",
+  "solucion": "def totales(pedidos):\n    return {cliente: sum(items.values()) for cliente, items in pedidos.items()}\n",
+  "erroneas": [
+    "def totales(pedidos):\n    return {cliente: sum(items.keys()) for cliente, items in pedidos.items()}\n",
+    "def totales(pedidos):\n    return {cliente: len(items) for cliente, items in pedidos.items()}\n",
+    "def totales(pedidos):\n    return {cliente: sum(items.values()) for cliente in pedidos}\n"
+  ],
+  "pistas": [
+    "`sum(d.values())` suma los valores de un diccionario.",
+    "Forma: `{clave: valor for clave, valor in d.items()}`."
+  ]
+}

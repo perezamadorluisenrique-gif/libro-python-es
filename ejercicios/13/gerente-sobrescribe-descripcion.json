@@ -1,0 +1,18 @@
+{
+  "titulo": "Gerente sobrescribe la descripción",
+  "capitulo": "13",
+  "seccion": "13.3 Métodos",
+  "enunciado": "`Empleado` tiene el método `descripcion()`. Define `Gerente(Empleado)` que **sobrescriba** `descripcion()` reutilizando el de la clase padre con `super()` y agregando ` (gerente de N personas)`. `Gerente` recibe `nombre`, `sueldo` y `equipo` (cantidad de personas).\n\n```python\ng = Gerente(\"Marta\", 3000, 5)\nprint(g.descripcion())  # Marta gana 3000 (gerente de 5 personas)\n```",
+  "inicial": "class Empleado:\n    def __init__(self, nombre, sueldo):\n        self.nombre = nombre\n        self.sueldo = sueldo\n\n    def descripcion(self):\n        return f\"{self.nombre} gana {self.sueldo}\"\n\n\n# Escribe tu código aquí\n",
+  "pruebas": "e = Empleado(\"Luis\", 1200)\nassert e.descripcion() == \"Luis gana 1200\", \"no modifiques Empleado\"\ng = Gerente(\"Marta\", 3000, 5)\nassert g.equipo == 5, f\"equipo: {g.equipo!r}\"\nassert g.descripcion() == \"Marta gana 3000 (gerente de 5 personas)\", f\"descripcion() devolvió {g.descripcion()!r}\"\nassert Gerente(\"Ivo\", 10, 2).descripcion() == \"Ivo gana 10 (gerente de 2 personas)\", \"falla con otros datos\"\n",
+  "solucion": "class Empleado:\n    def __init__(self, nombre, sueldo):\n        self.nombre = nombre\n        self.sueldo = sueldo\n\n    def descripcion(self):\n        return f\"{self.nombre} gana {self.sueldo}\"\n\n\nclass Gerente(Empleado):\n    def __init__(self, nombre, sueldo, equipo):\n        super().__init__(nombre, sueldo)\n        self.equipo = equipo\n\n    def descripcion(self):\n        return super().descripcion() + f\" (gerente de {self.equipo} personas)\"\n",
+  "erroneas": [
+    "class Empleado:\n    def __init__(self, nombre, sueldo):\n        self.nombre = nombre\n        self.sueldo = sueldo\n\n    def descripcion(self):\n        return f\"{self.nombre} gana {self.sueldo}\"\n\n\nclass Gerente(Empleado):\n    def __init__(self, nombre, sueldo, equipo):\n        super().__init__(nombre, sueldo)\n        self.equipo = equipo\n\n    def descripcion(self):\n        return f\" (gerente de {self.equipo} personas)\"\n",
+    "class Empleado:\n    def __init__(self, nombre, sueldo):\n        self.nombre = nombre\n        self.sueldo = sueldo\n\n    def descripcion(self):\n        return f\"{self.nombre} gana {self.sueldo}\"\n\n\nclass Gerente(Empleado):\n    def __init__(self, nombre, sueldo, equipo):\n        super().__init__(nombre, sueldo)\n        self.equipo = equipo\n\n    def descripcion(self):\n        return super().descripcion() + f\"(gerente de {self.equipo} personas)\"\n",
+    "class Empleado:\n    def __init__(self, nombre, sueldo):\n        self.nombre = nombre\n        self.sueldo = sueldo\n\n    def descripcion(self):\n        return f\"{self.nombre} gana {self.sueldo}\"\n\n\nclass Gerente(Empleado):\n    def __init__(self, nombre, sueldo, equipo):\n        self.nombre = nombre\n        self.sueldo = sueldo\n        self.equipo = equipo\n"
+  ],
+  "pistas": [
+    "`super().descripcion()` ejecuta el método del padre dentro del método sobrescrito.",
+    "Cuida el espacio antes del paréntesis en el texto agregado."
+  ]
+}

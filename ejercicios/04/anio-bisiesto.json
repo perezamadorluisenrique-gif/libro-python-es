@@ -1,0 +1,18 @@
+{
+  "titulo": "Año bisiesto",
+  "capitulo": "04",
+  "seccion": "4.3 Operaciones booleanas",
+  "enunciado": "Un año es bisiesto si es divisible entre 4 y no lo es entre 100, o bien si es divisible entre 400. Guarda en `es_bisiesto` un booleano con esa condición para la variable `anio` e imprímelo.\n\nEjemplo con `anio = 2000`:\n\n```text\nTrue\n```",
+  "inicial": "anio = 2000\n\n# Escribe tu código aquí\n",
+  "pruebas": "assert es_bisiesto is True, f\"es_bisiesto vale {es_bisiesto!r} para 2000\"\nassert __salida__.strip() == \"True\", f\"se imprimió {__salida__.strip()!r}\"\n",
+  "solucion": "anio = 2000\n\nes_bisiesto = (anio % 4 == 0 and anio % 100 != 0) or anio % 400 == 0\nprint(es_bisiesto)\n",
+  "erroneas": [
+    "anio = 2000\n\nes_bisiesto = anio % 4 == 0 and anio % 100 != 0\nprint(es_bisiesto)\n",
+    "anio = 2000\n\nes_bisiesto = anio % 4 == 0 and anio % 100 != 0 and anio % 400 == 0\nprint(es_bisiesto)\n",
+    "anio = 2000\n\nes_bisiesto = anio % 4 == 0 and (anio % 100 != 0 and anio % 400 == 0)\nprint(es_bisiesto)\n"
+  ],
+  "pistas": [
+    "Combina las condiciones con `and` y `or`; usa paréntesis.",
+    "2000 es divisible entre 100 y también entre 400."
+  ]
+}

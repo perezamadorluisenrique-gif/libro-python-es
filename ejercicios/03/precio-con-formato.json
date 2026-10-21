@@ -1,0 +1,18 @@
+{
+  "titulo": "Precio con formato",
+  "capitulo": "03",
+  "seccion": "3.2 Cadenas con formato",
+  "enunciado": "La variable `producto` y `precio` describen un artículo. Con una f-string imprime una línea con el nombre y el precio con exactamente 2 decimales.\n\nEjemplo con `producto = \"Café\"` y `precio = 4.5`:\n\n```text\nCafé: $4.50\n```",
+  "inicial": "producto = \"Café\"\nprecio = 4.5\n\n# Escribe tu código aquí\n",
+  "pruebas": "assert __salida__.strip() == \"Café: $4.50\", f\"se imprimió {__salida__.strip()!r}\"\n",
+  "solucion": "producto = \"Café\"\nprecio = 4.5\n\nprint(f\"{producto}: ${precio:.2f}\")\n",
+  "erroneas": [
+    "producto = \"Café\"\nprecio = 4.5\n\nprint(f\"{producto}: ${precio}\")\n",
+    "producto = \"Café\"\nprecio = 4.5\n\nprint(\"{producto}: ${precio:.2f}\")\n",
+    "producto = \"Café\"\nprecio = 4.5\n\nprint(f\"{producto}: ${precio:.1f}\")\n"
+  ],
+  "pistas": [
+    "Dentro de `{}` puedes usar `{precio:.2f}`.",
+    "No olvides la `f` antes de las comillas."
+  ]
+}

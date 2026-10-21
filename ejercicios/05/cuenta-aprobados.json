@@ -1,0 +1,18 @@
+{
+  "titulo": "Cuenta de aprobados",
+  "capitulo": "05",
+  "seccion": "5.2 Bucle for",
+  "enunciado": "La lista `notas` guarda calificaciones de 0 a 100. Recórrela con un `for` y deja en `aprobados` cuántas son **60 o más**, y en `suspensos` cuántas son menores que 60.\n\nEjemplo: con `[60, 59, 100]` habría 2 aprobados y 1 suspenso.",
+  "inicial": "notas = [75, 60, 59, 100, 42, 88, 60, 0]\naprobados = 0\nsuspensos = 0\n\n# Escribe tu código aquí\n",
+  "pruebas": "assert aprobados == 5, f\"aprobados vale {aprobados!r}, se esperaba 5\"\nassert suspensos == 3, f\"suspensos vale {suspensos!r}, se esperaba 3\"\n",
+  "solucion": "notas = [75, 60, 59, 100, 42, 88, 60, 0]\naprobados = 0\nsuspensos = 0\n\nfor nota in notas:\n    if nota >= 60:\n        aprobados += 1\n    else:\n        suspensos += 1\n",
+  "erroneas": [
+    "notas = [75, 60, 59, 100, 42, 88, 60, 0]\naprobados = 0\nsuspensos = 0\n\nfor nota in notas:\n    if nota > 60:\n        aprobados += 1\n    else:\n        suspensos += 1\n",
+    "notas = [75, 60, 59, 100, 42, 88, 60, 0]\naprobados = 0\nsuspensos = 0\n\nfor nota in notas:\n    if nota >= 60:\n        aprobados += 1\n    suspensos += 1\n",
+    "notas = [75, 60, 59, 100, 42, 88, 60, 0]\naprobados = 0\nsuspensos = 0\n\nfor nota in notas:\n    if nota >= 60:\n        aprobados = 1\n    else:\n        suspensos = 1\n"
+  ],
+  "pistas": [
+    "Dentro del `for`, un `if` decide qué contador aumenta.",
+    "Un 60 exacto sí aprueba."
+  ]
+}

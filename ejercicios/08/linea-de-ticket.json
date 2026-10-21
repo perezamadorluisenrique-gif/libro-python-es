@@ -1,0 +1,18 @@
+{
+  "titulo": "Línea de ticket",
+  "capitulo": "08",
+  "seccion": "8.4 Formato de cadenas",
+  "enunciado": "Define `linea_ticket(producto, precio)` que devuelva una cadena de ancho fijo: el producto alineado a la izquierda en 10 caracteres y el precio alineado a la derecha en 8 caracteres con 2 decimales. Usa f-strings.\n\nEjemplo: `linea_ticket(\"Pan\", 2.5)` devuelve `\"Pan           2.50\"` (`Pan` más 7 espacios hasta la columna 10, y luego `2.50` alineado a la derecha en 8 columnas, es decir 4 espacios y `2.50`).",
+  "inicial": "def linea_ticket(producto, precio):\n    # Escribe tu código aquí\n    pass\n",
+  "pruebas": "for prod, precio, esperado in [(\"Pan\", 2.5, \"Pan       \" + \"    2.50\"), (\"Leche\", 18, \"Leche     \" + \"   18.00\"), (\"Cafe\", 120.456, \"Cafe      \" + \"  120.46\"), (\"Sal\", 0.5, \"Sal       \" + \"    0.50\")]:\n    obtenido = linea_ticket(prod, precio)\n    assert obtenido == esperado, f\"linea_ticket({prod!r}, {precio}) devolvió {obtenido!r}, se esperaba {esperado!r}\"\nassert len(linea_ticket(\"X\", 1)) == 18, \"cada línea debe medir 18 caracteres\"\n",
+  "solucion": "def linea_ticket(producto, precio):\n    return f\"{producto:<10}{precio:>8.2f}\"\n",
+  "erroneas": [
+    "def linea_ticket(producto, precio):\n    return f\"{producto:>10}{precio:<8.2f}\"\n",
+    "def linea_ticket(producto, precio):\n    return f\"{producto:<10}{precio:>8}\"\n",
+    "def linea_ticket(producto, precio):\n    return f\"{producto:<10}{precio:>.2f}\"\n"
+  ],
+  "pistas": [
+    "En un f-string, `{x:<10}` alinea a la izquierda en 10 y `{x:>8.2f}` a la derecha con 2 decimales.",
+    "Revisa que la línea mida 10 + 8 caracteres."
+  ]
+}

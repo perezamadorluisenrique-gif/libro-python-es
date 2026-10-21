@@ -1,0 +1,18 @@
+{
+  "titulo": "Cajas necesarias",
+  "capitulo": "07",
+  "seccion": "7.2 Importar nombres",
+  "enunciado": "Con `from math import ceil`, define `cajas_necesarias(articulos, por_caja)` que devuelva cuántas cajas hacen falta para guardar todos los artículos (la última caja puede ir incompleta).\n\nEjemplo: `cajas_necesarias(25, 10)` devuelve `3`.",
+  "inicial": "# Escribe tu código aquí\n\ndef cajas_necesarias(articulos, por_caja):\n    pass\n",
+  "pruebas": "for art, caja, esperado in [(25, 10, 3), (20, 10, 2), (1, 10, 1), (0, 10, 0), (7, 3, 3), (100, 7, 15)]:\n    obtenido = cajas_necesarias(art, caja)\n    assert obtenido == esperado, f\"cajas_necesarias({art}, {caja}) devolvió {obtenido!r}, se esperaba {esperado!r}\"\n    assert isinstance(obtenido, int), f\"cajas_necesarias({art}, {caja}) debe devolver un entero, no {type(obtenido).__name__}\"\n",
+  "solucion": "from math import ceil\n\ndef cajas_necesarias(articulos, por_caja):\n    return ceil(articulos / por_caja)\n",
+  "erroneas": [
+    "def cajas_necesarias(articulos, por_caja):\n    return articulos // por_caja\n",
+    "from math import floor\n\ndef cajas_necesarias(articulos, por_caja):\n    return floor(articulos / por_caja) + 1\n",
+    "def cajas_necesarias(articulos, por_caja):\n    return round(articulos / por_caja)\n"
+  ],
+  "pistas": [
+    "`ceil` redondea hacia arriba: `ceil(2.1)` es 3.",
+    "Divide con `/` para no perder la parte decimal antes de redondear."
+  ]
+}

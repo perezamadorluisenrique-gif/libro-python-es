@@ -1,0 +1,18 @@
+{
+  "titulo": "Comparar decimales",
+  "capitulo": "02",
+  "seccion": "2.4 Errores de punto flotante",
+  "enunciado": "En Python, `0.1 + 0.2 == 0.3` es `False` por los errores de punto flotante. Guarda en `son_iguales` un valor `True` si `0.1 + 0.2` y `0.3` coinciden al redondear ambos a 2 decimales, y `False` si no. Imprime `son_iguales`.\n\nSalida esperada:\n\n```text\nTrue\n```",
+  "inicial": "x = 0.1 + 0.2\ny = 0.3\n\n# Escribe tu código aquí\n",
+  "pruebas": "assert son_iguales is True, f\"son_iguales vale {son_iguales!r}\"\nassert __salida__.strip() == \"True\", f\"se imprimió {__salida__.strip()!r}\"\n",
+  "solucion": "x = 0.1 + 0.2\ny = 0.3\n\nson_iguales = round(x, 2) == round(y, 2)\nprint(son_iguales)\n",
+  "erroneas": [
+    "x = 0.1 + 0.2\ny = 0.3\n\nson_iguales = x == y\nprint(son_iguales)\n",
+    "x = 0.1 + 0.2\ny = 0.3\n\nson_iguales = round(x, 20) == round(y, 20)\nprint(son_iguales)\n",
+    "x = 0.1 + 0.2\ny = 0.3\n\nson_iguales = \"True\"\nprint(round(x, 2) == y)\n"
+  ],
+  "pistas": [
+    "Compara `round(x, 2)` con `round(y, 2)`.",
+    "Recuerda que `==` compara y `=` asigna."
+  ]
+}

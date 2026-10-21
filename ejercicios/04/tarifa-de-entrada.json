@@ -1,0 +1,18 @@
+{
+  "titulo": "Tarifa de entrada",
+  "capitulo": "04",
+  "seccion": "4.4 Precedencia de operadores",
+  "enunciado": "Un museo cobra 5 dólares a los menores de 12 años y a los mayores de 65; el resto paga 10. Además, los sábados (`es_sabado` es `True`) cobra 5 a todos. Guarda en `tarifa` el precio para `edad` y `es_sabado` dados e imprímelo.\n\nEjemplo con `edad = 12` y `es_sabado = False`:\n\n```text\n10\n```",
+  "inicial": "edad = 12\nes_sabado = False\n\n# Escribe tu código aquí\n",
+  "pruebas": "assert tarifa == 10, f\"con edad=12 y es_sabado=False tarifa vale {tarifa!r}\"\nassert __salida__.strip() == \"10\", f\"se imprimió {__salida__.strip()!r}\"\n",
+  "solucion": "edad = 12\nes_sabado = False\n\nif edad < 12 or edad > 65 or es_sabado:\n    tarifa = 5\nelse:\n    tarifa = 10\nprint(tarifa)\n",
+  "erroneas": [
+    "edad = 12\nes_sabado = False\n\nif edad <= 12 or edad > 65 or es_sabado:\n    tarifa = 5\nelse:\n    tarifa = 10\nprint(tarifa)\n",
+    "edad = 12\nes_sabado = False\n\nif edad < 12 or edad > 65 or not es_sabado:\n    tarifa = 5\nelse:\n    tarifa = 10\nprint(tarifa)\n",
+    "edad = 12\nes_sabado = False\n\ntarifa = 5\nprint(tarifa)\n"
+  ],
+  "pistas": [
+    "Los tres casos de tarifa baja se combinan con `or`.",
+    "`and` se evalúa antes que `or`."
+  ]
+}

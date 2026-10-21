@@ -1,0 +1,18 @@
+{
+  "titulo": "Máximo común divisor",
+  "capitulo": "12",
+  "seccion": "12.4 Más recursión matemática",
+  "enunciado": "Define `mcd(a, b)` recursivamente con el algoritmo de Euclides: si `b == 0` el resultado es `a`; si no, es `mcd(b, a % b)`. Supón `a, b >= 0`.\n\nEjemplo: `mcd(12, 18)` devuelve `6`.",
+  "inicial": "def mcd(a, b):\n    # Escribe tu código aquí\n",
+  "pruebas": "assert mcd(12, 18) == 6, f\"mcd(12, 18) devolvió {mcd(12, 18)!r}\"\nassert mcd(18, 12) == 6, f\"mcd(18, 12) devolvió {mcd(18, 12)!r}\"\nassert mcd(7, 13) == 1, f\"mcd(7, 13) devolvió {mcd(7, 13)!r}\"\nassert mcd(5, 0) == 5, f\"mcd(5, 0) devolvió {mcd(5, 0)!r}\"\nassert mcd(9, 9) == 9, f\"mcd(9, 9) devolvió {mcd(9, 9)!r}\"\nassert mcd(100, 75) == 25, f\"mcd(100, 75) devolvió {mcd(100, 75)!r}\"\n",
+  "solucion": "def mcd(a, b):\n    if b == 0:\n        return a\n    return mcd(b, a % b)\n",
+  "erroneas": [
+    "def mcd(a, b):\n    if b == 0:\n        return b\n    return mcd(b, a % b)\n",
+    "def mcd(a, b):\n    if b == 0:\n        return a\n    return mcd(a, a % b)\n",
+    "def mcd(a, b):\n    if b == 1:\n        return a\n    return mcd(b, a % b)\n"
+  ],
+  "pistas": [
+    "El caso base es `b == 0`: el resultado es `a`.",
+    "En la llamada recursiva, `b` pasa a ser el primer argumento y `a % b` el segundo."
+  ]
+}

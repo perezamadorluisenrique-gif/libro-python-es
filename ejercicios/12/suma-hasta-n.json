@@ -1,0 +1,18 @@
+{
+  "titulo": "Suma hasta n",
+  "capitulo": "12",
+  "seccion": "12.1 Conceptos básicos de la recursión",
+  "enunciado": "Define **recursivamente** `suma_hasta(n)`, que devuelve `1 + 2 + ... + n` para `n >= 0` (con `n = 0` devuelve `0`). No uses bucles ni `sum()`.\n\nEjemplo: `suma_hasta(4)` devuelve `10`.",
+  "inicial": "def suma_hasta(n):\n    # Escribe tu código aquí\n",
+  "pruebas": "assert suma_hasta(0) == 0, f\"suma_hasta(0) devolvió {suma_hasta(0)!r}\"\nassert suma_hasta(1) == 1, f\"suma_hasta(1) devolvió {suma_hasta(1)!r}\"\nassert suma_hasta(4) == 10, f\"suma_hasta(4) devolvió {suma_hasta(4)!r}\"\nassert suma_hasta(100) == 5050, f\"suma_hasta(100) devolvió {suma_hasta(100)!r}\"\n",
+  "solucion": "def suma_hasta(n):\n    if n == 0:\n        return 0\n    return n + suma_hasta(n - 1)\n",
+  "erroneas": [
+    "def suma_hasta(n):\n    if n == 1:\n        return 0\n    return n + suma_hasta(n - 1)\n",
+    "def suma_hasta(n):\n    if n == 0:\n        return 0\n    return suma_hasta(n - 1)\n",
+    "def suma_hasta(n):\n    if n == 0:\n        return 0\n    return n + suma_hasta(n + 1)\n"
+  ],
+  "pistas": [
+    "El caso base es `n == 0`, que devuelve 0.",
+    "El caso recursivo suma `n` al resultado para `n - 1`."
+  ]
+}

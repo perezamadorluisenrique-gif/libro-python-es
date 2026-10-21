@@ -1,0 +1,18 @@
+{
+  "titulo": "Área del rectángulo",
+  "capitulo": "01",
+  "seccion": "1.5 Conceptos básicos de números",
+  "enunciado": "Las variables `ancho` y `alto` guardan las medidas de un rectángulo. Imprime su área (solo el número).\n\nEjemplo: con `ancho = 8` y `alto = 5` se imprime:\n\n```text\n40\n```",
+  "inicial": "ancho = 8\nalto = 5\n\n# Escribe tu código aquí\n",
+  "pruebas": "assert __salida__.strip() == \"40\", f\"se esperaba 40 y se imprimió {__salida__.strip()!r}\"\n",
+  "solucion": "ancho = 8\nalto = 5\n\nprint(ancho * alto)\n",
+  "erroneas": [
+    "ancho = 8\nalto = 5\n\nprint(ancho + alto)\n",
+    "ancho = 8\nalto = 5\n\nprint(\"ancho * alto\")\n",
+    "ancho = 8\nalto = 5\n\nprint(2 * (ancho + alto))\n"
+  ],
+  "pistas": [
+    "El área es base por altura.",
+    "El operador de multiplicación es `*`."
+  ]
+}

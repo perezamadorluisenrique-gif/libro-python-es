@@ -1,0 +1,18 @@
+{
+  "titulo": "Suma una columna de un CSV",
+  "capitulo": "14",
+  "seccion": "14.3 Archivos en distintas ubicaciones y trabajo con archivos CSV",
+  "enunciado": "Escribe `suma_columna(nombre, indice)` que lea un archivo CSV simple (valores separados por comas, **primera fila de encabezados**) y devuelva la suma, como número, de los valores de la columna `indice` (empezando en 0), ignorando el encabezado.\n\n```text\nproducto,cantidad\nlápiz,3\ncuaderno,5\n```\n\n`suma_columna(\"ventas.csv\", 1)` devuelve `8`.",
+  "inicial": "def suma_columna(nombre, indice):\n    # Escribe tu código aquí\n",
+  "pruebas": "with open(\"ej14_ventas.csv\", \"w\") as f:\n    f.write(\"producto,cantidad,precio\\nlapiz,3,1.5\\ncuaderno,5,4\\nregla,2,2.5\\n\")\nassert suma_columna(\"ej14_ventas.csv\", 1) == 10, f\"columna 1: {suma_columna('ej14_ventas.csv', 1)!r}\"\nassert abs(suma_columna(\"ej14_ventas.csv\", 2) - 8.0) < 1e-9, f\"columna 2: {suma_columna('ej14_ventas.csv', 2)!r}\"\nwith open(\"ej14_ventas.csv\", \"w\") as f:\n    f.write(\"a,b\\n\")\nassert suma_columna(\"ej14_ventas.csv\", 1) == 0, \"solo encabezado: suma 0\"\n",
+  "solucion": "def suma_columna(nombre, indice):\n    with open(nombre, \"r\") as f:\n        filas = f.readlines()\n    total = 0\n    for fila in filas[1:]:\n        campos = fila.strip().split(\",\")\n        total += float(campos[indice])\n    return total\n",
+  "erroneas": [
+    "def suma_columna(nombre, indice):\n    with open(nombre, \"r\") as f:\n        filas = f.readlines()\n    total = 0\n    for fila in filas:\n        campos = fila.strip().split(\",\")\n        total += float(campos[indice])\n    return total\n",
+    "def suma_columna(nombre, indice):\n    with open(nombre, \"r\") as f:\n        filas = f.readlines()\n    total = 0\n    for fila in filas[1:]:\n        campos = fila.strip().split(\",\")\n        total += campos[indice]\n    return total\n",
+    "def suma_columna(nombre, indice):\n    with open(nombre, \"r\") as f:\n        filas = f.readlines()\n    total = 0\n    for fila in filas[1:]:\n        campos = fila.strip().split(\",\")\n        total = float(campos[indice])\n    return total\n"
+  ],
+  "pistas": [
+    "Salta el encabezado con `filas[1:]`.",
+    "Los campos leídos son cadenas: conviértelos con `float()` antes de sumar."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "titulo": "Filtra registros",
+  "capitulo": "15",
+  "seccion": "15.4 Análisis exploratorio de datos",
+  "enunciado": "Un conjunto de datos se puede representar como lista de diccionarios (una fila por diccionario). Escribe `filtra(registros, campo, minimo)` que devuelva una **nueva** lista con los registros cuyo valor en `campo` sea mayor o igual que `minimo`, conservando el orden. No modifiques la lista original.\n\n```python\nfilas = [{\"ciudad\": \"Lima\", \"temp\": 24}, {\"ciudad\": \"Quito\", \"temp\": 15}]\nprint(filtra(filas, \"temp\", 20))  # [{'ciudad': 'Lima', 'temp': 24}]\n```",
+  "inicial": "def filtra(registros, campo, minimo):\n    # Escribe tu código aquí\n",
+  "pruebas": "filas = [{\"ciudad\": \"Lima\", \"temp\": 24}, {\"ciudad\": \"Quito\", \"temp\": 15}, {\"ciudad\": \"Cali\", \"temp\": 20}]\ncopia = [dict(f) for f in filas]\nr = filtra(filas, \"temp\", 20)\nassert [f[\"ciudad\"] for f in r] == [\"Lima\", \"Cali\"], f\"ciudades filtradas: {[f['ciudad'] for f in r]!r} (20 sí cumple «mayor o igual»)\"\nassert filas == copia, \"no debes modificar la lista original\"\nassert filtra(filas, \"temp\", 100) == [], \"ninguno cumple: lista vacía\"\nassert len(filtra(filas, \"temp\", 0)) == 3, \"todos cumplen\"\nassert filtra([], \"temp\", 0) == [], \"entrada vacía\"\n",
+  "solucion": "def filtra(registros, campo, minimo):\n    resultado = []\n    for fila in registros:\n        if fila[campo] >= minimo:\n            resultado.append(fila)\n    return resultado\n",
+  "erroneas": [
+    "def filtra(registros, campo, minimo):\n    resultado = []\n    for fila in registros:\n        if fila[campo] > minimo:\n            resultado.append(fila)\n    return resultado\n",
+    "def filtra(registros, campo, minimo):\n    for fila in registros:\n        if fila[campo] < minimo:\n            registros.remove(fila)\n    return registros\n",
+    "def filtra(registros, campo, minimo):\n    resultado = []\n    for fila in registros:\n        if fila[campo] >= minimo:\n            resultado.append(fila[campo])\n    return resultado\n"
+  ],
+  "pistas": [
+    "Construye una lista nueva y agrega solo las filas que cumplen la condición.",
+    "Quitar elementos de una lista mientras la recorres altera el resultado y además la modifica."
+  ]
+}

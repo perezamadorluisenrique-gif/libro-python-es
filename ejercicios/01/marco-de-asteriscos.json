@@ -1,0 +1,18 @@
+{
+  "titulo": "Marco de asteriscos",
+  "capitulo": "01",
+  "seccion": "1.4 Conceptos básicos de cadenas",
+  "enunciado": "La variable `titulo` guarda un texto. Imprime tres líneas: una fila de asteriscos de la misma longitud que el texto, el texto y otra fila igual de asteriscos.\n\nEjemplo con `titulo = \"Python\"`:\n\n```text\n******\nPython\n******\n```",
+  "inicial": "titulo = \"Python\"\n\n# Escribe tu código aquí\n",
+  "pruebas": "l = __salida__.splitlines()\nassert l == [\"******\", \"Python\", \"******\"], f\"salida: {l!r}\"\n",
+  "solucion": "titulo = \"Python\"\n\nprint(\"*\" * len(titulo))\nprint(titulo)\nprint(\"*\" * len(titulo))\n",
+  "erroneas": [
+    "titulo = \"Python\"\n\nprint(\"*\" * 5)\nprint(titulo)\nprint(\"*\" * 5)\n",
+    "titulo = \"Python\"\n\nprint(\"*\" * len(titulo))\nprint(titulo)\n",
+    "titulo = \"Python\"\n\nprint(\"*\" + len(titulo))\nprint(titulo)\nprint(\"*\" * len(titulo))\n"
+  ],
+  "pistas": [
+    "`len(texto)` da la cantidad de caracteres.",
+    "Multiplicar una cadena por un entero la repite."
+  ]
+}

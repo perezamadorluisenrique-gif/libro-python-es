@@ -1,0 +1,18 @@
+{
+  "titulo": "Ordena sin perder el original",
+  "capitulo": "09",
+  "seccion": "9.2 Ordenamiento e inversión de listas",
+  "enunciado": "Define `top_tres(puntajes)`, que devuelve una lista **nueva** con los tres puntajes más altos, de mayor a menor. La lista original no debe cambiar de orden. Si hay menos de tres, devuelve todos ordenados.\n\nEjemplo: `top_tres([50, 90, 70, 60])` devuelve `[90, 70, 60]`.",
+  "inicial": "def top_tres(puntajes):\n    # Escribe tu código aquí\n",
+  "pruebas": "orig = [50, 90, 70, 60]\nr = top_tres(orig)\nassert r == [90, 70, 60], f\"top_tres([50, 90, 70, 60]) devolvió {r!r}\"\nassert orig == [50, 90, 70, 60], f\"la lista original cambió: {orig!r}\"\nassert top_tres([5, 8]) == [8, 5], f\"top_tres([5, 8]) devolvió {top_tres([5, 8])!r}\"\nassert top_tres([]) == [], \"con lista vacía debe devolver []\"\nassert top_tres([3, 3, 1, 3]) == [3, 3, 3], f\"top_tres([3, 3, 1, 3]) devolvió {top_tres([3, 3, 1, 3])!r}\"\n",
+  "solucion": "def top_tres(puntajes):\n    copia = sorted(puntajes, reverse=True)\n    return copia[:3]\n",
+  "erroneas": [
+    "def top_tres(puntajes):\n    puntajes.sort(reverse=True)\n    return puntajes[:3]\n",
+    "def top_tres(puntajes):\n    copia = sorted(puntajes)\n    return copia[:3]\n",
+    "def top_tres(puntajes):\n    copia = sorted(puntajes, reverse=True)\n    return copia[:2]\n"
+  ],
+  "pistas": [
+    "`sorted()` devuelve una lista nueva; `sort()` modifica la original.",
+    "Para mayor a menor usa `reverse=True` y luego una rebanada `[:3]`."
+  ]
+}

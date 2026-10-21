@@ -1,0 +1,18 @@
+{
+  "titulo": "Área del círculo con math",
+  "capitulo": "07",
+  "seccion": "7.1 Conceptos básicos de los módulos",
+  "enunciado": "Importa el módulo `math` y define `area_circulo(radio)` que devuelva el área de un círculo (`pi * radio ** 2`) usando `math.pi`.\n\nEjemplo: `area_circulo(1)` devuelve `3.14159...`.",
+  "inicial": "# Escribe tu código aquí\n\ndef area_circulo(radio):\n    pass\n",
+  "pruebas": "import math as _m\nassert abs(area_circulo(1) - _m.pi) < 1e-9, f\"area_circulo(1) devolvió {area_circulo(1)!r}\"\nassert abs(area_circulo(2) - 4 * _m.pi) < 1e-9, f\"area_circulo(2) devolvió {area_circulo(2)!r}\"\nassert area_circulo(0) == 0, f\"area_circulo(0) devolvió {area_circulo(0)!r}\"\nassert abs(area_circulo(10) - 100 * _m.pi) < 1e-9, f\"area_circulo(10) devolvió {area_circulo(10)!r}\"\n",
+  "solucion": "import math\n\ndef area_circulo(radio):\n    return math.pi * radio ** 2\n",
+  "erroneas": [
+    "import math\n\ndef area_circulo(radio):\n    return math.pi * radio * 2\n",
+    "import math\n\ndef area_circulo(radio):\n    return 3.14 * radio ** 2\n",
+    "import math\n\ndef area_circulo(radio):\n    return 2 * math.pi * radio\n"
+  ],
+  "pistas": [
+    "Empieza con `import math` y usa `math.pi`.",
+    "`**` eleva a una potencia: `radio ** 2`."
+  ]
+}

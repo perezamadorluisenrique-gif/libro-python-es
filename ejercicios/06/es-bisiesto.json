@@ -1,0 +1,18 @@
+{
+  "titulo": "¿Año bisiesto?",
+  "capitulo": "06",
+  "seccion": "6.5 Valores de retorno",
+  "enunciado": "Define `es_bisiesto(anio)` que devuelva `True` si el año es bisiesto y `False` si no. Un año es bisiesto si es divisible entre 4, salvo los divisibles entre 100 que no lo sean también entre 400.\n\nEjemplos: `es_bisiesto(2024)` es `True`; `es_bisiesto(1900)` es `False`; `es_bisiesto(2000)` es `True`.",
+  "inicial": "def es_bisiesto(anio):\n    # Escribe tu código aquí\n    pass\n",
+  "pruebas": "for anio, esperado in [(2024, True), (2023, False), (1900, False), (2000, True), (2100, False), (1996, True), (2400, True), (7, False)]:\n    obtenido = es_bisiesto(anio)\n    assert obtenido is esperado, f\"es_bisiesto({anio}) devolvió {obtenido!r}, se esperaba {esperado!r}\"\n",
+  "solucion": "def es_bisiesto(anio):\n    if anio % 400 == 0:\n        return True\n    if anio % 100 == 0:\n        return False\n    return anio % 4 == 0\n",
+  "erroneas": [
+    "def es_bisiesto(anio):\n    return anio % 4 == 0\n",
+    "def es_bisiesto(anio):\n    if anio % 100 == 0:\n        return False\n    return anio % 4 == 0\n",
+    "def es_bisiesto(anio):\n    if anio % 4 == 0:\n        print(True)\n    else:\n        print(False)\n"
+  ],
+  "pistas": [
+    "Comprueba primero el caso más específico (divisible entre 400).",
+    "Devuelve booleanos, no los imprimas."
+  ]
+}

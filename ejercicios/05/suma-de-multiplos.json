@@ -1,0 +1,18 @@
+{
+  "titulo": "Suma de múltiplos de 3",
+  "capitulo": "05",
+  "seccion": "5.2 Bucle for",
+  "enunciado": "Usa un bucle `for` con `range` para guardar en `total` la suma de todos los múltiplos de 3 que hay entre 1 y 50 (ambos incluidos).\n\nEjemplo: los múltiplos de 3 hasta 10 son 3, 6 y 9, que suman 18.",
+  "inicial": "total = 0\n\n# Escribe tu código aquí\n",
+  "pruebas": "assert total == 408, f\"total vale {total!r}, se esperaba 408\"\n",
+  "solucion": "total = 0\n\nfor n in range(1, 51):\n    if n % 3 == 0:\n        total += n\n",
+  "erroneas": [
+    "total = 0\n\nfor n in range(1, 48):\n    if n % 3 == 0:\n        total += n\n",
+    "total = 0\n\nfor n in range(1, 51):\n    if n % 3 == 0:\n        total = n\n",
+    "total = 0\n\nfor n in range(3, 51, 3):\n    total += 1\n"
+  ],
+  "pistas": [
+    "`range(1, 51)` llega hasta 50.",
+    "Un número es múltiplo de 3 si `n % 3 == 0`."
+  ]
+}

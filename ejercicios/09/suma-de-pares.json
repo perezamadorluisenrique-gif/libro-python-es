@@ -1,0 +1,18 @@
+{
+  "titulo": "Suma de pares",
+  "capitulo": "09",
+  "seccion": "9.1 Modificación e iteración de listas",
+  "enunciado": "Define `suma_pares(numeros)`, que recibe una lista de enteros y devuelve la suma de los que son pares (sin modificar la lista).\n\nEjemplo: `suma_pares([1, 2, 3, 4])` devuelve `6`. Con una lista vacía devuelve `0`.",
+  "inicial": "def suma_pares(numeros):\n    # Escribe tu código aquí\n",
+  "pruebas": "assert suma_pares([1, 2, 3, 4]) == 6, f\"suma_pares([1, 2, 3, 4]) devolvió {suma_pares([1, 2, 3, 4])!r}\"\nassert suma_pares([]) == 0, \"con lista vacía debe devolver 0\"\nassert suma_pares([7, 9]) == 0, \"sin pares debe devolver 0\"\nassert suma_pares([0, -2, -3]) == -2, f\"suma_pares([0, -2, -3]) devolvió {suma_pares([0, -2, -3])!r}\"\nl = [2, 4]\nsuma_pares(l)\nassert l == [2, 4], \"no debes modificar la lista\"\n",
+  "solucion": "def suma_pares(numeros):\n    total = 0\n    for n in numeros:\n        if n % 2 == 0:\n            total += n\n    return total\n",
+  "erroneas": [
+    "def suma_pares(numeros):\n    total = 0\n    for n in numeros:\n        if n % 2 == 1:\n            total += n\n    return total\n",
+    "def suma_pares(numeros):\n    total = 0\n    for n in numeros:\n        if n % 2 == 0:\n            total = n\n    return total\n",
+    "def suma_pares(numeros):\n    total = 0\n    for n in numeros:\n        if n % 2 == 0:\n            total += n\n            print(total)\n"
+  ],
+  "pistas": [
+    "Recorre la lista con `for` y usa `n % 2 == 0` para detectar pares.",
+    "Acumula con `+=` y devuelve (`return`) el total al final."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "titulo": "Tipo de triángulo",
+  "capitulo": "04",
+  "seccion": "4.6 Decisiones anidadas",
+  "enunciado": "Las variables `a`, `b` y `c` son los lados de un triángulo. Si cada lado es menor que la suma de los otros dos, es un triángulo válido; entonces guarda en `tipo` `\"equilatero\"` (tres lados iguales), `\"isosceles\"` (exactamente dos iguales) o `\"escaleno\"` (ninguno igual). Si no es válido, `tipo` es `\"invalido\"`. Imprime `tipo`.\n\nEjemplo con 2, 2 y 9 (no cierran un triángulo):\n\n```text\ninvalido\n```",
+  "inicial": "a = 2\nb = 2\nc = 9\n\n# Escribe tu código aquí\n",
+  "pruebas": "assert tipo == \"invalido\", f\"con 2, 2, 9 tipo vale {tipo!r}\"\nassert __salida__.strip() == \"invalido\", f\"se imprimió {__salida__.strip()!r}\"\n",
+  "solucion": "a = 2\nb = 2\nc = 9\n\nif a < b + c and b < a + c and c < a + b:\n    if a == b == c:\n        tipo = \"equilatero\"\n    elif a == b or b == c or a == c:\n        tipo = \"isosceles\"\n    else:\n        tipo = \"escaleno\"\nelse:\n    tipo = \"invalido\"\nprint(tipo)\n",
+  "erroneas": [
+    "a = 2\nb = 2\nc = 9\n\nif a == b == c:\n    tipo = \"equilatero\"\nelif a == b:\n    tipo = \"isosceles\"\nelse:\n    tipo = \"escaleno\"\nprint(tipo)\n",
+    "a = 2\nb = 2\nc = 9\n\nif a == b or b == c or a == c:\n    tipo = \"equilatero\"\nelse:\n    tipo = \"escaleno\"\nprint(tipo)\n",
+    "a = 2\nb = 2\nc = 9\n\nif a < b + c:\n    tipo = \"escaleno\"\nelse:\n    tipo = \"invalido\"\nprint(tipo)\n"
+  ],
+  "pistas": [
+    "Comprueba primero la validez y dentro decide el tipo.",
+    "Con tres lados iguales, `a == b == c` es `True`."
+  ]
+}

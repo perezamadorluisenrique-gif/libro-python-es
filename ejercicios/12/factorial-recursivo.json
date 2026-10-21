@@ -1,0 +1,18 @@
+{
+  "titulo": "Factorial recursivo",
+  "capitulo": "12",
+  "seccion": "12.2 Recursión matemática sencilla",
+  "enunciado": "Define `factorial(n)` de forma recursiva: `0! = 1` y `n! = n * (n-1)!`. No uses bucles.\n\nEjemplo: `factorial(5)` devuelve `120`.",
+  "inicial": "def factorial(n):\n    # Escribe tu código aquí\n",
+  "pruebas": "assert factorial(0) == 1, f\"factorial(0) devolvió {factorial(0)!r}\"\nassert factorial(1) == 1, f\"factorial(1) devolvió {factorial(1)!r}\"\nassert factorial(5) == 120, f\"factorial(5) devolvió {factorial(5)!r}\"\nassert factorial(10) == 3628800, f\"factorial(10) devolvió {factorial(10)!r}\"\n",
+  "solucion": "def factorial(n):\n    if n == 0:\n        return 1\n    return n * factorial(n - 1)\n",
+  "erroneas": [
+    "def factorial(n):\n    if n == 0:\n        return 0\n    return n * factorial(n - 1)\n",
+    "def factorial(n):\n    if n == 0:\n        return 1\n    return n + factorial(n - 1)\n",
+    "def factorial(n):\n    if n == 1:\n        return 1\n    return n * factorial(n - 1)\n"
+  ],
+  "pistas": [
+    "El caso base `factorial(0)` debe valer 1 (no 0).",
+    "Multiplica `n` por el factorial de `n - 1`."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "titulo": "Dado reproducible",
+  "capitulo": "07",
+  "seccion": "7.3 Código de nivel superior",
+  "enunciado": "Importa `random` y define `tirar_dados(n, semilla)` que devuelva una lista con `n` tiradas de un dado de seis caras (`random.randint(1, 6)`). Antes de tirar, llama a `random.seed(semilla)` para que la misma semilla dé siempre la misma lista.\n\nEjemplo: `tirar_dados(3, 7)` devuelve siempre la misma lista de 3 valores entre 1 y 6.",
+  "inicial": "import random\n\ndef tirar_dados(n, semilla):\n    # Escribe tu código aquí\n    pass\n",
+  "pruebas": "a = tirar_dados(5, 42)\nb = tirar_dados(5, 42)\nassert isinstance(a, list) and len(a) == 5, f\"tirar_dados(5, 42) devolvió {a!r}\"\nassert a == b, f\"con la misma semilla se obtuvo {a!r} y luego {b!r}\"\nassert tirar_dados(0, 1) == [], \"con n = 0 debe devolver la lista vacía\"\ngrande = tirar_dados(300, 3)\nassert len(grande) == 300, f\"se esperaban 300 tiradas y hay {len(grande)}\"\nassert min(grande) == 1 and max(grande) == 6, f\"los valores deben ir de 1 a 6, pero van de {min(grande)} a {max(grande)}\"\nassert set(grande) == {1, 2, 3, 4, 5, 6}, \"deberían aparecer las seis caras\"\nassert tirar_dados(10, 1) != tirar_dados(10, 2), \"semillas distintas deberían dar tiradas distintas\"\n",
+  "solucion": "import random\n\ndef tirar_dados(n, semilla):\n    random.seed(semilla)\n    tiradas = []\n    for _ in range(n):\n        tiradas.append(random.randint(1, 6))\n    return tiradas\n",
+  "erroneas": [
+    "import random\n\ndef tirar_dados(n, semilla):\n    tiradas = []\n    for _ in range(n):\n        tiradas.append(random.randint(1, 6))\n    return tiradas\n",
+    "import random\n\ndef tirar_dados(n, semilla):\n    random.seed(semilla)\n    tiradas = []\n    for _ in range(n):\n        tiradas.append(random.randint(1, 5))\n    return tiradas\n",
+    "import random\n\ndef tirar_dados(n, semilla):\n    random.seed(semilla)\n    tiradas = []\n    for _ in range(n):\n        random.seed(semilla)\n        tiradas.append(random.randint(1, 6))\n    return tiradas\n"
+  ],
+  "pistas": [
+    "`random.seed(semilla)` se llama una sola vez, antes del bucle.",
+    "`randint(1, 6)` incluye ambos extremos."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "titulo": "Corregir y agregar",
+  "capitulo": "03",
+  "seccion": "3.4 Conceptos básicos de las listas",
+  "enunciado": "La lista `notas` tiene un error en la segunda posición: debería ser 9, no 5. Corrígelo modificando la lista y después agrega al final la nota 7. No crees una lista nueva.\n\nResultado esperado: `[6, 9, 8, 7]`.",
+  "inicial": "notas = [6, 5, 8]\n\n# Escribe tu código aquí\n",
+  "pruebas": "assert notas == [6, 9, 8, 7], f\"notas vale {notas!r}\"\n",
+  "solucion": "notas = [6, 5, 8]\n\nnotas[1] = 9\nnotas.append(7)\n",
+  "erroneas": [
+    "notas = [6, 5, 8]\n\nnotas[2] = 9\nnotas.append(7)\n",
+    "notas = [6, 5, 8]\n\nnotas[1] = 9\nnotas.append(notas)\n",
+    "notas = [6, 5, 8]\n\nnotas[1] = 9\nnotas = notas + 7\n"
+  ],
+  "pistas": [
+    "El segundo elemento tiene índice 1.",
+    "`lista.append(x)` agrega `x` al final."
+  ]
+}

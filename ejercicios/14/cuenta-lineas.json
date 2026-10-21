@@ -1,0 +1,18 @@
+{
+  "titulo": "Cuenta las líneas",
+  "capitulo": "14",
+  "seccion": "14.1 Lectura de archivos",
+  "enunciado": "Escribe la función `cuenta_lineas(nombre)` que abra el archivo de texto `nombre`, lo lea y devuelva cuántas líneas tiene. Un archivo vacío tiene 0 líneas.\n\n```python\n# si notas.txt contiene \"a\\nb\\nc\\n\"\nprint(cuenta_lineas(\"notas.txt\"))  # 3\n```",
+  "inicial": "def cuenta_lineas(nombre):\n    # Escribe tu código aquí\n",
+  "pruebas": "with open(\"ej14_cuenta.txt\", \"w\") as f:\n    f.write(\"a\\nb\\nc\\n\")\nassert cuenta_lineas(\"ej14_cuenta.txt\") == 3, f\"devolvió {cuenta_lineas('ej14_cuenta.txt')!r}\"\nwith open(\"ej14_cuenta.txt\", \"w\") as f:\n    f.write(\"uno\\ndos\")\nassert cuenta_lineas(\"ej14_cuenta.txt\") == 2, \"la última línea sin salto final también cuenta\"\nwith open(\"ej14_cuenta.txt\", \"w\") as f:\n    pass\nassert cuenta_lineas(\"ej14_cuenta.txt\") == 0, \"archivo vacío debe dar 0\"\n",
+  "solucion": "def cuenta_lineas(nombre):\n    with open(nombre, \"r\") as f:\n        lineas = f.readlines()\n    return len(lineas)\n",
+  "erroneas": [
+    "def cuenta_lineas(nombre):\n    with open(nombre, \"r\") as f:\n        texto = f.read()\n    return texto.count(\"\\n\")\n",
+    "def cuenta_lineas(nombre):\n    with open(nombre, \"r\") as f:\n        lineas = f.readlines()\n    return len(lineas) - 1\n",
+    "def cuenta_lineas(nombre):\n    with open(nombre, \"r\") as f:\n        lineas = f.readlines()\n    print(len(lineas))\n"
+  ],
+  "pistas": [
+    "`readlines()` devuelve una lista con una cadena por línea.",
+    "Si tu función cuenta saltos de línea, una última línea sin `\\n` se pierde."
+  ]
+}

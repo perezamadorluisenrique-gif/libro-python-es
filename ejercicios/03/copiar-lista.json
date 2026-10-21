@@ -1,0 +1,18 @@
+{
+  "titulo": "Copia independiente",
+  "capitulo": "03",
+  "seccion": "3.3 Repaso de las variables",
+  "enunciado": "Asignar `copia = original` no crea otra lista: ambos nombres apuntan al mismo objeto. Crea en `copia` una lista **nueva** con los mismos elementos que `original` (por ejemplo con `list(original)`), y luego agrega `99` a `copia`. `original` no debe cambiar.",
+  "inicial": "original = [1, 2, 3]\n\n# Escribe tu código aquí\n",
+  "pruebas": "assert original == [1, 2, 3], f\"original cambió: {original!r}\"\nassert copia == [1, 2, 3, 99], f\"copia vale {copia!r}\"\nassert copia is not original, \"copia sigue siendo el mismo objeto que original\"\n",
+  "solucion": "original = [1, 2, 3]\n\ncopia = list(original)\ncopia.append(99)\n",
+  "erroneas": [
+    "original = [1, 2, 3]\n\ncopia = original\ncopia.append(99)\n",
+    "original = [1, 2, 3]\n\ncopia = list(original)\n",
+    "original = [1, 2, 3]\n\ncopia = list(original)\noriginal.append(99)\n"
+  ],
+  "pistas": [
+    "`list(otra)` construye una lista nueva.",
+    "`is` te dice si dos nombres son el mismo objeto."
+  ]
+}

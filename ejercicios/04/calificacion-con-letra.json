@@ -1,0 +1,18 @@
+{
+  "titulo": "Calificación con letra",
+  "capitulo": "04",
+  "seccion": "4.5 Decisiones encadenadas",
+  "enunciado": "Según la variable `nota` (0 a 100), guarda en `letra` la calificación: `\"A\"` si es 90 o más, `\"B\"` si es 80 o más, `\"C\"` si es 70 o más y `\"D\"` en otro caso. Imprime `letra`.\n\nEjemplo con `nota = 80`:\n\n```text\nB\n```",
+  "inicial": "nota = 80\n\n# Escribe tu código aquí\n",
+  "pruebas": "assert letra == \"B\", f\"con nota=80 letra vale {letra!r}\"\nassert __salida__.strip() == \"B\", f\"se imprimió {__salida__.strip()!r}\"\n",
+  "solucion": "nota = 80\n\nif nota >= 90:\n    letra = \"A\"\nelif nota >= 80:\n    letra = \"B\"\nelif nota >= 70:\n    letra = \"C\"\nelse:\n    letra = \"D\"\nprint(letra)\n",
+  "erroneas": [
+    "nota = 80\n\nif nota > 90:\n    letra = \"A\"\nelif nota > 80:\n    letra = \"B\"\nelif nota > 70:\n    letra = \"C\"\nelse:\n    letra = \"D\"\nprint(letra)\n",
+    "nota = 80\n\nif nota >= 70:\n    letra = \"C\"\nelif nota >= 80:\n    letra = \"B\"\nelif nota >= 90:\n    letra = \"A\"\nelse:\n    letra = \"D\"\nprint(letra)\n",
+    "nota = 80\n\nif nota >= 90:\n    letra = \"A\"\nif nota >= 80:\n    letra = \"B\"\nif nota >= 70:\n    letra = \"C\"\nelse:\n    letra = \"D\"\nprint(letra)\n"
+  ],
+  "pistas": [
+    "Empieza por la condición más exigente.",
+    "Usa `elif` para encadenar."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "titulo": "Frases palíndromas",
+  "capitulo": "08",
+  "seccion": "8.2 Rebanado de cadenas",
+  "enunciado": "Define `es_palindromo(frase)` que devuelva `True` si la frase se lee igual al derecho y al revés, ignorando espacios y diferencias entre mayúsculas y minúsculas (sin tildes en los casos de prueba).\n\nEjemplo: `es_palindromo(\"Anita lava la tina\")` devuelve `True`; `es_palindromo(\"hola\")` devuelve `False`.",
+  "inicial": "def es_palindromo(frase):\n    # Escribe tu código aquí\n    pass\n",
+  "pruebas": "for frase, esperado in [(\"Anita lava la tina\", True), (\"hola\", False), (\"Ana\", True), (\"\", True), (\"a\", True), (\"Atar a la rata\", True), (\"ab\", False), (\"abca\", False)]:\n    obtenido = es_palindromo(frase)\n    assert obtenido is esperado, f\"es_palindromo({frase!r}) devolvió {obtenido!r}, se esperaba {esperado!r}\"\n",
+  "solucion": "def es_palindromo(frase):\n    limpia = frase.replace(\" \", \"\").lower()\n    return limpia == limpia[::-1]\n",
+  "erroneas": [
+    "def es_palindromo(frase):\n    return frase == frase[::-1]\n",
+    "def es_palindromo(frase):\n    limpia = frase.replace(\" \", \"\")\n    return limpia == limpia[::-1]\n",
+    "def es_palindromo(frase):\n    limpia = frase.replace(\" \", \"\").lower()\n    return limpia[0] == limpia[-1]\n"
+  ],
+  "pistas": [
+    "`texto[::-1]` da la cadena al revés.",
+    "Primero quita los espacios con `replace` y pasa todo a minúsculas."
+  ]
+}

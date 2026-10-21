@@ -1,0 +1,18 @@
+{
+  "titulo": "Suma por filas",
+  "capitulo": "09",
+  "seccion": "9.4 Listas anidadas",
+  "enunciado": "Una tabla se guarda como lista de listas. Define `suma_filas(tabla)`, que devuelve una lista con la suma de cada fila.\n\nEjemplo: `suma_filas([[1, 2], [3, 4, 5]])` devuelve `[3, 12]`. Una fila vacía suma `0`.",
+  "inicial": "def suma_filas(tabla):\n    # Escribe tu código aquí\n",
+  "pruebas": "assert suma_filas([[1, 2], [3, 4, 5]]) == [3, 12], f\"suma_filas([[1, 2], [3, 4, 5]]) devolvió {suma_filas([[1, 2], [3, 4, 5]])!r}\"\nassert suma_filas([]) == [], \"tabla vacía debe dar []\"\nassert suma_filas([[], [7]]) == [0, 7], f\"suma_filas([[], [7]]) devolvió {suma_filas([[], [7]])!r}\"\nassert suma_filas([[1], [1], [1]]) == [1, 1, 1], f\"suma_filas([[1], [1], [1]]) devolvió {suma_filas([[1], [1], [1]])!r}\"\n",
+  "solucion": "def suma_filas(tabla):\n    sumas = []\n    for fila in tabla:\n        sumas.append(sum(fila))\n    return sumas\n",
+  "erroneas": [
+    "def suma_filas(tabla):\n    total = 0\n    for fila in tabla:\n        total += sum(fila)\n    return [total]\n",
+    "def suma_filas(tabla):\n    sumas = []\n    for fila in tabla:\n        for n in fila:\n            sumas.append(n)\n    return sumas\n",
+    "def suma_filas(tabla):\n    sumas = []\n    for fila in tabla:\n        sumas.append(len(fila))\n    return sumas\n"
+  ],
+  "pistas": [
+    "Recorre cada fila y calcula `sum(fila)`.",
+    "Guarda cada suma en una lista nueva con `append()`."
+  ]
+}

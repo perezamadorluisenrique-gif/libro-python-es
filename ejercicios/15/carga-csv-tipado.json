@@ -1,0 +1,18 @@
+{
+  "titulo": "Carga un CSV con tipos",
+  "capitulo": "15",
+  "seccion": "15.3 pandas",
+  "enunciado": "Con el módulo `csv` de la biblioteca estándar, escribe `carga_csv(nombre)` que lea un CSV con encabezados y devuelva una lista de diccionarios (uno por fila). Los valores de la columna `\"edad\"` deben convertirse a `int` y los de `\"altura\"` a `float`; las demás columnas quedan como texto. Usa `csv.DictReader`.\n\n```python\n# personas.csv:  nombre,edad,altura / Ana,30,1.65\nprint(carga_csv(\"personas.csv\"))\n# [{'nombre': 'Ana', 'edad': 30, 'altura': 1.65}]\n```",
+  "inicial": "import csv\n\n\ndef carga_csv(nombre):\n    # Escribe tu código aquí\n",
+  "pruebas": "with open(\"ej15_personas.csv\", \"w\", newline=\"\") as f:\n    f.write(\"nombre,edad,altura\\nAna,30,1.65\\nLuis,25,1.8\\n\")\nr = carga_csv(\"ej15_personas.csv\")\nassert r == [{\"nombre\": \"Ana\", \"edad\": 30, \"altura\": 1.65}, {\"nombre\": \"Luis\", \"edad\": 25, \"altura\": 1.8}], f\"devolvió {r!r}\"\nassert type(r[0][\"edad\"]) is int, \"edad debe ser int\"\nassert type(r[0][\"altura\"]) is float, \"altura debe ser float\"\nwith open(\"ej15_personas.csv\", \"w\", newline=\"\") as f:\n    f.write(\"nombre,edad,altura\\n\")\nassert carga_csv(\"ej15_personas.csv\") == [], \"solo encabezado: lista vacía\"\n",
+  "solucion": "import csv\n\n\ndef carga_csv(nombre):\n    filas = []\n    with open(nombre, newline=\"\") as f:\n        for fila in csv.DictReader(f):\n            fila[\"edad\"] = int(fila[\"edad\"])\n            fila[\"altura\"] = float(fila[\"altura\"])\n            filas.append(dict(fila))\n    return filas\n",
+  "erroneas": [
+    "import csv\n\n\ndef carga_csv(nombre):\n    filas = []\n    with open(nombre, newline=\"\") as f:\n        for fila in csv.DictReader(f):\n            filas.append(dict(fila))\n    return filas\n",
+    "import csv\n\n\ndef carga_csv(nombre):\n    filas = []\n    with open(nombre, newline=\"\") as f:\n        for fila in csv.DictReader(f):\n            fila[\"edad\"] = int(fila[\"edad\"])\n            filas.append(dict(fila))\n    return filas\n",
+    "import csv\n\n\ndef carga_csv(nombre):\n    with open(nombre, newline=\"\") as f:\n        return list(csv.reader(f))\n"
+  ],
+  "pistas": [
+    "`csv.DictReader(f)` entrega cada fila como diccionario con los encabezados como claves.",
+    "Todo lo que lee el módulo `csv` llega como texto: convierte con `int()` y `float()`."
+  ]
+}

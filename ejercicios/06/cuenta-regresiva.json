@@ -1,0 +1,18 @@
+{
+  "titulo": "Cuenta regresiva",
+  "capitulo": "06",
+  "seccion": "6.2 Flujo de control",
+  "enunciado": "Define `cuenta_regresiva(n)` que devuelva una lista con los números desde `n` hasta 1, de mayor a menor. Si `n` es 0 o negativo, devuelve la lista vacía.\n\nEjemplo: `cuenta_regresiva(3)` devuelve `[3, 2, 1]`.",
+  "inicial": "def cuenta_regresiva(n):\n    # Escribe tu código aquí\n    pass\n",
+  "pruebas": "assert cuenta_regresiva(3) == [3, 2, 1], f\"cuenta_regresiva(3) devolvió {cuenta_regresiva(3)!r}\"\nassert cuenta_regresiva(1) == [1], f\"cuenta_regresiva(1) devolvió {cuenta_regresiva(1)!r}\"\nassert cuenta_regresiva(0) == [], f\"cuenta_regresiva(0) devolvió {cuenta_regresiva(0)!r}\"\nassert cuenta_regresiva(-4) == [], f\"cuenta_regresiva(-4) devolvió {cuenta_regresiva(-4)!r}\"\nassert cuenta_regresiva(6) == [6, 5, 4, 3, 2, 1], f\"cuenta_regresiva(6) devolvió {cuenta_regresiva(6)!r}\"\n",
+  "solucion": "def cuenta_regresiva(n):\n    resultado = []\n    while n > 0:\n        resultado.append(n)\n        n -= 1\n    return resultado\n",
+  "erroneas": [
+    "def cuenta_regresiva(n):\n    resultado = []\n    while n > 1:\n        resultado.append(n)\n        n -= 1\n    return resultado\n",
+    "def cuenta_regresiva(n):\n    return list(range(1, n + 1))\n",
+    "def cuenta_regresiva(n):\n    resultado = []\n    while n >= 0:\n        resultado.append(n)\n        n -= 1\n    return resultado\n"
+  ],
+  "pistas": [
+    "Un bucle `while n > 0` que añade `n` y lo reduce sirve.",
+    "Con `n <= 0` el bucle no debe ejecutarse ni una vez."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "titulo": "Hipotenusa",
+  "capitulo": "02",
+  "seccion": "2.6 El módulo math",
+  "enunciado": "Usa el módulo `math` para calcular la hipotenusa de un triángulo rectángulo con catetos `a` y `b`. Guarda el resultado en `h` e imprímelo.\n\nEjemplo con `a = 5` y `b = 12`:\n\n```text\n13.0\n```",
+  "inicial": "import math\n\na = 5\nb = 12\n\n# Escribe tu código aquí\n",
+  "pruebas": "assert h == 13.0, f\"h vale {h!r}\"\nassert __salida__.strip() == \"13.0\", f\"se imprimió {__salida__.strip()!r}\"\n",
+  "solucion": "import math\n\na = 5\nb = 12\n\nh = math.sqrt(a ** 2 + b ** 2)\nprint(h)\n",
+  "erroneas": [
+    "import math\n\na = 5\nb = 12\n\nh = math.sqrt(a + b)\nprint(h)\n",
+    "import math\n\na = 5\nb = 12\n\nh = math.sqrt(a ** 2) + math.sqrt(b ** 2)\nprint(h)\n",
+    "import math\n\na = 5\nb = 12\n\nh = a ** 2 + b ** 2\nprint(h)\n"
+  ],
+  "pistas": [
+    "Teorema de Pitágoras: raíz de a² + b².",
+    "`math.sqrt(x)` calcula la raíz cuadrada; `**` es la potencia."
+  ]
+}

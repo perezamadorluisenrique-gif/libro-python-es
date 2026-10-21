@@ -1,0 +1,18 @@
+{
+  "titulo": "De texto a número",
+  "capitulo": "02",
+  "seccion": "2.2 Conversión de tipos",
+  "enunciado": "La variable `entrada` guarda el texto `\"42\"`. Convierte el texto a entero y guarda en `resultado` ese número más 8. Imprime `resultado`.\n\nSalida esperada:\n\n```text\n50\n```",
+  "inicial": "entrada = \"42\"\n\n# Escribe tu código aquí\n",
+  "pruebas": "assert resultado == 50 and isinstance(resultado, int), f\"resultado vale {resultado!r}\"\nassert __salida__.strip() == \"50\", f\"se imprimió {__salida__.strip()!r}\"\n",
+  "solucion": "entrada = \"42\"\n\nresultado = int(entrada) + 8\nprint(resultado)\n",
+  "erroneas": [
+    "entrada = \"42\"\n\nresultado = entrada + 8\nprint(resultado)\n",
+    "entrada = \"42\"\n\nresultado = entrada + \"8\"\nprint(resultado)\n",
+    "entrada = \"42\"\n\nresultado = int(entrada + 8)\nprint(resultado)\n"
+  ],
+  "pistas": [
+    "No se puede sumar una cadena y un entero.",
+    "Usa `int(entrada)` antes de sumar."
+  ]
+}

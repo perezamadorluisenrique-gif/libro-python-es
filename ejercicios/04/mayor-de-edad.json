@@ -1,0 +1,18 @@
+{
+  "titulo": "¿Mayor de edad?",
+  "capitulo": "04",
+  "seccion": "4.2 Instrucciones if-else",
+  "enunciado": "La variable `edad` guarda la edad de una persona. Imprime `Mayor de edad` si tiene 18 años o más y `Menor de edad` en caso contrario.\n\nEjemplo con `edad = 18`:\n\n```text\nMayor de edad\n```",
+  "inicial": "edad = 18\n\n# Escribe tu código aquí\n",
+  "pruebas": "assert __salida__.strip() == \"Mayor de edad\", f\"con edad=18 se imprimió {__salida__.strip()!r}\"\n",
+  "solucion": "edad = 18\n\nif edad >= 18:\n    print(\"Mayor de edad\")\nelse:\n    print(\"Menor de edad\")\n",
+  "erroneas": [
+    "edad = 18\n\nif edad > 18:\n    print(\"Mayor de edad\")\nelse:\n    print(\"Menor de edad\")\n",
+    "edad = 18\n\nif edad >= 18:\n    print(\"Mayor de edad\")\nprint(\"Menor de edad\")\n",
+    "edad = 18\n\nprint(\"Mayor de edad\")\nprint(\"Menor de edad\")\n"
+  ],
+  "pistas": [
+    "18 cuenta como mayor: ¿`>` o `>=`?",
+    "Usa `if ...:` y `else:` con sangría."
+  ]
+}

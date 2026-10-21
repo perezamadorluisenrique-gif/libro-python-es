@@ -1,0 +1,18 @@
+{
+  "titulo": "Gráfico de barras en texto",
+  "capitulo": "15",
+  "seccion": "15.5 Visualización de datos",
+  "enunciado": "Visualizar no siempre requiere bibliotecas gráficas. Escribe `barras(datos)`, donde `datos` es un diccionario de etiqueta a cantidad entera, que devuelva una **lista de cadenas**, una por etiqueta (en el orden del diccionario), con el formato `\"<etiqueta> | <#...>\"`: la etiqueta, un espacio, la barra vertical, un espacio y tantos `#` como indique la cantidad.\n\n```python\nfor linea in barras({\"lun\": 3, \"mar\": 1}):\n    print(linea)\n# lun | ###\n# mar | #\n```",
+  "inicial": "def barras(datos):\n    # Escribe tu código aquí\n",
+  "pruebas": "r = barras({\"lun\": 3, \"mar\": 1})\nassert r == [\"lun | ###\", \"mar | #\"], f\"devolvió {r!r}\"\nassert barras({\"x\": 0}) == [\"x | \"], f\"cantidad 0: {barras({'x': 0})!r}\"\nassert barras({}) == [], \"diccionario vacío: lista vacía\"\nr = barras({\"a\": 5, \"b\": 2, \"c\": 4})\nassert r == [\"a | #####\", \"b | ##\", \"c | ####\"], f\"devolvió {r!r}\"\n",
+  "solucion": "def barras(datos):\n    lineas = []\n    for etiqueta, cantidad in datos.items():\n        lineas.append(f\"{etiqueta} | \" + \"#\" * cantidad)\n    return lineas\n",
+  "erroneas": [
+    "def barras(datos):\n    lineas = []\n    for etiqueta, cantidad in datos.items():\n        lineas.append(f\"{etiqueta} |\" + \"#\" * cantidad)\n    return lineas\n",
+    "def barras(datos):\n    for etiqueta, cantidad in datos.items():\n        print(f\"{etiqueta} | \" + \"#\" * cantidad)\n",
+    "def barras(datos):\n    lineas = []\n    for etiqueta, cantidad in datos.items():\n        lineas.append(f\"{etiqueta} | \" + \"#\" * (cantidad - 1))\n    return lineas\n"
+  ],
+  "pistas": [
+    "Multiplicar una cadena por un entero la repite: `\"#\" * 3`.",
+    "Devuelve la lista con `return`; no imprimas dentro de la función."
+  ]
+}

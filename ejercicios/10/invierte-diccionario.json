@@ -1,0 +1,18 @@
+{
+  "titulo": "Diccionario invertido",
+  "capitulo": "10",
+  "seccion": "10.3 Operaciones con diccionarios",
+  "enunciado": "Define `invertir(d)`, que recibe un diccionario cuyos valores son todos distintos y devuelve otro donde las claves y los valores intercambian su papel. No modifiques `d`.\n\nEjemplo: `invertir({\"uno\": 1, \"dos\": 2})` devuelve `{1: \"uno\", 2: \"dos\"}`.",
+  "inicial": "def invertir(d):\n    # Escribe tu código aquí\n",
+  "pruebas": "orig = {\"uno\": 1, \"dos\": 2}\nr = invertir(orig)\nassert r == {1: \"uno\", 2: \"dos\"}, f\"devolvió {r!r}\"\nassert orig == {\"uno\": 1, \"dos\": 2}, \"no debes modificar el diccionario original\"\nassert invertir({}) == {}, \"diccionario vacío\"\nassert invertir({\"a\": \"x\"}) == {\"x\": \"a\"}, \"un solo par\"\n",
+  "solucion": "def invertir(d):\n    nuevo = {}\n    for clave, valor in d.items():\n        nuevo[valor] = clave\n    return nuevo\n",
+  "erroneas": [
+    "def invertir(d):\n    nuevo = {}\n    for clave, valor in d.items():\n        nuevo[clave] = valor\n    return nuevo\n",
+    "def invertir(d):\n    for clave, valor in list(d.items()):\n        d[valor] = clave\n        del d[clave]\n    return d\n",
+    "def invertir(d):\n    return list(d.values())\n"
+  ],
+  "pistas": [
+    "Recorre con `d.items()` y guarda `nuevo[valor] = clave`.",
+    "Construye un diccionario nuevo en lugar de cambiar `d`."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "titulo": "Resumen estadístico",
+  "capitulo": "15",
+  "seccion": "15.2 NumPy",
+  "enunciado": "Sin pandas ni NumPy, la biblioteca estándar `statistics` ya resume datos. Escribe `resumen(datos)` que reciba una lista no vacía de números y devuelva un diccionario con las claves `\"minimo\"`, `\"maximo\"`, `\"media\"` y `\"mediana\"`.\n\n```python\nprint(resumen([4, 1, 7, 2]))\n# {'minimo': 1, 'maximo': 7, 'media': 3.5, 'mediana': 3.0}\n```",
+  "inicial": "import statistics\n\n\ndef resumen(datos):\n    # Escribe tu código aquí\n",
+  "pruebas": "r = resumen([4, 1, 7, 2])\nassert r == {\"minimo\": 1, \"maximo\": 7, \"media\": 3.5, \"mediana\": 3.0}, f\"resumen([4, 1, 7, 2]) devolvió {r!r}\"\nr = resumen([5])\nassert r == {\"minimo\": 5, \"maximo\": 5, \"media\": 5, \"mediana\": 5}, f\"un solo dato: {r!r}\"\nr = resumen([9, 1, 5])\nassert r[\"mediana\"] == 5, f\"la mediana de [9, 1, 5] es 5 (datos sin ordenar), no {r['mediana']!r}\"\nassert resumen([2, 4, 9])[\"media\"] == 5, \"media de [2, 4, 9]\"\n",
+  "solucion": "import statistics\n\n\ndef resumen(datos):\n    return {\n        \"minimo\": min(datos),\n        \"maximo\": max(datos),\n        \"media\": statistics.mean(datos),\n        \"mediana\": statistics.median(datos),\n    }\n",
+  "erroneas": [
+    "import statistics\n\n\ndef resumen(datos):\n    return {\n        \"minimo\": min(datos),\n        \"maximo\": max(datos),\n        \"media\": statistics.mean(datos),\n        \"mediana\": datos[len(datos) // 2],\n    }\n",
+    "import statistics\n\n\ndef resumen(datos):\n    return {\n        \"minimo\": datos[0],\n        \"maximo\": datos[-1],\n        \"media\": statistics.mean(datos),\n        \"mediana\": statistics.median(datos),\n    }\n",
+    "import statistics\n\n\ndef resumen(datos):\n    return {\n        \"minimo\": min(datos),\n        \"maximo\": max(datos),\n        \"media\": sum(datos) // len(datos),\n        \"mediana\": statistics.median(datos),\n    }\n"
+  ],
+  "pistas": [
+    "`statistics.mean()` y `statistics.median()` aceptan listas sin ordenar.",
+    "Para el mínimo y el máximo usa `min()` y `max()`, no posiciones."
+  ]
+}

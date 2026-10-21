@@ -1,0 +1,18 @@
+{
+  "titulo": "Limpia y normaliza",
+  "capitulo": "08",
+  "seccion": "8.1 Operaciones con cadenas",
+  "enunciado": "Define `normaliza(texto)` que devuelva el texto sin espacios al principio ni al final, todo en minúsculas.\n\nEjemplo: `normaliza(\"  HoLa Mundo \")` devuelve `\"hola mundo\"`.",
+  "inicial": "def normaliza(texto):\n    # Escribe tu código aquí\n    pass\n",
+  "pruebas": "for entrada, esperado in [(\"  HoLa Mundo \", \"hola mundo\"), (\"PYTHON\", \"python\"), (\"ya limpio\", \"ya limpio\"), (\"   \", \"\"), (\"\\tAbC\\n\", \"abc\"), (\" A  B \", \"a  b\")]:\n    obtenido = normaliza(entrada)\n    assert obtenido == esperado, f\"normaliza({entrada!r}) devolvió {obtenido!r}, se esperaba {esperado!r}\"\n",
+  "solucion": "def normaliza(texto):\n    return texto.strip().lower()\n",
+  "erroneas": [
+    "def normaliza(texto):\n    texto.strip()\n    texto.lower()\n    return texto\n",
+    "def normaliza(texto):\n    return texto.lower().replace(\" \", \"\")\n",
+    "def normaliza(texto):\n    return texto.strip().upper()\n"
+  ],
+  "pistas": [
+    "Las cadenas son inmutables: los métodos devuelven una cadena nueva.",
+    "Puedes encadenar: `texto.strip().lower()`."
+  ]
+}

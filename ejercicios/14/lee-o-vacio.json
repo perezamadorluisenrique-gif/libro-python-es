@@ -1,0 +1,18 @@
+{
+  "titulo": "Leer sin que se caiga",
+  "capitulo": "14",
+  "seccion": "14.4 Manejo de excepciones",
+  "enunciado": "Escribe `primera_linea(nombre)` que devuelva la primera línea del archivo `nombre` **sin el salto de línea final**. Si el archivo no existe, debe devolver la cadena `\"(sin archivo)\"`; si existe pero está vacío, devuelve `\"\"`. Usa `try` y `except`.\n\n```python\nprint(primera_linea(\"no_existe.txt\"))  # (sin archivo)\n```",
+  "inicial": "def primera_linea(nombre):\n    # Escribe tu código aquí\n",
+  "pruebas": "import os\nif os.path.exists(\"ej14_no_existe.txt\"):\n    os.remove(\"ej14_no_existe.txt\")\nassert primera_linea(\"ej14_no_existe.txt\") == \"(sin archivo)\", f\"archivo ausente: {primera_linea('ej14_no_existe.txt')!r}\"\nwith open(\"ej14_prim.txt\", \"w\") as f:\n    f.write(\"hola\\nmundo\\n\")\nassert primera_linea(\"ej14_prim.txt\") == \"hola\", f\"devolvió {primera_linea('ej14_prim.txt')!r}\"\nwith open(\"ej14_prim.txt\", \"w\") as f:\n    pass\nassert primera_linea(\"ej14_prim.txt\") == \"\", \"archivo vacío debe dar cadena vacía\"\n",
+  "solucion": "def primera_linea(nombre):\n    try:\n        with open(nombre, \"r\") as f:\n            return f.readline().rstrip(\"\\n\")\n    except FileNotFoundError:\n        return \"(sin archivo)\"\n",
+  "erroneas": [
+    "def primera_linea(nombre):\n    try:\n        with open(nombre, \"r\") as f:\n            return f.readline()\n    except FileNotFoundError:\n        return \"(sin archivo)\"\n",
+    "def primera_linea(nombre):\n    with open(nombre, \"r\") as f:\n        return f.readline().rstrip(\"\\n\")\n",
+    "def primera_linea(nombre):\n    try:\n        with open(nombre, \"r\") as f:\n            return f.read().rstrip(\"\\n\")\n    except FileNotFoundError:\n        return \"(sin archivo)\"\n"
+  ],
+  "pistas": [
+    "Abrir un archivo inexistente en modo lectura genera `FileNotFoundError`.",
+    "`readline()` lee una sola línea e incluye el `\\n`; quítalo con `rstrip(\"\\n\")`."
+  ]
+}

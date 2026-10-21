@@ -1,0 +1,18 @@
+{
+  "titulo": "Últimos caracteres",
+  "capitulo": "08",
+  "seccion": "8.2 Rebanado de cadenas",
+  "enunciado": "Define `ultimos(texto, n)` que devuelva los últimos `n` caracteres de `texto`. Si `n` es 0 devuelve `\"\"`; si `n` es mayor que la longitud, devuelve el texto completo.\n\nEjemplo: `ultimos(\"programa\", 3)` devuelve `\"ama\"`.",
+  "inicial": "def ultimos(texto, n):\n    # Escribe tu código aquí\n    pass\n",
+  "pruebas": "for texto, n, esperado in [(\"programa\", 3, \"ama\"), (\"programa\", 0, \"\"), (\"abc\", 3, \"abc\"), (\"abc\", 10, \"abc\"), (\"\", 2, \"\"), (\"hola\", 1, \"a\")]:\n    obtenido = ultimos(texto, n)\n    assert obtenido == esperado, f\"ultimos({texto!r}, {n}) devolvió {obtenido!r}, se esperaba {esperado!r}\"\n",
+  "solucion": "def ultimos(texto, n):\n    if n == 0:\n        return \"\"\n    return texto[-n:]\n",
+  "erroneas": [
+    "def ultimos(texto, n):\n    return texto[-n:]\n",
+    "def ultimos(texto, n):\n    if n == 0:\n        return \"\"\n    return texto[-n:-1]\n",
+    "def ultimos(texto, n):\n    return texto[:n]\n"
+  ],
+  "pistas": [
+    "`texto[-3:]` toma los últimos tres caracteres.",
+    "`texto[-0:]` es lo mismo que `texto[0:]`: trata el 0 aparte."
+  ]
+}

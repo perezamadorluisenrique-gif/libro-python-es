@@ -1,0 +1,18 @@
+{
+  "titulo": "Ficha de estudiante",
+  "capitulo": "03",
+  "seccion": "3.2 Cadenas con formato",
+  "enunciado": "Las variables `nombre`, `edad` y `nota` describen a un estudiante. Imprime una sola línea con f-string con este formato: nombre, edad, y la nota con un decimal.\n\nEjemplo con `\"Lucía\"`, `19`, `8.75`:\n\n```text\nLucía (19 años): 8.8\n```",
+  "inicial": "nombre = \"Lucía\"\nedad = 19\nnota = 8.75\n\n# Escribe tu código aquí\n",
+  "pruebas": "esperado = \"Lucía (19 años): 8.8\"\nassert __salida__.strip() == esperado, f\"se imprimió {__salida__.strip()!r}; se esperaba {esperado!r}\"\n",
+  "solucion": "nombre = \"Lucía\"\nedad = 19\nnota = 8.75\n\nprint(f\"{nombre} ({edad} años): {nota:.1f}\")\n",
+  "erroneas": [
+    "nombre = \"Lucía\"\nedad = 19\nnota = 8.75\n\nprint(f\"{nombre} ({edad} años): {nota}\")\n",
+    "nombre = \"Lucía\"\nedad = 19\nnota = 8.75\n\nprint(f\"{nombre} {edad} años: {nota:.1f}\")\n",
+    "nombre = \"Lucía\"\nedad = 19\nnota = 8.75\n\nprint(f\"{nombre} ({edad} años): {nota:.2f}\")\n"
+  ],
+  "pistas": [
+    "Usa `{nota:.1f}` para un decimal.",
+    "Los paréntesis y los dos puntos son texto normal."
+  ]
+}

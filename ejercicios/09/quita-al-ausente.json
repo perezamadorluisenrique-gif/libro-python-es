@@ -1,0 +1,18 @@
+{
+  "titulo": "Quita al ausente",
+  "capitulo": "09",
+  "seccion": "9.1 Modificación e iteración de listas",
+  "enunciado": "La lista `asistentes` tiene los nombres de quienes llegaron a una reunión. Escribe el programa que:\n\n1. agregue `\"Lucía\"` al final con `append()`,\n2. elimine `\"Mateo\"` con `remove()`.\n\nAl final, `asistentes` debe ser `[\"Ana\", \"Luis\", \"Lucía\"]` si empieza como `[\"Ana\", \"Mateo\", \"Luis\"]`.",
+  "inicial": "asistentes = [\"Ana\", \"Mateo\", \"Luis\"]\n\n# Escribe tu código aquí\n",
+  "pruebas": "assert asistentes == [\"Ana\", \"Luis\", \"Lucía\"], f\"asistentes quedó como {asistentes!r}\"\n",
+  "solucion": "asistentes = [\"Ana\", \"Mateo\", \"Luis\"]\n\nasistentes.append(\"Lucía\")\nasistentes.remove(\"Mateo\")\n",
+  "erroneas": [
+    "asistentes = [\"Ana\", \"Mateo\", \"Luis\"]\n\nasistentes.append(\"Lucía\")\nasistentes.pop()\n",
+    "asistentes = [\"Ana\", \"Mateo\", \"Luis\"]\n\nasistentes.remove(\"Mateo\")\nasistentes.append(\"Lucia\")\n",
+    "asistentes = [\"Ana\", \"Mateo\", \"Luis\"]\n\nasistentes = asistentes.append(\"Lucía\")\nasistentes.remove(\"Mateo\")\n"
+  ],
+  "pistas": [
+    "`append()` agrega al final y `remove()` borra por valor.",
+    "`append()` modifica la lista y no devuelve nada útil: no la asignes a la variable."
+  ]
+}

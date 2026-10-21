@@ -1,0 +1,18 @@
+{
+  "titulo": "Filtra los primos",
+  "capitulo": "05",
+  "seccion": "5.5 else de bucle",
+  "enunciado": "La lista `candidatos` tiene enteros. Construye la lista `primos` con los que sean primos (mayores que 1 y sin divisores distintos de 1 y de sí mismos), en el mismo orden. Usa un `for` interno con `break` y su cláusula `else`.\n\nEjemplo: de `[1, 2, 9, 11]` salen `[2, 11]`.",
+  "inicial": "candidatos = [1, 2, 9, 13, 15, 21, 23, 25, 29, 49]\nprimos = []\n\n# Escribe tu código aquí\n",
+  "pruebas": "assert primos == [2, 13, 23, 29], f\"primos vale {primos!r}\"\n",
+  "solucion": "candidatos = [1, 2, 9, 13, 15, 21, 23, 25, 29, 49]\nprimos = []\n\nfor n in candidatos:\n    if n < 2:\n        continue\n    for d in range(2, n):\n        if n % d == 0:\n            break\n    else:\n        primos.append(n)\n",
+  "erroneas": [
+    "candidatos = [1, 2, 9, 13, 15, 21, 23, 25, 29, 49]\nprimos = []\n\nfor n in candidatos:\n    for d in range(2, n):\n        if n % d == 0:\n            break\n    else:\n        primos.append(n)\n",
+    "candidatos = [1, 2, 9, 13, 15, 21, 23, 25, 29, 49]\nprimos = []\n\nfor n in candidatos:\n    if n < 2:\n        continue\n    for d in range(2, n):\n        if n % d == 0:\n            break\n        else:\n            primos.append(n)\n",
+    "candidatos = [1, 2, 9, 13, 15, 21, 23, 25, 29, 49]\nprimos = []\n\nfor n in candidatos:\n    if n < 2:\n        continue\n    for d in range(2, 6):\n        if n % d == 0:\n            break\n    else:\n        primos.append(n)\n"
+  ],
+  "pistas": [
+    "El `else` de un `for` se ejecuta solo si el bucle terminó sin `break`.",
+    "El 1 no es primo, pero `range(2, 1)` está vacío: trátalo aparte."
+  ]
+}

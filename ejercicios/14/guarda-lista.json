@@ -1,0 +1,18 @@
+{
+  "titulo": "Guarda una lista en un archivo",
+  "capitulo": "14",
+  "seccion": "14.2 Escritura en archivos",
+  "enunciado": "Escribe `guarda_lineas(nombre, lista)` que cree (o sobrescriba) el archivo `nombre` y escriba cada elemento de `lista` en su propia línea, terminada con salto de línea.\n\n```python\nguarda_lineas(\"frutas.txt\", [\"pera\", \"uva\"])\n# frutas.txt queda con:\n# pera\n# uva\n```",
+  "inicial": "def guarda_lineas(nombre, lista):\n    # Escribe tu código aquí\n",
+  "pruebas": "guarda_lineas(\"ej14_guarda.txt\", [\"pera\", \"uva\"])\nwith open(\"ej14_guarda.txt\") as f:\n    assert f.read() == \"pera\\nuva\\n\", \"cada elemento debe ir en su línea, con \\\\n al final\"\nguarda_lineas(\"ej14_guarda.txt\", [\"x\"])\nwith open(\"ej14_guarda.txt\") as f:\n    assert f.read() == \"x\\n\", \"debe sobrescribir el contenido anterior\"\nguarda_lineas(\"ej14_guarda.txt\", [])\nwith open(\"ej14_guarda.txt\") as f:\n    assert f.read() == \"\", \"lista vacía: archivo vacío\"\n",
+  "solucion": "def guarda_lineas(nombre, lista):\n    with open(nombre, \"w\") as f:\n        for elemento in lista:\n            f.write(str(elemento) + \"\\n\")\n",
+  "erroneas": [
+    "def guarda_lineas(nombre, lista):\n    with open(nombre, \"w\") as f:\n        for elemento in lista:\n            f.write(elemento)\n",
+    "def guarda_lineas(nombre, lista):\n    with open(nombre, \"a\") as f:\n        for elemento in lista:\n            f.write(elemento + \"\\n\")\n",
+    "def guarda_lineas(nombre, lista):\n    with open(nombre, \"w\") as f:\n        f.write(str(lista) + \"\\n\")\n"
+  ],
+  "pistas": [
+    "`write()` no agrega saltos de línea por sí solo.",
+    "El modo `\"w\"` borra lo anterior; el modo `\"a\"` añade al final."
+  ]
+}

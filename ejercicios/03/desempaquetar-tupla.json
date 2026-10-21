@@ -1,0 +1,18 @@
+{
+  "titulo": "Desempaquetar una tupla",
+  "capitulo": "03",
+  "seccion": "3.5 Conceptos básicos de las tuplas",
+  "enunciado": "La tupla `punto` guarda las coordenadas `(x, y)` de un punto. Guarda cada coordenada en las variables `x` e `y` y en `suma` la suma de ambas. Imprime `suma`.\n\nEjemplo con `punto = (3, 4)`:\n\n```text\n7\n```",
+  "inicial": "punto = (3, 4)\n\n# Escribe tu código aquí\n",
+  "pruebas": "assert (x, y, suma) == (3, 4, 7), f\"x={x!r}, y={y!r}, suma={suma!r}\"\nassert __salida__.strip() == \"7\", f\"se imprimió {__salida__.strip()!r}\"\n",
+  "solucion": "punto = (3, 4)\n\nx = punto[0]\ny = punto[1]\nsuma = x + y\nprint(suma)\n",
+  "erroneas": [
+    "punto = (3, 4)\n\nx = punto[1]\ny = punto[2]\nsuma = x + y\nprint(suma)\n",
+    "punto = (3, 4)\n\nx = punto[0]\ny = punto[1]\nsuma = punto\nprint(suma)\n",
+    "punto = (3, 4)\n\nx = punto[0]\ny = punto[0]\nsuma = x + y\nprint(suma)\n"
+  ],
+  "pistas": [
+    "Las tuplas se indexan igual que las listas.",
+    "Con `x, y = punto` también puedes desempaquetar."
+  ]
+}

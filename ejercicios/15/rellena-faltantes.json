@@ -1,0 +1,18 @@
+{
+  "titulo": "Rellena datos faltantes",
+  "capitulo": "15",
+  "seccion": "15.4 Análisis exploratorio de datos",
+  "enunciado": "En una lista de medidas, los datos faltantes se marcan con `None`. Escribe `rellena_con_media(medidas)` que devuelva una **nueva** lista donde cada `None` se reemplaza por la media de los valores que sí existen (calculada con `statistics.mean`). Si no hay ningún valor presente, devuelve una lista con los mismos `None`. No modifiques la lista original.\n\n```python\nprint(rellena_con_media([2, None, 4]))  # [2, 3, 4]\n```",
+  "inicial": "import statistics\n\n\ndef rellena_con_media(medidas):\n    # Escribe tu código aquí\n",
+  "pruebas": "orig = [2, None, 4, None, 6]\ncopia = list(orig)\nr = rellena_con_media(orig)\nassert r == [2, 4, 4, 4, 6], f\"devolvió {r!r}\"\nassert orig == copia, \"no debes modificar la lista original\"\nassert rellena_con_media([1, 2, 3]) == [1, 2, 3], \"sin faltantes no cambia nada\"\nassert rellena_con_media([None, 10]) == [10, 10], f\"[None, 10] -> {rellena_con_media([None, 10])!r}\"\nassert rellena_con_media([None, None]) == [None, None], \"todo faltante: se deja igual\"\nassert rellena_con_media([0, None, 4]) == [0, 2, 4], \"el 0 es un dato válido, no un faltante\"\n",
+  "solucion": "import statistics\n\n\ndef rellena_con_media(medidas):\n    presentes = [m for m in medidas if m is not None]\n    if not presentes:\n        return list(medidas)\n    media = statistics.mean(presentes)\n    return [media if m is None else m for m in medidas]\n",
+  "erroneas": [
+    "import statistics\n\n\ndef rellena_con_media(medidas):\n    presentes = [m for m in medidas if m]\n    if not presentes:\n        return list(medidas)\n    media = statistics.mean(presentes)\n    return [media if m is None else m for m in medidas]\n",
+    "import statistics\n\n\ndef rellena_con_media(medidas):\n    media = statistics.mean([m if m is not None else 0 for m in medidas])\n    return [media if m is None else m for m in medidas]\n",
+    "import statistics\n\n\ndef rellena_con_media(medidas):\n    presentes = [m for m in medidas if m is not None]\n    if not presentes:\n        return list(medidas)\n    media = statistics.mean(presentes)\n    for i in range(len(medidas)):\n        if medidas[i] is None:\n            medidas[i] = media\n    return medidas\n"
+  ],
+  "pistas": [
+    "Primero calcula la media solo con los valores que no son `None`.",
+    "Compara con `is None`, no con la veracidad: `0` es un dato válido."
+  ]
+}

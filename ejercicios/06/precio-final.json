@@ -1,0 +1,18 @@
+{
+  "titulo": "Precio final con argumentos con nombre",
+  "capitulo": "06",
+  "seccion": "6.6 Argumentos con nombre",
+  "enunciado": "Define `precio_final(precio, descuento=0, impuesto=0.16)`: aplica primero el descuento (porcentaje, por ejemplo `10` es 10 %) y luego suma el impuesto (fracción). Devuelve el resultado con `round(valor, 2)`.\n\nEjemplos: `precio_final(100)` devuelve `116.0`; `precio_final(200, descuento=10)` devuelve `208.8`; `precio_final(100, impuesto=0)` devuelve `100.0`.",
+  "inicial": "def precio_final(precio, descuento=0, impuesto=0.16):\n    # Escribe tu código aquí\n    pass\n",
+  "pruebas": "casos = [((100,), {}, 116.0), ((200,), {\"descuento\": 10}, 208.8), ((100,), {\"impuesto\": 0}, 100.0), ((50, 20, 0.1), {}, 44.0), ((80,), {\"impuesto\": 0.21, \"descuento\": 50}, 48.4), ((0,), {}, 0.0)]\nfor args, kw, esperado in casos:\n    obtenido = precio_final(*args, **kw)\n    assert obtenido == esperado, f\"precio_final{args} con {kw} devolvió {obtenido!r}, se esperaba {esperado!r}\"\n",
+  "solucion": "def precio_final(precio, descuento=0, impuesto=0.16):\n    con_descuento = precio * (1 - descuento / 100)\n    return round(con_descuento * (1 + impuesto), 2)\n",
+  "erroneas": [
+    "def precio_final(precio, descuento=0, impuesto=0.16):\n    con_descuento = precio * (1 - descuento)\n    return round(con_descuento * (1 + impuesto), 2)\n",
+    "def precio_final(precio, descuento=0, impuesto=0.16):\n    con_descuento = precio * (1 - descuento / 100)\n    return round(con_descuento + impuesto, 2)\n",
+    "def precio_final(precio, descuento=0, impuesto=0.16):\n    return round(precio * (1 + impuesto) - descuento, 2)\n"
+  ],
+  "pistas": [
+    "El descuento viene en porcentaje: divídelo entre 100.",
+    "Descuento primero, impuesto después, sobre el precio ya rebajado."
+  ]
+}

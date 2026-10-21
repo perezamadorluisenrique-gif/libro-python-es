@@ -1,0 +1,18 @@
+{
+  "titulo": "Extensión de un archivo",
+  "capitulo": "08",
+  "seccion": "8.3 Búsqueda y prueba de cadenas",
+  "enunciado": "Define `extension(nombre)` que devuelva la extensión del archivo (lo que sigue al **último** punto), en minúsculas, o `\"\"` si el nombre no tiene punto. Usa `rfind` o `find`.\n\nEjemplos: `extension(\"foto.JPG\")` devuelve `\"jpg\"`; `extension(\"datos.tar.gz\")` devuelve `\"gz\"`; `extension(\"LEEME\")` devuelve `\"\"`.",
+  "inicial": "def extension(nombre):\n    # Escribe tu código aquí\n    pass\n",
+  "pruebas": "for nombre, esperado in [(\"foto.JPG\", \"jpg\"), (\"datos.tar.gz\", \"gz\"), (\"LEEME\", \"\"), (\"a.b\", \"b\"), (\"informe.final.PDF\", \"pdf\"), (\"\", \"\"), (\"nota.\", \"\")]:\n    obtenido = extension(nombre)\n    assert obtenido == esperado, f\"extension({nombre!r}) devolvió {obtenido!r}, se esperaba {esperado!r}\"\n",
+  "solucion": "def extension(nombre):\n    pos = nombre.rfind(\".\")\n    if pos == -1:\n        return \"\"\n    return nombre[pos + 1:].lower()\n",
+  "erroneas": [
+    "def extension(nombre):\n    pos = nombre.find(\".\")\n    if pos == -1:\n        return \"\"\n    return nombre[pos + 1:].lower()\n",
+    "def extension(nombre):\n    pos = nombre.rfind(\".\")\n    return nombre[pos + 1:].lower()\n",
+    "def extension(nombre):\n    pos = nombre.rfind(\".\")\n    if pos == -1:\n        return \"\"\n    return nombre[pos:].lower()\n"
+  ],
+  "pistas": [
+    "`rfind` busca desde el final y devuelve -1 si no encuentra nada.",
+    "La extensión empieza un carácter después del punto."
+  ]
+}

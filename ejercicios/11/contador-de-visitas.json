@@ -1,0 +1,18 @@
+{
+  "titulo": "Contador de visitas",
+  "capitulo": "11",
+  "seccion": "11.2 Clases e instancias",
+  "enunciado": "Define la clase `Contador` con un atributo de instancia `cuenta` que empieza en 0 y un atributo de clase `creados` que cuenta cuántas instancias se han creado (se incrementa en cada `__init__`). `Contador.creados` empieza en 0.",
+  "inicial": "class Contador:\n    # Escribe tu código aquí\n",
+  "pruebas": "assert Contador.creados == 0, f\"Contador.creados debe empezar en 0 y vale {Contador.creados!r}\"\na = Contador()\nassert a.cuenta == 0, f\"a.cuenta vale {a.cuenta!r}\"\nassert Contador.creados == 1, f\"tras crear una instancia, creados vale {Contador.creados!r}\"\nb = Contador()\nassert Contador.creados == 2, f\"tras crear dos, creados vale {Contador.creados!r}\"\na.cuenta = 5\nassert b.cuenta == 0, \"cuenta es de cada instancia\"\n",
+  "solucion": "class Contador:\n    creados = 0\n\n    def __init__(self):\n        self.cuenta = 0\n        Contador.creados += 1\n",
+  "erroneas": [
+    "class Contador:\n    creados = 0\n\n    def __init__(self):\n        self.cuenta = 0\n        self.creados += 1\n",
+    "class Contador:\n    def __init__(self):\n        self.cuenta = 0\n        self.creados = 1\n",
+    "class Contador:\n    creados = 1\n\n    def __init__(self):\n        self.cuenta = 0\n        Contador.creados += 1\n"
+  ],
+  "pistas": [
+    "Un atributo de clase se define en el cuerpo de la clase, fuera de `__init__`.",
+    "Para modificarlo para todos, usa `Contador.creados`, no `self.creados`."
+  ]
+}

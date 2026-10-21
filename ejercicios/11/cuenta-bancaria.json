@@ -1,0 +1,18 @@
+{
+  "titulo": "Cuenta bancaria",
+  "capitulo": "11",
+  "seccion": "11.3 Métodos de instancia",
+  "enunciado": "Define la clase `Cuenta` con `__init__(self, saldo=0)` y los métodos:\n\n- `depositar(monto)`: suma `monto` al saldo.\n- `retirar(monto)`: resta `monto` y devuelve `True`; si el saldo no alcanza, no cambia nada y devuelve `False`.\n\nEl saldo se guarda en el atributo `saldo`.",
+  "inicial": "class Cuenta:\n    # Escribe tu código aquí\n",
+  "pruebas": "c = Cuenta()\nassert c.saldo == 0, f\"saldo inicial {c.saldo!r}\"\nc.depositar(100)\nassert c.saldo == 100, f\"tras depositar 100: {c.saldo!r}\"\nassert c.retirar(30) is True and c.saldo == 70, f\"tras retirar 30: {c.saldo!r}\"\nassert c.retirar(70) is True and c.saldo == 0, \"retirar todo el saldo es válido\"\nassert c.retirar(1) is False and c.saldo == 0, \"sin fondos: False y saldo intacto\"\nd = Cuenta(50)\nassert d.saldo == 50, f\"Cuenta(50).saldo vale {d.saldo!r}\"\nassert d.retirar(51) is False and d.saldo == 50, \"no se puede retirar más del saldo\"\n",
+  "solucion": "class Cuenta:\n    def __init__(self, saldo=0):\n        self.saldo = saldo\n\n    def depositar(self, monto):\n        self.saldo += monto\n\n    def retirar(self, monto):\n        if monto <= self.saldo:\n            self.saldo -= monto\n            return True\n        return False\n",
+  "erroneas": [
+    "class Cuenta:\n    def __init__(self, saldo=0):\n        self.saldo = saldo\n\n    def depositar(self, monto):\n        self.saldo += monto\n\n    def retirar(self, monto):\n        if monto < self.saldo:\n            self.saldo -= monto\n            return True\n        return False\n",
+    "class Cuenta:\n    def __init__(self, saldo=0):\n        self.saldo = saldo\n\n    def depositar(self, monto):\n        self.saldo += monto\n\n    def retirar(self, monto):\n        self.saldo -= monto\n        return monto <= self.saldo\n",
+    "class Cuenta:\n    def __init__(self, saldo=0):\n        self.saldo = saldo\n\n    def depositar(self, monto):\n        saldo += monto\n\n    def retirar(self, monto):\n        if monto <= self.saldo:\n            self.saldo -= monto\n            return True\n        return False\n"
+  ],
+  "pistas": [
+    "Dentro de los métodos, usa siempre `self.saldo`.",
+    "Comprueba el saldo **antes** de restar."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "titulo": "Teléfono de contacto",
+  "capitulo": "10",
+  "seccion": "10.1 Conceptos básicos de los diccionarios",
+  "enunciado": "El diccionario `agenda` asocia nombres con teléfonos. Escribe el programa que guarde en `telefono_ana` el teléfono de `\"Ana\"` y en `cantidad` cuántos contactos hay.\n\nCon `agenda = {\"Ana\": \"555-1234\", \"Beto\": \"555-9876\"}` se obtiene `telefono_ana == \"555-1234\"` y `cantidad == 2`.",
+  "inicial": "agenda = {\"Ana\": \"555-1234\", \"Beto\": \"555-9876\"}\n\n# Escribe tu código aquí\n",
+  "pruebas": "assert telefono_ana == \"555-1234\", f\"telefono_ana vale {telefono_ana!r}\"\nassert cantidad == 2, f\"cantidad vale {cantidad!r}\"\n",
+  "solucion": "agenda = {\"Ana\": \"555-1234\", \"Beto\": \"555-9876\"}\n\ntelefono_ana = agenda[\"Ana\"]\ncantidad = len(agenda)\n",
+  "erroneas": [
+    "agenda = {\"Ana\": \"555-1234\", \"Beto\": \"555-9876\"}\n\ntelefono_ana = agenda[0]\ncantidad = len(agenda)\n",
+    "agenda = {\"Ana\": \"555-1234\", \"Beto\": \"555-9876\"}\n\ntelefono_ana = \"Ana\"\ncantidad = len(agenda)\n",
+    "agenda = {\"Ana\": \"555-1234\", \"Beto\": \"555-9876\"}\n\ntelefono_ana = agenda[\"Ana\"]\ncantidad = len(agenda[\"Ana\"])\n"
+  ],
+  "pistas": [
+    "Los diccionarios se consultan por clave: `agenda[clave]`.",
+    "`len()` sobre un diccionario cuenta sus pares clave-valor."
+  ]
+}

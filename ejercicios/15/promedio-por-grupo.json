@@ -1,0 +1,18 @@
+{
+  "titulo": "Promedio por grupo",
+  "capitulo": "15",
+  "seccion": "15.4 Análisis exploratorio de datos",
+  "enunciado": "Escribe `promedio_por_grupo(registros, clave, valor)` que reciba una lista de diccionarios y devuelva un diccionario que asocie cada valor distinto de `clave` con el promedio (`statistics.mean`) de los valores del campo `valor` de sus registros.\n\n```python\nventas = [{\"zona\": \"norte\", \"monto\": 10}, {\"zona\": \"sur\", \"monto\": 4},\n          {\"zona\": \"norte\", \"monto\": 20}]\nprint(promedio_por_grupo(ventas, \"zona\", \"monto\"))\n# {'norte': 15, 'sur': 4}\n```",
+  "inicial": "import statistics\n\n\ndef promedio_por_grupo(registros, clave, valor):\n    # Escribe tu código aquí\n",
+  "pruebas": "ventas = [{\"zona\": \"norte\", \"monto\": 10}, {\"zona\": \"sur\", \"monto\": 4}, {\"zona\": \"norte\", \"monto\": 20}]\nr = promedio_por_grupo(ventas, \"zona\", \"monto\")\nassert r == {\"norte\": 15, \"sur\": 4}, f\"devolvió {r!r}\"\nassert promedio_por_grupo([], \"zona\", \"monto\") == {}, \"entrada vacía: diccionario vacío\"\nnotas = [{\"curso\": \"A\", \"nota\": 5}, {\"curso\": \"B\", \"nota\": 7}, {\"curso\": \"A\", \"nota\": 6}, {\"curso\": \"C\", \"nota\": 1}, {\"curso\": \"B\", \"nota\": 8}]\nr = promedio_por_grupo(notas, \"curso\", \"nota\")\nassert r == {\"A\": 5.5, \"B\": 7.5, \"C\": 1}, f\"devolvió {r!r}\"\n",
+  "solucion": "import statistics\n\n\ndef promedio_por_grupo(registros, clave, valor):\n    grupos = {}\n    for fila in registros:\n        grupos.setdefault(fila[clave], []).append(fila[valor])\n    return {k: statistics.mean(v) for k, v in grupos.items()}\n",
+  "erroneas": [
+    "import statistics\n\n\ndef promedio_por_grupo(registros, clave, valor):\n    grupos = {}\n    for fila in registros:\n        grupos[fila[clave]] = [fila[valor]]\n    return {k: statistics.mean(v) for k, v in grupos.items()}\n",
+    "import statistics\n\n\ndef promedio_por_grupo(registros, clave, valor):\n    grupos = {}\n    for fila in registros:\n        grupos.setdefault(fila[clave], []).append(fila[valor])\n    return {k: sum(v) for k, v in grupos.items()}\n",
+    "import statistics\n\n\ndef promedio_por_grupo(registros, clave, valor):\n    grupos = {}\n    for fila in registros:\n        grupos.setdefault(fila[clave], []).append(fila[valor])\n    return {k: statistics.mean(v) for k, v in grupos.items()}[\"norte\"]\n"
+  ],
+  "pistas": [
+    "Primero agrupa los valores en listas, un diccionario de listas, y luego promedia cada lista.",
+    "`dict.setdefault(k, [])` o una comprobación `if k not in d` sirven para crear la lista del grupo."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "titulo": "Puntos que se suman",
+  "capitulo": "11",
+  "seccion": "11.4 Sobrecarga de operadores",
+  "enunciado": "Define la clase `Punto` con atributos `x` e `y` (`__init__(self, x, y)`) y sobrecarga:\n\n- `+` (`__add__`): devuelve un `Punto` **nuevo** con las coordenadas sumadas, sin modificar los originales.\n- `==` (`__eq__`): dos puntos son iguales si tienen las mismas `x` e `y`.\n- `__str__`: devuelve `\"(x, y)\"`, por ejemplo `\"(1, 2)\"`.",
+  "inicial": "class Punto:\n    # Escribe tu código aquí\n",
+  "pruebas": "a = Punto(1, 2)\nb = Punto(3, -5)\nc = a + b\nassert isinstance(c, Punto), f\"a + b debe ser un Punto, no {type(c).__name__}\"\nassert (c.x, c.y) == (4, -3), f\"a + b dio ({c.x}, {c.y})\"\nassert (a.x, a.y) == (1, 2) and (b.x, b.y) == (3, -5), \"a + b no debe modificar a ni b\"\nassert Punto(1, 2) == Punto(1, 2), \"puntos con mismas coordenadas deben ser iguales\"\nassert not (Punto(1, 2) == Punto(2, 1)), \"puntos distintos no deben ser iguales\"\nassert not (Punto(1, 2) == Punto(1, 3)), \"basta que una coordenada difiera para que sean distintos\"\nassert str(Punto(1, 2)) == \"(1, 2)\", f\"str(Punto(1, 2)) dio {str(Punto(1, 2))!r}\"\nassert str(c) == \"(4, -3)\", f\"str(c) dio {str(c)!r}\"\n",
+  "solucion": "class Punto:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n\n    def __add__(self, otro):\n        return Punto(self.x + otro.x, self.y + otro.y)\n\n    def __eq__(self, otro):\n        return self.x == otro.x and self.y == otro.y\n\n    def __str__(self):\n        return f\"({self.x}, {self.y})\"\n",
+  "erroneas": [
+    "class Punto:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n\n    def __add__(self, otro):\n        self.x += otro.x\n        self.y += otro.y\n        return self\n\n    def __eq__(self, otro):\n        return self.x == otro.x and self.y == otro.y\n\n    def __str__(self):\n        return f\"({self.x}, {self.y})\"\n",
+    "class Punto:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n\n    def __add__(self, otro):\n        return Punto(self.x + otro.x, self.y + otro.y)\n\n    def __eq__(self, otro):\n        return self.x == otro.x or self.y == otro.y\n\n    def __str__(self):\n        return f\"({self.x}, {self.y})\"\n",
+    "class Punto:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n\n    def __add__(self, otro):\n        return Punto(self.x + otro.x, self.y + otro.y)\n\n    def __eq__(self, otro):\n        return self.x == otro.x and self.y == otro.y\n\n    def __str__(self):\n        print(f\"({self.x}, {self.y})\")\n"
+  ],
+  "pistas": [
+    "`__add__` debe construir y devolver un objeto nuevo.",
+    "`__str__` debe devolver (`return`) la cadena, no imprimirla."
+  ]
+}

@@ -1,0 +1,604 @@
+id	letra	seguridad	nota
+CPL-ch01-m01-p01	b	baja	animacion no visible; adivinado
+CPL-ch01-m01-p02	a	baja	explicacion no decide; c descartada por patron
+CPL-ch01-m01-p03	c	alta	
+CPL-ch01-m01-p04	b	alta	
+CPL-ch01-m01-p05	c	alta	
+CPL-ch01-m01-p06	a	alta	
+CPL-ch01-m02-p01	c	alta	
+CPL-ch01-m02-p02	c	alta	
+CPL-ch01-m02-p03	c	alta	
+CPL-ch01-m02-p04	c	alta	
+CPL-ch01-m02-p05	b	alta	
+CPL-ch01-m02-p06	a	alta	
+CPL-ch01-m03-p01	c	alta	
+CPL-ch01-m03-p02	b	alta	
+CPL-ch01-m03-p03	c	alta	
+CPL-ch01-m03-p04	a	alta	
+CPL-ch01-m03-p05	a	alta	
+CPL-ch01-m03-p06	b	alta	
+CPL-ch01-m03-p07	c	alta	
+CPL-ch01-m03-p08	a	alta	
+CPL-ch01-m04-p01	c	alta	
+CPL-ch01-m04-p02	c	alta	
+CPL-ch01-m04-p03	c	alta	
+CPL-ch01-m04-p04	c	alta	
+CPL-ch01-m04-p105	c	alta	ejecutado
+CPL-ch01-m04-p106	b	alta	ejecutado
+CPL-ch01-m04-p107	b	alta	ejecutado
+CPL-ch01-m04-p05	c	alta	ejecutado
+CPL-ch01-m04-p06	c	alta	
+CPL-ch01-m04-p07	c	alta	
+CPL-ch01-m04-p08	c	alta	
+CPL-ch01-m05-p01	c	alta	
+CPL-ch01-m05-p02	b	alta	
+CPL-ch01-m05-p03	a	alta	
+CPL-ch01-m05-p04	c	alta	
+CPL-ch01-m05-p05	b	alta	ejecutado
+CPL-ch01-m05-p06	c	alta	ejecutado
+CPL-ch01-m05-p07	c	alta	ejecutado
+CPL-ch01-m05-p08	c	alta	ejecutado
+CPL-ch01-m05-p09	a	alta	ejecutado
+CPL-ch01-m05-p10	b	alta	
+CPL-ch01-m05-p11	a	alta	ejecutado
+CPL-ch01-m05-p12	c	alta	
+CPL-ch01-m06-p01	b	baja	nombre exacto no visible; la explicacion solo descarta Desktop
+CPL-ch01-m06-p02	b	alta	
+CPL-ch01-m06-p03	b	alta	
+CPL-ch01-m06-p04	a	alta	
+CPL-ch01-m06-p05	c	alta	
+CPL-ch01-m06-p06	b	alta	
+CPL-ch01-m07-p01	b	alta	
+CPL-ch01-m07-p02	a	alta	
+CPL-ch01-m07-p03	b	alta	
+CPL-ch01-m07-p04	c	alta	
+CPL-ch01-m07-p05	a	alta	
+CPL-ch01-m07-p06	c	alta	
+CPL-ch01-m07-p07	a	alta	
+CPL-ch01-m07-p08	c	alta	
+CPL-ch01-m07-p09	b	media	c es mas largo; explicacion ambigua
+CPL-ch01-m08-p01	a	alta	
+CPL-ch01-m08-p02	b	alta	
+CPL-ch01-m08-p03	c	alta	
+CPL-ch01-m08-p04	b	alta	
+CPL-ch01-m08-p05	a	alta	
+CPL-ch01-m08-p06	b	alta	
+CPL-ch02-m01-p01	a	alta	
+CPL-ch02-m01-p02	c	alta	
+CPL-ch02-m01-p03	b	alta	
+CPL-ch02-m01-p04	c	alta	
+CPL-ch02-m01-p05	a	alta	
+CPL-ch02-m02-p01	a	alta	
+CPL-ch02-m02-p02	a	alta	
+CPL-ch02-m02-p03	a	alta	
+CPL-ch02-m02-p04	a	alta	
+CPL-ch02-m02-p05	b	alta	
+CPL-ch02-m02-p06	a	alta	ejecutado
+CPL-ch02-m02-p07	b	alta	ejecutado
+CPL-ch02-m02-p08	a	alta	ejecutado
+CPL-ch02-m03-p01	b	alta	
+CPL-ch02-m03-p02	a	alta	
+CPL-ch02-m03-p03	b	alta	
+CPL-ch02-m03-p04	b	alta	
+CPL-ch02-m03-p05	b	alta	
+CPL-ch02-m03-p06	a	alta	
+CPL-ch02-m03-p07	b	alta	
+CPL-ch02-m03-p08	b	alta	ejecutado
+CPL-ch02-m03-p09	a	alta	
+CPL-ch02-m03-p10	c	alta	ejecutado
+CPL-ch02-m03-p11	c	alta	
+CPL-ch02-m03-p12	b	alta	ejecutado
+CPL-ch02-m03-p13	b	alta	
+CPL-ch02-m03-p14	c	alta	ejecutado
+CPL-ch02-m04-p01	b	alta	
+CPL-ch02-m04-p02	a	alta	
+CPL-ch02-m04-p03	c	alta	ejecutado
+CPL-ch02-m04-p04	b	alta	ejecutado; la explicacion dice 3.50 pero Python da 3.5
+CPL-ch02-m04-p05	b	alta	ejecutado
+CPL-ch02-m04-p06	a	alta	ejecutado
+CPL-ch02-m05-p01	b	alta	ejecutado
+CPL-ch02-m05-p02	c	alta	ejecutado
+CPL-ch02-m05-p03	a	alta	ejecutado; la explicacion dice resto 1 pero 1//4 es 0
+CPL-ch02-m05-p04	c	alta	
+CPL-ch02-m05-p05	b	alta	
+CPL-ch02-m05-p06	a	media	c es equivalente, pero la explicacion habla de modulo
+CPL-ch02-m06-p01	c	alta	
+CPL-ch02-m06-p02	b	alta	
+CPL-ch02-m06-p03	a	alta	ejecutado
+CPL-ch02-m06-p04	b	alta	ejecutado
+CPL-ch02-m06-p05	a	alta	ejecutado
+CPL-ch02-m06-p06	b	media	a no importa math; c es r*2 (incorrecto)
+CPL-ch02-m06-p07	a	alta	ejecutado; math.pow da 27.0
+CPL-ch02-m07-p01	a	alta	
+CPL-ch02-m07-p02	c	alta	
+CPL-ch02-m07-p03	b	alta	
+CPL-ch02-m07-p04	a	alta	
+CPL-ch02-m07-p05	b	alta	
+CPL-ch02-m07-p06	a	alta	ejecutado
+CPL-ch02-m07-p07	c	alta	
+CPL-ch02-m07-p08	b	alta	
+CPL-ch02-m07-p09	a	alta	
+CPL-ch02-m07-p10	c	alta	
+CPL-ch02-m08-p01	d	alta	
+CPL-ch02-m08-p02	a	alta	
+CPL-ch02-m08-p03	b	alta	
+CPL-ch03-m01-p01	a	alta	
+CPL-ch03-m01-p02	b	alta	
+CPL-ch03-m01-p03	c	alta	
+CPL-ch03-m01-p04	b	alta	
+CPL-ch03-m01-p05	b	alta	
+CPL-ch03-m01-p06	b	media	a y b muestran lo mismo; la explicacion dice que devuelve un string
+CPL-ch03-m01-p07	c	alta	
+CPL-ch03-m01-p08	c	alta	
+CPL-ch03-m01-p09	c	alta	
+CPL-ch03-m02-p01	b	alta	
+CPL-ch03-m02-p02	a	alta	
+CPL-ch03-m02-p03	c	alta	
+CPL-ch03-m02-p04	a	alta	
+CPL-ch03-m02-p05	c	alta	
+CPL-ch03-m02-p06	b	alta	
+CPL-ch03-m03-p01	b	baja	animacion no visible; adivinado
+CPL-ch03-m03-p02	c	alta	
+CPL-ch03-m03-p03	a	alta	
+CPL-ch03-m03-p04	a	alta	
+CPL-ch03-m03-p05	c	alta	
+CPL-ch03-m03-p06	b	alta	
+CPL-ch03-m04-p01	b	alta	
+CPL-ch03-m04-p02	a	alta	
+CPL-ch03-m04-p03	c	alta	
+CPL-ch03-m04-p04	a	alta	
+CPL-ch03-m05-p01	a	alta	
+CPL-ch03-m05-p02	c	alta	
+CPL-ch03-m05-p03	a	baja	a y c son tuplas validas; explicacion destaca las comas
+CPL-ch03-m05-p04	b	alta	
+CPL-ch03-m05-p05	a	alta	
+CPL-ch03-m05-p06	b	alta	
+CPL-ch04-m01-p01	c	alta	
+CPL-ch04-m01-p02	b	alta	
+CPL-ch04-m01-p03	a	alta	
+CPL-ch04-m01-p04	a	alta	
+CPL-ch04-m01-p05	b	alta	
+CPL-ch04-m01-p06	b	alta	
+CPL-ch04-m01-p07	b	alta	ejecutado
+CPL-ch04-m01-p08	a	alta	ejecutado; bool(-1) es True (la explicación mezcla letra, manda la ejecución)
+CPL-ch04-m01-p09	b	alta	ejecutado
+CPL-ch04-m01-p10	a	alta	ejecutado
+CPL-ch04-m01-p11	a	alta	
+CPL-ch04-m01-p12	b	alta	ejecutado
+CPL-ch04-m01-p13	b	alta	ejecutado
+CPL-ch04-m01-p14	b	alta	ejecutado
+CPL-ch04-m01-p15	b	alta	ejecutado
+CPL-ch04-m01-p16	a	alta	ejecutado; 0 != 0.4 es True
+CPL-ch04-m01-p17	b	alta	ejecutado
+CPL-ch04-m01-p18	c	alta	
+CPL-ch04-m01-p19	b	alta	ejecutado
+CPL-ch04-m01-p20	b	alta	ejecutado
+CPL-ch04-m02-p01	b	alta	
+CPL-ch04-m02-p02	c	alta	
+CPL-ch04-m02-p03	b	alta	
+CPL-ch04-m02-p04	c	alta	
+CPL-ch04-m02-p05	b	alta	la salida es 0 (asignación sin sangría); no hay error
+CPL-ch04-m02-p06	c	alta	
+CPL-ch04-m02-p07	a	alta	
+CPL-ch04-m02-p08	b	alta	55 no es alcanzable (solo 30 o 105)
+CPL-ch04-m03-p01	a	alta	
+CPL-ch04-m03-p02	b	alta	
+CPL-ch04-m03-p03	b	alta	
+CPL-ch04-m03-p04	b	alta	
+CPL-ch04-m03-p05	a	alta	
+CPL-ch04-m03-p06	c	alta	
+CPL-ch04-m03-p07	a	alta	
+CPL-ch04-m03-p08	a	alta	
+CPL-ch04-m03-p09	b	alta	
+CPL-ch04-m03-p10	a	alta	
+CPL-ch04-m04-p01	b	alta	
+CPL-ch04-m04-p02	a	alta	
+CPL-ch04-m04-p03	b	alta	
+CPL-ch04-m04-p04	b	alta	ejecutado; 10+3*2/4 = 11.5, evalúa como (3*2)/4; la explicación no discrimina
+CPL-ch04-m04-p05	b	alta	ejecutado (512)
+CPL-ch04-m04-p06	c	alta	
+CPL-ch04-m04-p07	a	alta	
+CPL-ch04-m04-p08	a	alta	
+CPL-ch04-m04-p09	b	alta	
+CPL-ch04-m05-p01	b	alta	
+CPL-ch04-m05-p02	b	alta	
+CPL-ch04-m05-p03	a	alta	
+CPL-ch04-m05-p04	a	alta	
+CPL-ch04-m05-p05	c	alta	ejecutado (18)
+CPL-ch04-m05-p06	b	alta	
+CPL-ch04-m05-p07	c	alta	elif va tras otro elif y antes de else (posición 3)
+CPL-ch04-m05-p08	a	alta	
+CPL-ch04-m05-p09	c	alta	
+CPL-ch04-m06-p01	c	media	ejemplo previo no visible; la explicación indica else externo (sumac)
+CPL-ch04-m06-p02	c	alta	
+CPL-ch04-m06-p03	b	alta	
+CPL-ch04-m06-p04	c	alta	
+CPL-ch04-m07-p01	c	alta	
+CPL-ch04-m07-p02	a	alta	ejecutado (90)
+CPL-ch04-m07-p03	c	alta	
+CPL-ch04-m07-p04	b	alta	
+CPL-ch04-m07-p05	b	alta	
+CPL-ch05-m01-p01	b	media	código no visible; la explicación dice 6 iteraciones (1,2,3,5,8,13)
+CPL-ch05-m01-p02	c	alta	
+CPL-ch05-m01-p03	a	media	código no visible; la explicación lista 1 1 2 3 5 8 13
+CPL-ch05-m01-p04	b	alta	
+CPL-ch05-m01-p05	b	alta	
+CPL-ch05-m01-p06	c	alta	
+CPL-ch05-m02-p01	b	alta	
+CPL-ch05-m02-p02	a	alta	
+CPL-ch05-m02-p03	c	alta	
+CPL-ch05-m02-p04	a	alta	
+CPL-ch05-m02-p05	c	alta	
+CPL-ch05-m02-p06	a	media	ninguna opción es -1 exacta; "1" parece -1 con el signo perdido; el rango da [-1]
+CPL-ch05-m02-p07	c	alta	
+CPL-ch05-m02-p08	c	alta	
+CPL-ch05-m03-p01	b	alta	ejecutado (10)
+CPL-ch05-m03-p02	b	alta	
+CPL-ch05-m03-p03	b	media	ejecutado; solo b imprime la salida pedida (a no inicializa j, c sin print()); la explicación dice c y no encaja
+CPL-ch05-m03-p04	a	alta	
+CPL-ch05-m03-p05	b	alta	
+CPL-ch05-m03-p06	c	alta	ejecutado
+CPL-ch05-m04-p01	c	alta	
+CPL-ch05-m04-p02	b	alta	ejecutado
+CPL-ch05-m04-p03	b	alta	ejecutado (8)
+CPL-ch05-m04-p04	b	alta	ejecutado (9 6 3 0 = 4 prints)
+CPL-ch05-m04-p05	b	alta	
+CPL-ch05-m05-p01	b	alta	ejecutado; imprime 16 is 2 to the 4 (la explicación dice eso, letra c errónea)
+CPL-ch05-m05-p02	a	alta	
+CPL-ch05-m05-p03	b	media	ejecutado; imprime 1,2,2 y Not all numbers...; la explicación está mezclada, manda la ejecución
+CPL-ch06-m01-p01	c	alta	
+CPL-ch06-m01-p02	b	alta	
+CPL-ch06-m01-p03	b	alta	
+CPL-ch06-m01-p04	b	alta	
+CPL-ch06-m01-p05	c	alta	
+CPL-ch06-m01-p06	b	alta	
+CPL-ch06-m01-p07	a	alta	
+CPL-ch06-m01-p08	c	alta	
+CPL-ch06-m01-p09	c	alta	
+CPL-ch06-m02-p01	c	alta	
+CPL-ch06-m02-p02	b	alta	
+CPL-ch06-m02-p03	c	alta	
+CPL-ch06-m02-p04	c	alta	
+CPL-ch06-m02-p05	c	alta	
+CPL-ch06-m02-p06	b	alta	
+CPL-ch06-m03-p01	c	alta	
+CPL-ch06-m03-p02	a	alta	
+CPL-ch06-m03-p03	c	alta	
+CPL-ch06-m03-p04	b	alta	
+CPL-ch06-m03-p05	c	alta	
+CPL-ch06-m03-p06	b	alta	
+CPL-ch06-m03-p07	a	media	depende de la entrada; hour no cambia, se imprime el valor introducido (9 asumido)
+CPL-ch06-m03-p08	c	alta	
+CPL-ch06-m03-p09	b	media	entrada asumida 9 (como p07): 9+1 = 10
+CPL-ch06-m04-p01	b	alta	
+CPL-ch06-m04-p02	a	alta	
+CPL-ch06-m04-p03	a	alta	
+CPL-ch06-m04-p04	a	alta	
+CPL-ch06-m04-p05	a	alta	
+CPL-ch06-m04-p06	b	alta	
+CPL-ch06-m04-p07	c	alta	
+CPL-ch06-m04-p10	a	alta	
+CPL-ch06-m04-p08	b	alta	
+CPL-ch06-m04-p09	a	alta	
+CPL-ch06-m04-p11	b	alta	
+CPL-ch06-m05-p01	a	alta	
+CPL-ch06-m05-p02	b	alta	
+CPL-ch06-m05-p03	c	alta	
+CPL-ch06-m05-p04	b	alta	
+CPL-ch06-m05-p05	a	alta	
+CPL-ch06-m05-p06	b	alta	
+CPL-ch06-m05-p07	a	alta	
+CPL-ch06-m06-p01	d	alta	
+CPL-ch06-m06-p02	b	alta	
+CPL-ch06-m06-p03	a	alta	
+CPL-ch06-m06-p04	b	alta	
+CPL-ch06-m06-p05	b	alta	
+CPL-ch06-m06-p06	c	alta	
+CPL-ch06-m06-p07	b	alta	
+CPL-ch07-m01-p01	b	alta	
+CPL-ch07-m01-p02	a	alta	
+CPL-ch07-m01-p03	c	media	explicación da 150 (6*5**2); módulo area.py no visible
+CPL-ch07-m01-p04	a	alta	
+CPL-ch07-m01-p05	b	alta	
+CPL-ch07-m01-p06	b	alta	
+CPL-ch07-m02-p01	a	alta	
+CPL-ch07-m02-p02	b	alta	
+CPL-ch07-m02-p03	b	alta	
+CPL-ch07-m02-p04	b	alta	circle reemplazada por la definición local
+CPL-ch07-m02-p05	a	alta	
+CPL-ch07-m02-p06	b	alta	hello() está en la línea 7
+CPL-ch07-m03-p01	b	alta	
+CPL-ch07-m03-p02	a	alta	el retraso es efecto secundario
+CPL-ch07-m03-p03	a	alta	el input se ejecuta al importar
+CPL-ch07-m03-p04	c	alta	
+CPL-ch07-m03-p05	a	alta	
+CPL-ch07-m03-p06	c	alta	
+CPL-ch07-m04-p01	b	alta	
+CPL-ch07-m04-p02	c	alta	
+CPL-ch07-m04-p03	a	alta	
+CPL-ch07-m04-p04	b	alta	
+CPL-ch07-m04-p05	c	alta	
+CPL-ch07-m04-p06	a	alta	
+CPL-ch07-m04-p07	b	alta	solo docstrings, no comentarios
+CPL-ch07-m04-p08	a	alta	
+CPL-ch07-m04-p09	a	alta	
+CPL-ch07-m05-p01	a	media	explicación describe la library reference
+CPL-ch07-m05-p02	b	alta	
+CPL-ch07-m05-p03	a	alta	
+CPL-ch07-m05-p04	c	alta	
+CPL-ch07-m05-p05	a	alta	
+CPL-ch07-m05-p06	a	alta	
+CPL-ch08-m01-p01	a	alta	
+CPL-ch08-m01-p02	b	alta	
+CPL-ch08-m01-p03	b	alta	
+CPL-ch08-m01-p04	a	alta	
+CPL-ch08-m01-p05	b	alta	
+CPL-ch08-m01-p06	a	alta	
+CPL-ch08-m02-p01	b	alta	
+CPL-ch08-m02-p02	b	alta	
+CPL-ch08-m02-p03	a	alta	'e' en ambos índices: True
+CPL-ch08-m02-p04	b	alta	
+CPL-ch08-m02-p05	b	alta	
+CPL-ch08-m02-p06	b	alta	
+CPL-ch08-m02-p07	b	alta	
+CPL-ch08-m02-p08	a	alta	
+CPL-ch08-m02-p09	c	alta	
+CPL-ch08-m03-p01	c	alta	
+CPL-ch08-m03-p02	b	alta	
+CPL-ch08-m03-p03	a	alta	'' in str es True (la explicación lo dice)
+CPL-ch08-m03-p04	a	alta	
+CPL-ch08-m03-p05	c	alta	
+CPL-ch08-m03-p06	c	alta	
+CPL-ch08-m03-p07	c	alta	
+CPL-ch08-m03-p08	a	alta	
+CPL-ch08-m03-p09	a	media	ejecutado: count no solapa, da 1; la explicación dice 2 (incorrecta)
+CPL-ch08-m03-p10	a	alta	
+CPL-ch08-m03-p11	b	alta	
+CPL-ch08-m03-p12	a	alta	
+CPL-ch08-m03-p13	a	alta	
+CPL-ch08-m03-p14	c	alta	
+CPL-ch08-m03-p15	a	alta	
+CPL-ch08-m04-p01	c	alta	
+CPL-ch08-m04-p02	b	alta	
+CPL-ch08-m04-p03	a	alta	
+CPL-ch08-m04-p04	c	alta	
+CPL-ch08-m04-p05	b	alta	
+CPL-ch08-m04-p06	b	alta	
+CPL-ch08-m04-p07	b	alta	
+CPL-ch08-m04-p08	c	alta	
+CPL-ch08-m04-p09	c	alta	
+CPL-ch08-m04-p10	c	alta	
+CPL-ch08-m04-p11	a	alta	
+CPL-ch08-m04-p12	b	alta	
+CPL-ch08-m05-p01	b	media	ejecutado: split('*') real da ['1','2','3','']; b es la única con strings (tiene comilla errata)
+CPL-ch08-m05-p02	c	alta	
+CPL-ch08-m05-p03	b	alta	
+CPL-ch08-m05-p04	c	alta	
+CPL-ch08-m05-p05	b	alta	
+CPL-ch08-m05-p06	b	media	out es la cadena "12"
+CPL-ch09-m01-p01	b	alta	
+CPL-ch09-m01-p02	c	alta	
+CPL-ch09-m01-p03	c	alta	
+CPL-ch09-m01-p04	a	alta	
+CPL-ch09-m01-p05	b	alta	
+CPL-ch09-m01-p06	a	alta	
+CPL-ch09-m03-p01	b	alta	
+CPL-ch09-m03-p02	a	alta	
+CPL-ch09-m03-p03	c	alta	
+CPL-ch09-m03-p04	b	alta	
+CPL-ch09-m03-p05	a	alta	
+CPL-ch09-m03-p06	a	alta	
+CPL-ch09-m04-p01	a	alta	
+CPL-ch09-m04-p02	b	alta	
+CPL-ch09-m04-p03	c	alta	ejecutado: 12.4
+CPL-ch09-m04-p04	c	alta	
+CPL-ch09-m04-p05	a	alta	
+CPL-ch09-m04-p06	b	alta	
+CPL-ch09-m05-p01	a	alta	
+CPL-ch09-m05-p02	c	alta	
+CPL-ch09-m05-p03	c	alta	
+CPL-ch09-m05-p04	a	alta	
+CPL-ch09-m05-p05	c	alta	
+CPL-ch09-m06-p01	a	alta	
+CPL-ch09-m06-p02	c	alta	
+CPL-ch09-m06-p03	b	alta	ejecutado: [0,1,2,3,4]
+CPL-ch09-m06-p04	c	alta	
+CPL-ch09-m06-p05	b	media	opción b tiene errata de comillas; ejecutado: ['i','i','a','o','e']
+CPL-ch09-m06-p06	a	alta	ejecutado: []
+CPL-ch10-m01-p01	a	alta	
+CPL-ch10-m01-p02	b	alta	
+CPL-ch10-m01-p03	b	alta	
+CPL-ch10-m01-p04	b	alta	
+CPL-ch10-m01-p05	b	alta	
+CPL-ch10-m01-p06	a	alta	
+CPL-ch10-m02-p01	b	alta	
+CPL-ch10-m02-p02	c	alta	
+CPL-ch10-m02-p03	b	alta	
+CPL-ch10-m02-p04	b	alta	
+CPL-ch10-m02-p05	a	alta	
+CPL-ch10-m02-p06	b	alta	
+CPL-ch10-m03-p01	c	alta	
+CPL-ch10-m03-p02	b	alta	
+CPL-ch10-m03-p03	b	alta	
+CPL-ch10-m03-p04	a	alta	
+CPL-ch10-m03-p05	c	alta	
+CPL-ch10-m03-p06	b	media	orden de claves asumido por la explicación
+CPL-ch10-m03-p07	c	alta	
+CPL-ch10-m03-p08	b	alta	
+CPL-ch10-m03-p09	a	media	Kabob pasa a 22 según la explicación
+CPL-ch10-m04-p01	a	alta	
+CPL-ch10-m04-p02	b	alta	
+CPL-ch10-m04-p03	b	alta	
+CPL-ch10-m04-p04	b	alta	
+CPL-ch10-m04-p05	a	alta	
+CPL-ch10-m04-p06	c	alta	
+CPL-ch10-m05-p01	b	alta	
+CPL-ch10-m05-p02	c	alta	
+CPL-ch10-m05-p03	b	alta	
+CPL-ch10-m05-p04	b	alta	
+CPL-ch10-m05-p05	a	alta	
+CPL-ch10-m05-p06	a	alta	
+CPL-ch11-m01-p01	b	alta	
+CPL-ch11-m01-p02	b	alta	
+CPL-ch11-m01-p03	a	alta	
+CPL-ch11-m01-p04	b	alta	
+CPL-ch11-m01-p05	b	alta	
+CPL-ch11-m01-p06	a	media	"improved view" vs "high visibility": la explicación habla de reducir desorden
+CPL-ch11-m02-p01	a	alta	
+CPL-ch11-m02-p02	c	alta	
+CPL-ch11-m02-p03	a	alta	
+CPL-ch11-m02-p04	c	alta	
+CPL-ch11-m02-p05	b	alta	
+CPL-ch11-m02-p06	b	alta	
+CPL-ch11-m02-p07	a	alta	
+CPL-ch11-m02-p08	c	alta	
+CPL-ch11-m02-p09	b	alta	
+CPL-ch11-m02-p10	b	alta	
+CPL-ch11-m02-p11	a	alta	
+CPL-ch11-m02-p12	b	media	salida no visible; la explicación indica que cls_id nuevo es atributo de instancia sin cambiar lo impreso
+CPL-ch11-m03-p01	b	alta	
+CPL-ch11-m03-p02	b	alta	
+CPL-ch11-m03-p03	c	alta	
+CPL-ch11-m03-p04	c	alta	
+CPL-ch11-m03-p05	c	alta	
+CPL-ch11-m03-p06	b	alta	
+CPL-ch11-m04-p01	c	alta	
+CPL-ch11-m04-p02	b	alta	
+CPL-ch11-m04-p03	c	alta	
+CPL-ch11-m04-p04	a	alta	
+CPL-ch11-m04-p05	b	alta	
+CPL-ch11-m04-p06	c	alta	
+CPL-ch11-m04-p07	a	alta	
+CPL-ch11-m04-p08	b	alta	
+CPL-ch11-m04-p09	b	alta	
+CPL-ch11-m05-p01	b	alta	
+CPL-ch11-m05-p02	b	alta	
+CPL-ch11-m05-p03	c	alta	
+CPL-ch11-m05-p04	b	alta	
+CPL-ch11-m05-p05	c	alta	
+CPL-ch12-m01-p01	a	alta	
+CPL-ch12-m01-p02	b	alta	
+CPL-ch12-m01-p03	b	alta	
+CPL-ch12-m01-p04	c	alta	
+CPL-ch12-m01-p05	c	alta	
+CPL-ch12-m01-p06	a	alta	
+CPL-ch12-m02-p05	c	media	entrada defectuosa: texto de sección mezclado; la única pregunta con opciones es rec_fact sin caso base (infinita)
+CPL-ch12-m02-p06	b	alta	ejecutado: n==0 devuelve 0 → resultado 0 (b)
+CPL-ch12-m02-p07	a	alta	
+CPL-ch12-m02-p08	b	alta	ejecutado: resultado 0 (b)
+CPL-ch12-m03-p01	b	alta	
+CPL-ch12-m03-p02	a	media	la explicación solo dice que falta len==0; con ==1 los pares fallarían (a)
+CPL-ch12-m03-p03	b	alta	ejecutado: strip("m") de "madamm" da "ada"
+CPL-ch12-m03-p04	a	baja	enunciado y explicación ausentes; supuesto: ¿es permutación?
+CPL-ch12-m03-p05	b	baja	enunciado y explicación ausentes; supuesto: ¿es permutación?
+CPL-ch12-m03-p06	a	baja	enunciado y explicación ausentes; supuesto: ¿es permutación?
+CPL-ch12-m03-p07	a	baja	enunciado y explicación ausentes; supuesto: ¿es permutación?
+CPL-ch12-m03-p08	a	baja	enunciado y explicación ausentes; supuesto: ¿es permutación?
+CPL-ch12-m04-p01	c	alta	ejecutado: fib(9)=34
+CPL-ch12-m04-p02	c	alta	ejecutado: 8 llamadas a casos base
+CPL-ch12-m04-p03	b	alta	
+CPL-ch12-m04-p04	c	alta	
+CPL-ch12-m04-p05	a	alta	ejecutado: 4 llamadas recursivas
+CPL-ch12-m04-p06	b	alta	
+CPL-ch12-m04-p07	b	media	ejecutado: 7 recursivas + inicial = 8; manda la explicación (8)
+CPL-ch12-m05-p01	c	alta	
+CPL-ch12-m05-p02	a	alta	
+CPL-ch12-m05-p03	a	alta	
+CPL-ch12-m05-p04	a	media	explicación enumera 4 llamadas (mid 6,10,12,11)
+CPL-ch12-m05-p05	b	alta	
+CPL-ch12-m05-p06	a	media	la explicación dice que el iterativo es más complejo (a)
+CPL-ch13-m01-p01	a	media	la explicación describe is-a (letra b incorrecta)
+CPL-ch13-m01-p02	b	alta	
+CPL-ch13-m01-p03	b	alta	
+CPL-ch13-m01-p04	b	alta	
+CPL-ch13-m01-p05	a	alta	
+CPL-ch13-m01-p06	c	alta	
+CPL-ch13-m01-p07	a	alta	
+CPL-ch13-m02-p01	b	alta	
+CPL-ch13-m02-p02	a	alta	
+CPL-ch13-m02-p03	b	alta	
+CPL-ch13-m02-p04	b	media	código no visible; sigue la explicación
+CPL-ch13-m02-p05	c	alta	
+CPL-ch13-m02-p06	a	alta	
+CPL-ch13-m03-p01	b	alta	
+CPL-ch13-m03-p02	b	alta	
+CPL-ch13-m03-p03	c	alta	
+CPL-ch13-m03-p04	b	alta	
+CPL-ch13-m03-p05	a	media	código no visible; def de Polygon.__init__ en línea 2
+CPL-ch13-m03-p06	b	media	código no visible; vuelve a Square.__init__, línea 14
+CPL-ch13-m03-p07	b	media	num_sides=4 según explicación
+CPL-ch13-m03-p08	c	alta	
+CPL-ch13-m03-p09	a	alta	
+CPL-ch13-m04-p01	a	alta	
+CPL-ch13-m04-p02	b	alta	
+CPL-ch13-m04-p03	a	media	código no visible; B(2) da a_attr=2, b_attr=0
+CPL-ch13-m04-p04	b	alta	
+CPL-ch13-m04-p05	b	media	explicación confusa; d_inst hereda a_attr, b_attr y d_attr
+CPL-ch13-m05-p01	a	alta	
+CPL-ch13-m05-p02	b	alta	
+CPL-ch13-m05-p03	b	baja	código no visible; deducido: 2 va a b_attr y a_attr toma otro valor
+CPL-ch13-m05-p04	b	alta	
+CPL-ch13-m05-p05	b	alta	
+CPL-ch13-m05-p06	b	alta	
+CPL-ch14-m01-p01	c	alta	
+CPL-ch14-m01-p02	a	alta	
+CPL-ch14-m01-p03	b	alta	
+CPL-ch14-m01-p04	c	alta	
+CPL-ch14-m01-p05	b	alta	
+CPL-ch14-m01-p06	a	alta	
+CPL-ch14-m02-p01	a	alta	
+CPL-ch14-m02-p02	c	alta	
+CPL-ch14-m02-p03	b	alta	
+CPL-ch14-m02-p04	c	media	sin close() el contenido es incierto según la explicación
+CPL-ch14-m02-p05	a	alta	
+CPL-ch14-m02-p06	b	alta	
+CPL-ch14-m03-p01	b	alta	
+CPL-ch14-m03-p02	c	alta	
+CPL-ch14-m03-p03	c	alta	
+CPL-ch14-m03-p04	a	media	a escapa las barras; b es inválido o ambiguo
+CPL-ch14-m03-p05	a	alta	
+CPL-ch14-m03-p06	b	alta	
+CPL-ch14-m03-p07	c	alta	
+CPL-ch14-m04-p01	c	alta	
+CPL-ch14-m04-p02	a	alta	
+CPL-ch14-m04-p03	b	alta	
+CPL-ch14-m04-p04	b	alta	
+CPL-ch14-m04-p05	c	alta	
+CPL-ch14-m04-p06	b	alta	
+CPL-ch14-m05-p01	a	alta	
+CPL-ch14-m05-p02	c	alta	
+CPL-ch14-m05-p03	a	media	raise ValueError muestra "ValueError" sin mensaje
+CPL-ch15-m01-p01	c	alta	
+CPL-ch15-m01-p02	b	alta	
+CPL-ch15-m01-p03	c	alta	
+CPL-ch15-m01-p04	a	alta	
+CPL-ch15-m01-p05	b	alta	
+CPL-ch15-m01-p06	a	alta	
+CPL-ch15-m02-p01	c	alta	
+CPL-ch15-m02-p02	a	alta	
+CPL-ch15-m02-p03	d	alta	
+CPL-ch15-m02-p04	b	alta	ejecutado: 2*arr duplica
+CPL-ch15-m02-p05	c	alta	
+CPL-ch15-m02-p06	a	alta	ejecutado: multiplicación elemento a elemento
+CPL-ch15-m03-p01	a	alta	
+CPL-ch15-m03-p02	a	alta	
+CPL-ch15-m03-p03	b	media	la explicación describe heterogeneidad (b)
+CPL-ch15-m03-p04	c	alta	
+CPL-ch15-m03-p05	c	alta	
+CPL-ch15-m03-p06	a	alta	
+CPL-ch15-m04-p01	a	alta	
+CPL-ch15-m04-p02	c	alta	
+CPL-ch15-m04-p03	a	alta	
+CPL-ch15-m04-p04	b	media	loc incluye extremos: 0:2 (b)
+CPL-ch15-m04-p05	c	alta	
+CPL-ch15-m04-p06	b	alta	
+CPL-ch15-m04-p07	a	media	df no visible; a es la sintaxis válida
+CPL-ch15-m04-p08	b	alta	
+CPL-ch15-m04-p09	a	alta	
+CPL-ch15-m04-p10	c	alta	
+CPL-ch15-m05-p01	b	alta	
+CPL-ch15-m05-p02	c	alta	
+CPL-ch15-m05-p03	a	alta	
+CPL-ch15-m05-p04	c	alta	
+CPL-ch15-m05-p05	b	alta	
+CPL-ch15-m05-p06	b	alta	

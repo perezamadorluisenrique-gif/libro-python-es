@@ -1,0 +1,18 @@
+{
+  "titulo": "Aprobados y reprobados",
+  "capitulo": "10",
+  "seccion": "10.4 Condicionales y bucles en diccionarios",
+  "enunciado": "Define `separar(notas, minimo)`, que recibe un diccionario `{estudiante: nota}` y devuelve una tupla `(aprobados, reprobados)` con dos listas de nombres, ordenadas alfabéticamente. Aprueba quien tiene nota **mayor o igual** que `minimo`.\n\nEjemplo: `separar({\"Ana\": 8, \"Beto\": 4}, 6)` devuelve `([\"Ana\"], [\"Beto\"])`.",
+  "inicial": "def separar(notas, minimo):\n    # Escribe tu código aquí\n",
+  "pruebas": "assert separar({\"Ana\": 8, \"Beto\": 4}, 6) == ([\"Ana\"], [\"Beto\"]), f\"devolvió {separar({'Ana': 8, 'Beto': 4}, 6)!r}\"\nassert separar({\"Zoe\": 6, \"Ada\": 6, \"Leo\": 5}, 6) == ([\"Ada\", \"Zoe\"], [\"Leo\"]), \"nota igual al mínimo aprueba; orden alfabético\"\nassert separar({}, 5) == ([], []), \"diccionario vacío\"\nassert separar({\"Eva\": 10}, 11) == ([], [\"Eva\"]), \"todos reprueban\"\n",
+  "solucion": "def separar(notas, minimo):\n    aprobados = []\n    reprobados = []\n    for nombre, nota in notas.items():\n        if nota >= minimo:\n            aprobados.append(nombre)\n        else:\n            reprobados.append(nombre)\n    return (sorted(aprobados), sorted(reprobados))\n",
+  "erroneas": [
+    "def separar(notas, minimo):\n    aprobados = []\n    reprobados = []\n    for nombre, nota in notas.items():\n        if nota > minimo:\n            aprobados.append(nombre)\n        else:\n            reprobados.append(nombre)\n    return (sorted(aprobados), sorted(reprobados))\n",
+    "def separar(notas, minimo):\n    aprobados = []\n    reprobados = []\n    for nombre, nota in notas.items():\n        if nota >= minimo:\n            aprobados.append(nombre)\n        else:\n            reprobados.append(nombre)\n    return (aprobados, reprobados)\n",
+    "def separar(notas, minimo):\n    aprobados = []\n    reprobados = []\n    for nombre in notas:\n        if nombre >= minimo:\n            aprobados.append(nombre)\n        else:\n            reprobados.append(nombre)\n    return (sorted(aprobados), sorted(reprobados))\n"
+  ],
+  "pistas": [
+    "Con `for nombre, nota in notas.items()` obtienes clave y valor a la vez.",
+    "`sorted()` ordena una lista alfabéticamente sin modificarla."
+  ]
+}

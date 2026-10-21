@@ -1,0 +1,18 @@
+{
+  "titulo": "Promedio de tres notas",
+  "capitulo": "01",
+  "seccion": "1.5 Conceptos básicos de números",
+  "enunciado": "Las variables `n1`, `n2` y `n3` guardan tres notas. Imprime su promedio.\n\nEjemplo con 6, 7 y 8 se imprime:\n\n```text\n7.0\n```",
+  "inicial": "n1 = 6\nn2 = 7\nn3 = 8\n\n# Escribe tu código aquí\n",
+  "pruebas": "assert __salida__.strip() == \"7.0\", f\"se esperaba 7.0 y se imprimió {__salida__.strip()!r}\"\n",
+  "solucion": "n1 = 6\nn2 = 7\nn3 = 8\n\nprint((n1 + n2 + n3) / 3)\n",
+  "erroneas": [
+    "n1 = 6\nn2 = 7\nn3 = 8\n\nprint(n1 + n2 + n3 / 3)\n",
+    "n1 = 6\nn2 = 7\nn3 = 8\n\nprint((n1 + n2 + n3) // 3)\n",
+    "n1 = 6\nn2 = 7\nn3 = 8\n\nprint(n1 + n2 + n3)\n"
+  ],
+  "pistas": [
+    "La división va después de sumar: necesitas paréntesis.",
+    "`/` devuelve un decimal."
+  ]
+}

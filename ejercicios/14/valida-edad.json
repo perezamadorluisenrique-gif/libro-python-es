@@ -1,0 +1,18 @@
+{
+  "titulo": "Validar con raise",
+  "capitulo": "14",
+  "seccion": "14.5 Generar excepciones",
+  "enunciado": "Escribe `valida_edad(texto)` que reciba una cadena, la convierta a entero y la devuelva si está entre 0 y 120 (inclusive). Si el número está fuera de ese rango, debe **generar** `ValueError(\"edad fuera de rango\")` con `raise`. Si el texto no es un número, basta con dejar que `int()` genere su propio `ValueError`.\n\n```python\nprint(valida_edad(\"35\"))  # 35\nvalida_edad(\"200\")        # ValueError: edad fuera de rango\n```",
+  "inicial": "def valida_edad(texto):\n    # Escribe tu código aquí\n",
+  "pruebas": "assert valida_edad(\"35\") == 35, f\"valida_edad('35') devolvió {valida_edad('35')!r}\"\nassert valida_edad(\"0\") == 0 and valida_edad(\"120\") == 120, \"0 y 120 son válidos\"\nfor malo in [\"-1\", \"121\", \"200\"]:\n    try:\n        valida_edad(malo)\n    except ValueError as e:\n        assert str(e) == \"edad fuera de rango\", f\"mensaje para {malo!r}: {str(e)!r}\"\n    else:\n        assert False, f\"valida_edad({malo!r}) debía generar ValueError\"\ntry:\n    valida_edad(\"abc\")\nexcept ValueError:\n    pass\nelse:\n    assert False, \"texto no numérico debe generar ValueError\"\n",
+  "solucion": "def valida_edad(texto):\n    edad = int(texto)\n    if edad < 0 or edad > 120:\n        raise ValueError(\"edad fuera de rango\")\n    return edad\n",
+  "erroneas": [
+    "def valida_edad(texto):\n    edad = int(texto)\n    if edad < 0 or edad > 120:\n        return \"edad fuera de rango\"\n    return edad\n",
+    "def valida_edad(texto):\n    edad = int(texto)\n    if edad <= 0 or edad >= 120:\n        raise ValueError(\"edad fuera de rango\")\n    return edad\n",
+    "def valida_edad(texto):\n    edad = int(texto)\n    if edad < 0 or edad > 120:\n        print(\"edad fuera de rango\")\n    return edad\n"
+  ],
+  "pistas": [
+    "`raise ValueError(\"mensaje\")` interrumpe la función; no uses `return` para avisar del error.",
+    "Los límites 0 y 120 sí son válidos."
+  ]
+}

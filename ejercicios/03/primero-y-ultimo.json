@@ -1,0 +1,18 @@
+{
+  "titulo": "Primero y último",
+  "capitulo": "03",
+  "seccion": "3.4 Conceptos básicos de las listas",
+  "enunciado": "La lista `temperaturas` guarda mediciones. Guarda en `primera` el primer elemento, en `ultima` el último, y en `cantidad` cuántos elementos tiene. Para el último elemento no uses un número fijo: debe funcionar con listas de cualquier tamaño.\n\nEjemplo: con `[18, 21, 25, 19]`, `primera` es 18, `ultima` es 19 y `cantidad` es 4.",
+  "inicial": "temperaturas = [18, 21, 25, 19]\n\n# Escribe tu código aquí\n",
+  "pruebas": "assert (primera, ultima, cantidad) == (18, 19, 4), f\"primera={primera!r}, ultima={ultima!r}, cantidad={cantidad!r}\"\n",
+  "solucion": "temperaturas = [18, 21, 25, 19]\n\nprimera = temperaturas[0]\nultima = temperaturas[-1]\ncantidad = len(temperaturas)\n",
+  "erroneas": [
+    "temperaturas = [18, 21, 25, 19]\n\nprimera = temperaturas[1]\nultima = temperaturas[len(temperaturas)]\ncantidad = len(temperaturas)\n",
+    "temperaturas = [18, 21, 25, 19]\n\nprimera = temperaturas[0]\nultima = temperaturas[4]\ncantidad = len(temperaturas)\n",
+    "temperaturas = [18, 21, 25, 19]\n\nprimera = temperaturas[0]\nultima = temperaturas[-1]\ncantidad = 3\n"
+  ],
+  "pistas": [
+    "Los índices empiezan en 0.",
+    "`lista[-1]` es el último elemento."
+  ]
+}

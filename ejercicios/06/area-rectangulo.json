@@ -1,0 +1,18 @@
+{
+  "titulo": "Área del rectángulo",
+  "capitulo": "06",
+  "seccion": "6.1 Definición de funciones",
+  "enunciado": "Define la función `area_rectangulo(base, altura)` que **devuelva** el área.\n\nEjemplo: `area_rectangulo(3, 4)` devuelve `12`.",
+  "inicial": "def area_rectangulo(base, altura):\n    # Escribe tu código aquí\n    pass\n",
+  "pruebas": "assert area_rectangulo(3, 4) == 12, f\"area_rectangulo(3, 4) devolvió {area_rectangulo(3, 4)!r}\"\nassert area_rectangulo(5, 5) == 25, f\"area_rectangulo(5, 5) devolvió {area_rectangulo(5, 5)!r}\"\nassert area_rectangulo(0, 7) == 0, f\"area_rectangulo(0, 7) devolvió {area_rectangulo(0, 7)!r}\"\nassert area_rectangulo(2.5, 2) == 5.0, f\"area_rectangulo(2.5, 2) devolvió {area_rectangulo(2.5, 2)!r}\"\n",
+  "solucion": "def area_rectangulo(base, altura):\n    return base * altura\n",
+  "erroneas": [
+    "def area_rectangulo(base, altura):\n    print(base * altura)\n",
+    "def area_rectangulo(base, altura):\n    return base + altura\n",
+    "def area_rectangulo(base, altura):\n    return 2 * (base + altura)\n"
+  ],
+  "pistas": [
+    "La función debe devolver el valor con `return`, no imprimirlo.",
+    "Área = base por altura."
+  ]
+}

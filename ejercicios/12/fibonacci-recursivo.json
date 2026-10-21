@@ -1,0 +1,18 @@
+{
+  "titulo": "Fibonacci",
+  "capitulo": "12",
+  "seccion": "12.4 Más recursión matemática",
+  "enunciado": "Define `fib(n)` recursivamente: `fib(0) = 0`, `fib(1) = 1` y `fib(n) = fib(n-1) + fib(n-2)`.\n\nLa sucesión empieza `0, 1, 1, 2, 3, 5, 8, ...`, así que `fib(6)` devuelve `8`.",
+  "inicial": "def fib(n):\n    # Escribe tu código aquí\n",
+  "pruebas": "esperado = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]\nfor i, e in enumerate(esperado):\n    assert fib(i) == e, f\"fib({i}) devolvió {fib(i)!r} y se esperaba {e}\"\nassert fib(15) == 610, f\"fib(15) devolvió {fib(15)!r}\"\n",
+  "solucion": "def fib(n):\n    if n < 2:\n        return n\n    return fib(n - 1) + fib(n - 2)\n",
+  "erroneas": [
+    "def fib(n):\n    if n == 0:\n        return 0\n    return fib(n - 1) + fib(n - 2)\n",
+    "def fib(n):\n    if n < 2:\n        return 1\n    return fib(n - 1) + fib(n - 2)\n",
+    "def fib(n):\n    if n < 2:\n        return n\n    return fib(n - 1) + fib(n - 1)\n"
+  ],
+  "pistas": [
+    "Hay dos casos base: `fib(0)` y `fib(1)`.",
+    "Una función recursiva puede llamarse dos veces en el caso recursivo."
+  ]
+}

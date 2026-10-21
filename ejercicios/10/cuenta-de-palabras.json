@@ -1,0 +1,18 @@
+{
+  "titulo": "Cuenta de palabras",
+  "capitulo": "10",
+  "seccion": "10.2 Creación de diccionarios",
+  "enunciado": "Define `contar(palabras)`, que recibe una lista de palabras y devuelve un diccionario que asocia cada palabra con las veces que aparece.\n\nEjemplo: `contar([\"sol\", \"luna\", \"sol\"])` devuelve `{\"sol\": 2, \"luna\": 1}`.",
+  "inicial": "def contar(palabras):\n    # Escribe tu código aquí\n",
+  "pruebas": "assert contar([\"sol\", \"luna\", \"sol\"]) == {\"sol\": 2, \"luna\": 1}, f\"devolvió {contar(['sol', 'luna', 'sol'])!r}\"\nassert contar([]) == {}, \"lista vacía debe dar {}\"\nassert contar([\"a\"]) == {\"a\": 1}, f\"contar(['a']) devolvió {contar(['a'])!r}\"\nassert contar([\"a\", \"A\", \"a\", \"a\"]) == {\"a\": 3, \"A\": 1}, \"distingue mayúsculas de minúsculas\"\n",
+  "solucion": "def contar(palabras):\n    cuentas = {}\n    for p in palabras:\n        if p in cuentas:\n            cuentas[p] += 1\n        else:\n            cuentas[p] = 1\n    return cuentas\n",
+  "erroneas": [
+    "def contar(palabras):\n    cuentas = {}\n    for p in palabras:\n        cuentas[p] = 1\n    return cuentas\n",
+    "def contar(palabras):\n    cuentas = {}\n    for p in palabras:\n        cuentas[p] += 1\n    return cuentas\n",
+    "def contar(palabras):\n    cuentas = {}\n    for p in palabras:\n        if p in cuentas:\n            cuentas[p] += 1\n        else:\n            cuentas[p] = 1\n"
+  ],
+  "pistas": [
+    "Si la palabra ya es clave, suma 1; si no, créala con valor 1.",
+    "No olvides devolver el diccionario con `return`."
+  ]
+}

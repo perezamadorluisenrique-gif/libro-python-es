@@ -1,0 +1,18 @@
+{
+  "titulo": "Horas y minutos",
+  "capitulo": "02",
+  "seccion": "2.5 División de enteros",
+  "enunciado": "La variable `duracion` guarda minutos. Guarda en `horas` las horas completas y en `minutos` los minutos que sobran. Imprime `horas` y `minutos` en una sola línea separados por un espacio.\n\nEjemplo con `duracion = 135`:\n\n```text\n2 15\n```",
+  "inicial": "duracion = 135\n\n# Escribe tu código aquí\n",
+  "pruebas": "assert (horas, minutos) == (2, 15), f\"horas={horas!r}, minutos={minutos!r}\"\nassert __salida__.strip() == \"2 15\", f\"se imprimió {__salida__.strip()!r}\"\n",
+  "solucion": "duracion = 135\n\nhoras = duracion // 60\nminutos = duracion % 60\nprint(horas, minutos)\n",
+  "erroneas": [
+    "duracion = 135\n\nhoras = duracion / 60\nminutos = duracion % 60\nprint(horas, minutos)\n",
+    "duracion = 135\n\nhoras = duracion // 60\nminutos = duracion // 60\nprint(horas, minutos)\n",
+    "duracion = 135\n\nhoras = duracion % 60\nminutos = duracion // 60\nprint(horas, minutos)\n"
+  ],
+  "pistas": [
+    "`//` da el cociente entero y `%` el resto.",
+    "Una hora tiene 60 minutos."
+  ]
+}

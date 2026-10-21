@@ -1,0 +1,18 @@
+{
+  "titulo": "Días entre dos fechas",
+  "capitulo": "07",
+  "seccion": "7.5 Cómo encontrar módulos",
+  "enunciado": "La biblioteca estándar incluye `datetime`. Define `dias_entre(a1, m1, d1, a2, m2, d2)` que devuelva cuántos días hay desde la primera fecha (año, mes, día) hasta la segunda. El resultado es negativo si la segunda es anterior. Usa `datetime.date` y devuelve un entero.\n\nEjemplo: `dias_entre(2024, 1, 1, 2024, 1, 31)` devuelve `30`.",
+  "inicial": "# Escribe tu código aquí\n\ndef dias_entre(a1, m1, d1, a2, m2, d2):\n    pass\n",
+  "pruebas": "casos = [((2024, 1, 1, 2024, 1, 31), 30), ((2024, 2, 28, 2024, 3, 1), 2), ((2023, 2, 28, 2023, 3, 1), 1), ((2023, 12, 31, 2024, 1, 1), 1), ((2024, 5, 5, 2024, 5, 5), 0), ((2024, 3, 1, 2024, 2, 1), -29)]\nfor args, esperado in casos:\n    obtenido = dias_entre(*args)\n    assert obtenido == esperado, f\"dias_entre{args} devolvió {obtenido!r}, se esperaba {esperado!r}\"\n    assert type(obtenido) is int, f\"dias_entre{args} debe devolver int, no {type(obtenido).__name__}\"\n",
+  "solucion": "from datetime import date\n\ndef dias_entre(a1, m1, d1, a2, m2, d2):\n    return (date(a2, m2, d2) - date(a1, m1, d1)).days\n",
+  "erroneas": [
+    "from datetime import date\n\ndef dias_entre(a1, m1, d1, a2, m2, d2):\n    return date(a2, m2, d2) - date(a1, m1, d1)\n",
+    "from datetime import date\n\ndef dias_entre(a1, m1, d1, a2, m2, d2):\n    return (date(a1, m1, d1) - date(a2, m2, d2)).days\n",
+    "def dias_entre(a1, m1, d1, a2, m2, d2):\n    return (a2 - a1) * 365 + (m2 - m1) * 30 + (d2 - d1)\n"
+  ],
+  "pistas": [
+    "Restar dos `date` da un `timedelta`; su atributo `.days` es un entero.",
+    "Cuidado con el orden de la resta."
+  ]
+}

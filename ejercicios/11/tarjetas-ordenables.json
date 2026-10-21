@@ -1,0 +1,18 @@
+{
+  "titulo": "Tarjetas ordenables",
+  "capitulo": "11",
+  "seccion": "11.4 Sobrecarga de operadores",
+  "enunciado": "Define la clase `Tarjeta` con atributos `valor` (entero) y `palo` (cadena), y sobrecarga `<` (`__lt__`) para que una tarjeta sea menor que otra si su `valor` es menor. Así `sorted()` podrá ordenar listas de tarjetas.\n\nEjemplo: `Tarjeta(3, \"oros\") < Tarjeta(7, \"copas\")` es `True`.",
+  "inicial": "class Tarjeta:\n    # Escribe tu código aquí\n",
+  "pruebas": "t1 = Tarjeta(3, \"oros\")\nt2 = Tarjeta(7, \"copas\")\nassert t1.valor == 3 and t1.palo == \"oros\", \"faltan los atributos valor y palo\"\nassert (t1 < t2) is True, \"3 < 7 debe ser True\"\nassert (t2 < t1) is False, \"7 < 3 debe ser False\"\nassert (t1 < Tarjeta(3, \"espadas\")) is False, \"valores iguales: no es menor\"\nmazo = [Tarjeta(9, \"a\"), Tarjeta(2, \"b\"), Tarjeta(5, \"c\")]\nvalores = [t.valor for t in sorted(mazo)]\nassert valores == [2, 5, 9], f\"sorted(mazo) dio los valores {valores!r}\"\n",
+  "solucion": "class Tarjeta:\n    def __init__(self, valor, palo):\n        self.valor = valor\n        self.palo = palo\n\n    def __lt__(self, otra):\n        return self.valor < otra.valor\n",
+  "erroneas": [
+    "class Tarjeta:\n    def __init__(self, valor, palo):\n        self.valor = valor\n        self.palo = palo\n\n    def __lt__(self, otra):\n        return self.valor <= otra.valor\n",
+    "class Tarjeta:\n    def __init__(self, valor, palo):\n        self.valor = valor\n        self.palo = palo\n\n    def __lt__(self, otra):\n        return self.palo < otra.palo\n",
+    "class Tarjeta:\n    def __init__(self, valor, palo):\n        self.valor = valor\n        self.palo = palo\n\n    def __lt__(self, otra):\n        return self.valor > otra.valor\n"
+  ],
+  "pistas": [
+    "`__lt__(self, otra)` debe devolver un booleano.",
+    "Compara los `valor`, no los objetos completos."
+  ]
+}

@@ -1,0 +1,264 @@
+en	es	evitar	nota
+!=	!=		operador de Python, no se traduce
+<	<		operador de Python, no se traduce
+<=	<=		operador de Python, no se traduce
+=	=		operador de Python, no se traduce
+==	==		operador de Python, no se traduce
+>	>		operador de Python, no se traduce
+>=	>=		operador de Python, no se traduce
+abstraction	abstracción		
+aliasing	uso de alias		varios nombres para el mismo objeto
+and	and		palabra clave de Python, no se traduce
+append	append()		método de lista, no se traduce
+argument	argumento		
+arithmetic operators	operadores aritméticos		
+ascii	ASCII		sigla, no se traduce
+assignment operator	operador de asignación		
+base case	caso base		
+bool	bool		nombre de Python, no se traduce
+bool()	bool()		nombre de Python, no se traduce
+branch	rama		rama de una instrucción condicional
+break	break		palabra clave de Python, no se traduce
+built-in function	función integrada	función incorporada,funciones incorporadas,función predefinida,funciones predefinidas	plural: funciones integradas
+class	clase		
+class attribute	atributo de clase		
+code point	punto de código		
+comments	comentarios		
+comparison operators	operadores de comparación		
+computer	computadora	ordenador,ordenadores	femenino
+condition	condición		
+conditional expression	expresión condicional		
+container	contenedor		
+continue	continue		palabra clave de Python, no se traduce
+control flow	flujo de control		
+count()	count()		nombre de Python, no se traduce
+data analysis	análisis de datos		
+data filtering	filtrado de datos		
+data indexing	indexación de datos		
+data science	ciencia de datos		
+data science life cycle	ciclo de vida de la ciencia de datos		
+data slicing	rebanado de datos		
+data type	tipo de datos		
+dataframe	DataFrame		clase de pandas, no se traduce
+def	def		palabra clave de Python, no se traduce
+delimiter	delimitador		
+diamond problem	problema del diamante		
+dict	dict		nombre de Python, no se traduce
+dictionary	diccionario		
+dictionary comprehension	comprensión de diccionario		
+docstring	cadena de documentación (docstring)		en usos posteriores puede abreviarse docstring
+elif	elif		palabra clave de Python, no se traduce
+else statement	instrucción else		
+encapsulation	encapsulamiento	encapsulación	
+escape sequence	secuencia de escape		
+explicit type conversion	conversión explícita de tipos		
+exploratory data analysis (eda)	análisis exploratorio de datos (EDA)		
+expression	expresión		
+f-string	f-string		no se traduce
+feature	característica		en ciencia de datos: columna usada como variable de entrada
+field width	ancho de campo		
+find()	find()		nombre de Python, no se traduce
+float()	float()		nombre de Python, no se traduce
+floor division	división entera	división de piso,división piso	operador //
+for loop	bucle for		
+format specifier	especificador de formato		
+format()	format()		nombre de Python, no se traduce
+formatted string literal	literal de cadena con formato		
+formatting string	cadena de formato		
+function	función		
+global scope	ámbito global		
+google colaboratory	Google Colaboratory		nombre propio
+google sheets	Google Sheets		nombre propio
+hierarchical inheritance	herencia jerárquica		
+identity	identidad		identidad de un objeto
+if statement	instrucción if		
+iloc[]	iloc[]		nombre de Python, no se traduce
+immutable	inmutable		
+implicit type conversion	conversión implícita de tipos		
+import statement	instrucción import		
+in	in		palabra clave de Python, no se traduce
+index	índice		
+index()	index()		nombre de Python, no se traduce
+infinite loop	bucle infinito		
+inner loop	bucle interno		
+input	entrada		
+input()	input()		nombre de Python, no se traduce
+instance attribute	atributo de instancia		
+instance method	método de instancia		
+instances	instancias		
+int()	int()		nombre de Python, no se traduce
+interpreter	intérprete		
+join()	join()		nombre de Python, no se traduce
+jupyter notebook	Jupyter Notebook		nombre propio
+jupyterlab	JupyterLab		nombre propio
+kaggle kernels	Kaggle Kernels		nombre propio
+key-value	clave-valor		
+keyword arguments	argumentos con nombre	argumentos nombrados,argumentos de palabra clave,argumentos por palabra clave	a veces llamados argumentos de palabra clave en otros textos
+keywords	palabras clave		«palabras reservadas» se admite como sinónimo cuando el original dice «reserved words».
+len()	len()		nombre de Python, no se traduce
+library	biblioteca	librería,librerías	plural: bibliotecas
+list comprehension	comprensión de listas		
+list-of-lists	lista de listas		
+loc[]	loc[]		nombre de Python, no se traduce
+local scope	ámbito local		
+logical operator	operador lógico		
+loop	bucle	ciclo for,ciclo while,ciclo infinito,lazo,lazos	plural: bucles
+loop else	else de bucle		
+lower()	lower()		nombre de Python, no se traduce
+magic methods	métodos mágicos		
+memory diagram	diagrama de memoria		
+microsoft excel	Microsoft Excel		nombre propio
+mixin classes	clases mixin		
+mode	moda		estadística; para archivos usar modo de apertura
+module	módulo		
+modulo operator	operador de módulo		operador %
+modulus	módulo aritmético		resto de la división; no confundir con módulo de Python
+multilevel inheritance	herencia multinivel		
+multiple inheritance	herencia múltiple		
+mutable	mutable		
+name collision	colisión de nombres		
+named replacement fields	campos de reemplazo con nombre		
+ndarray	ndarray		clase de NumPy, no se traduce
+nested dictionaries	diccionarios anidados		
+nested list	lista anidada		
+nested loop	bucle anidado		
+newline	salto de línea	nueva línea,nueva linea	
+not	not		palabra clave de Python, no se traduce
+numbered replacement fields	campos de reemplazo numerados		
+numpy	NumPy		nombre propio
+object	objeto		
+object-oriented programming	programación orientada a objetos		abreviatura: POO
+operator overloading	sobrecarga de operadores		
+or	or		palabra clave de Python, no se traduce
+outer loop	bucle externo		
+output	salida		
+overflow error	error de desbordamiento	error de overflow,error de sobreflujo	
+override	sobrescribir	sobreescribir,sobreescritura	sustantivo: sobrescritura
+pandas	pandas		nombre propio, en minúscula
+parameter	parámetro		
+pass-by-object-reference	paso por referencia de objeto		
+path	ruta		ruta de un archivo
+pep	PEP		sigla de Python Enhancement Proposal, no se traduce
+polymorphism	polimorfismo		
+positional arguments	argumentos posicionales		
+precedence	precedencia	prioridad de operadores	orden de precedencia de operadores
+program	programa		
+prompt	indicador (prompt)		texto que se muestra al pedir una entrada; en la consola, el prompt >>>
+python package index	Python Package Index (PyPI)		nombre propio
+python standard library	biblioteca estándar de Python	librería estándar	
+range()	range()		nombre de Python, no se traduce
+recursion	recursión	recursividad	
+recursion tree	árbol de recursión		
+recursive case	caso recursivo		
+repl	REPL		sigla, no se traduce
+replacement field	campo de reemplazo		
+replacement fields	campos de reemplazo		
+return statement	instrucción return		
+round()	round()		nombre de Python, no se traduce
+round-off error	error de redondeo		
+scope	ámbito		«alcance» se admite en su sentido general (alcance de un libro), no para el ámbito de una variable.
+self	self		convención de Python, no se traduce
+series	Series		clase de pandas, no se traduce
+shell	shell		no se traduce
+snake case	snake_case		convención de nombres, no se traduce
+sorting	ordenamiento	ordenación	
+split()	split()		nombre de Python, no se traduce
+statement	instrucción	sentencia,sentencias	plural: instrucciones
+step size	tamaño de paso		
+str()	str()		nombre de Python, no se traduce
+string	cadena		puede decirse cadena de caracteres
+string alignment type	tipo de alineación de cadena		
+string slicing	rebanado de cadenas		
+syntax	sintaxis		
+traceback	traza (traceback)		mensaje de error con la pila de llamadas
+true division	división verdadera		operador /
+try	try		palabra clave de Python, no se traduce
+tuple	tupla		
+type	tipo		
+unicode	Unicode		nombre propio
+upper()	upper()		nombre de Python, no se traduce
+value	valor		
+variable	variable		
+while loop	bucle while		
+None	None		nombre de Python, no se traduce
+True	True		nombre de Python, no se traduce
+False	False		nombre de Python, no se traduce
+list	lista		
+integer	entero		tipo int
+float	float		tipo de Python, no se traduce
+floating-point number	número de punto flotante		número de coma flotante no se usa en Latinoamérica
+boolean	booleano		
+programmer	programador		plural: programadores
+user	usuario		
+code	código		
+source code	código fuente		
+syntax error	error de sintaxis		
+runtime error	error en tiempo de ejecución	error de ejecución,error de runtime	
+logic error	error lógico	error de lógica	
+print	print()		función de Python, no se traduce; verbo: imprimir o mostrar
+example	ejemplo		
+learning objectives	objetivos de aprendizaje		
+concepts in practice	conceptos en práctica		
+try it	pruébalo		
+chapter summary	resumen del capítulo		
+exploring further	para saber más		
+checkpoint	punto de control		
+answer	respuesta		
+video	video	vídeo	sin tilde, uso latinoamericano
+chapter	capítulo		
+section	sección		
+debugging	depuración	debugging,debuggeo,debugueo	
+bug	error (bug)		defecto del programa
+inheritance	herencia		
+method	método		
+attribute	atributo		
+file	archivo	fichero,ficheros	plural: archivos
+package	paquete		
+exception	excepción		
+set	conjunto		
+slicing	rebanado	segmentación	
+iteration	iteración		
+operator	operador		
+indentation	sangría	indentación,identación	
+comment	comentario		
+subclass	subclase		
+superclass	superclase		el cap. 13 enumera «superclase / clase base / clase padre» como sinónimos; «clase padre» deja de estar en evitar (decisión de la sesión e7dd8a0e, ver NEXT.md)
+constructor	constructor		
+algorithm	algoritmo		
+function call	llamada a función	llamado a función	femenino: la llamada
+return value	valor de retorno	valor de regreso	
+default argument	argumento predeterminado	argumento por defecto,argumento por omisión	
+key	clave		de un diccionario
+element	elemento		
+text file	archivo de texto		
+data structure	estructura de datos		
+recursive function	función recursiva		
+assignment	asignación		
+call stack	pila de llamadas		
+data	datos		
+side effect	efecto secundario		
+function overloading	sobrecarga de funciones		
+top-level code	código de nivel superior		
+batteries included	baterías incluidas		
+ternary operator	operador ternario		
+associativity	asociatividad		
+truth table	tabla de verdad		
+nesting	anidamiento		
+shift cipher	cifrado por desplazamiento		
+character	carácter		
+built-in module	módulo integrado		
+code runner	ejecutor de código		
+field	campo		
+procedure	procedimiento		
+composition	composición		
+array	arreglo		
+palindrome	palíndromo		
+binary search	búsqueda binaria		
+outlier	valor atípico		
+box plot	diagrama de caja		
+histogram	histograma		
+scatter plot	gráfico de dispersión		
+missing data	datos faltantes		
+stakeholder	parte interesada		
+append mode	modo de adición		
+buffer	búfer		

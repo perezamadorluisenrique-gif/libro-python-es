@@ -1,0 +1,18 @@
+{
+  "titulo": "Cambio en monedas",
+  "capitulo": "02",
+  "seccion": "2.5 División de enteros",
+  "enunciado": "Una máquina entrega el cambio en monedas de 25 y de 5 centavos, usando primero tantas monedas de 25 como sea posible. La variable `cambio` guarda los centavos. Guarda en `de_25` la cantidad de monedas de 25 y en `de_5` la cantidad de monedas de 5 necesarias para el resto (el cambio siempre es múltiplo de 5). Imprime `de_25` y `de_5` separados por un espacio.\n\nEjemplo con `cambio = 85`:\n\n```text\n3 2\n```",
+  "inicial": "cambio = 85\n\n# Escribe tu código aquí\n",
+  "pruebas": "assert (de_25, de_5) == (3, 2), f\"de_25={de_25!r}, de_5={de_5!r}\"\nassert __salida__.strip() == \"3 2\", f\"se imprimió {__salida__.strip()!r}\"\n",
+  "solucion": "cambio = 85\n\nde_25 = cambio // 25\nresto = cambio % 25\nde_5 = resto // 5\nprint(de_25, de_5)\n",
+  "erroneas": [
+    "cambio = 85\n\nde_25 = cambio // 25\nde_5 = cambio // 5\nprint(de_25, de_5)\n",
+    "cambio = 85\n\nde_25 = cambio / 25\nde_5 = (cambio % 25) // 5\nprint(de_25, de_5)\n",
+    "cambio = 85\n\nde_25 = cambio // 25\nde_5 = cambio % 25\nprint(de_25, de_5)\n"
+  ],
+  "pistas": [
+    "Primero calcula las monedas de 25; el resto lo da `%`.",
+    "Divide ese resto entre 5 con `//`."
+  ]
+}

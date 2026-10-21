@@ -1,0 +1,18 @@
+{
+  "titulo": "Intercambio de variables",
+  "capitulo": "01",
+  "seccion": "1.3 Variables",
+  "enunciado": "Las variables `a` y `b` tienen valores. Intercambia sus valores usando una tercera variable auxiliar, de modo que al final `a` valga lo que valía `b` y viceversa. No cambies las dos primeras líneas.\n\nEjemplo: si `a = 3` y `b = 7`, al final `a` es 7 y `b` es 3.",
+  "inicial": "a = 3\nb = 7\n\n# Escribe tu código aquí\n",
+  "pruebas": "assert (a, b) == (7, 3), f\"a vale {a!r} y b vale {b!r}; se esperaba a=7, b=3\"\n",
+  "solucion": "a = 3\nb = 7\n\naux = a\na = b\nb = aux\n",
+  "erroneas": [
+    "a = 3\nb = 7\n\na = b\nb = a\n",
+    "a = 3\nb = 7\n\naux = a\nb = aux\na = b\n",
+    "a = 3\nb = 7\n\na = 7\n"
+  ],
+  "pistas": [
+    "Si haces `a = b` primero, pierdes el valor original de `a`: guárdalo antes.",
+    "Orden: `aux = a`, `a = b`, `b = aux`."
+  ]
+}
